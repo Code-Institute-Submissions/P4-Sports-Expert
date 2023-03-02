@@ -12,7 +12,8 @@ class BlogForm(ModelForm):
     class Meta:
         model = BlogPost
         fields = (
-            'created_by', 'description', 'title', 'blog_image', 'body', 'category'
+            'created_by', 'description', 'title', 
+            'blog_image', 'body', 'category'
             )
         widgets = {
             'description': forms.TextInput(attrs={'class': 'form-control'}),
