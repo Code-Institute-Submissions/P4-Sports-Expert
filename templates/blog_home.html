@@ -4,8 +4,10 @@
 
 {% for blog in object_list %}
 
-{{ blog.title }}
 
+<ul>
+    <li><a href="{% url 'blog_detail' blog.pk %}">{{ blog.title}}</a></li>
+</ul>
 {% endfor %}
 
 {% endblock %}
