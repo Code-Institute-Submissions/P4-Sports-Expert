@@ -24,7 +24,7 @@ class AddBlog(LoginRequiredMixin, CreateView):
         return {'created_by': self.request.user}
 
 
-class EditBlog(UpdateView):
+class EditBlog(LoginRequiredMixin, UpdateView):
     model = BlogPost
     template_name = 'edit_blog.html'
     fields = ['description', 'title', 'blog_image', 'body', 'category']
