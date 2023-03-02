@@ -28,7 +28,7 @@ class AddBlog(LoginRequiredMixin, CreateView):
         return {'created_by': self.request.user}
 
 
-class EditBlog(LoginRequiredMixin, UpdateView):
+class EditBlog(UpdateView):
     model = BlogPost
     template_name = 'edit_blog.html'
     fields = ['description', 'title', 'blog_image', 'body', 'category']
@@ -40,10 +40,18 @@ class EditBlog(LoginRequiredMixin, UpdateView):
             return HttpResponseForbidden("You are not the owner of this blog")
             return handler
         else:
-            return handler
+            return handler    
+        
 
-
-class DeleteBlog(LoginRequiredMixin, DeleteView):
+class DeleteBlog(DeleteView):
     model = BlogPost
     template_name = 'delete_blog.html'
     success_url = reverse_lazy('home')
+
+    def dispatch(self, request, *args, **kwargs):
+        handler = super(DeleteBlog, self).dispatch(request, *args, **kwargs)
+        if self.object.created_by != request.user:
+            return HttpResponseForbidden("You are not the owner of this blog")
+            return handler
+        else:
+            return handler    

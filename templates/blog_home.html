@@ -7,7 +7,8 @@
 
 <ul>
     <li><a href="{% url 'blog_detail' blog.pk %}">{{ blog.title}}</a>
-        <a class="btn btn-primary" href="{% url 'edit_blog' blog.pk %}">Edit</a></li>
+        <a class="btn btn-primary" href="{% url 'edit_blog' blog.pk %}">Edit</a>
+        <a class="btn btn-primary" href="{% url 'delete_blog' blog.pk %}">Delete</a></li>
         
 </ul>
 {% endfor %}
