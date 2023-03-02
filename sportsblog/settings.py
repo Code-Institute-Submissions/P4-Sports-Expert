@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'cloudinary',
     'home',
+    'blog',
 ]
 
 SITE_ID = 1
