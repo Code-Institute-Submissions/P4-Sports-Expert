@@ -16,4 +16,4 @@ class BlogDetail(DetailView):
 class AddBlog(CreateView):
     model = BlogPost
     template_name = 'add_blog.html'
-    fields = '__all__'
+    fields = ['description', 'title', 'blog_image', 'body', 'category']

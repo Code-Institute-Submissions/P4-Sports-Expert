@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 from datetime import datetime, date
 from cloudinary.models import CloudinaryField
 
@@ -26,6 +27,9 @@ class BlogPost(models.Model):
 
     def __str__(self):
         return f"Blog post by {self.created_by} on {self.date_created}"
+
+    def get_absolute_url(self):
+        return reverse('home')    
 
 
 
