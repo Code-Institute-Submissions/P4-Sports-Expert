@@ -1,14 +1,35 @@
 {% extends "base.html" %}
 
 {% block content %}
-<img src="{{ object.blog_image.url }}" alt="placeholder">
-<h1>{{ object.created_by }}</h1>
-<h2>{{ object.title}}</h2>
-<h3>{{ object.date_created}}</h3>
+<main class="container-fluid">
+    <div class="mx-auto col-10 col-md-8 col-lg-6" id="blog-form">
+        <div class="row text-center">
+            <div class="col-6">
+                <h1>Blog By: {{ object.created_by }}</h1>
+            </div>
+            <div class="col-6">
+                <h3> Posted On: {{ object.date_created}}</h3>
+            </div>
+        </div>
+        <div class="row text-center">
+            <h2>{{ object.title}}</h2>
+        </div>
+        <div class="row text-center" id="blog-image">
+            <img src="{{ object.blog_image.url }}" alt="placeholder">
+        </div>
+        <div class="row text-center">
+            <p>{{ object.body }}</p>
+        </div>
+        <div class="row text-center">
+            <div class="col-12">
+                <a href="{% url 'home'%}" class="btn btn-primary">Home</a>
+            </div>
+        </div>
+    </div>
+</main>
 
 
 
 <a href="{% url 'home'%}"></a>
 
 {% endblock %}
-
