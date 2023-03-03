@@ -4,13 +4,23 @@
 
 {% for blog in object_list %}
 
+<div class="row justify-content-center" id="card-row">
+    <div class="col-sm-6 col-md-3">
+        <div class="card col-8 align-items-center">
+            <img src="{{ blog.blog_image.url }}" alt="user-upload-image" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">{{ blog.title }}</h5>
+                <p class="card-text">{{ blog.description }}</p>
+                <div class="row">
+                    <div class="col text-center">
+                        <a href=" {% url 'blog_detail' blog.pk %}" class="btn btn-primary">Go To blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<ul>
-    <li><a href="{% url 'blog_detail' blog.pk %}">{{ blog.title}}</a>
-        <a class="btn btn-primary" href="{% url 'edit_blog' blog.pk %}">Edit</a>
-        <a class="btn btn-primary" href="{% url 'delete_blog' blog.pk %}">Delete</a></li>
-        
-</ul>
 {% endfor %}
 
 {% endblock %}
