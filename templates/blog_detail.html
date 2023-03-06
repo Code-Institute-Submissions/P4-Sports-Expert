@@ -17,7 +17,12 @@
         </div>
         <div class="row text-center" id="blog-image">
             <div class="col justify-content-center">
+                {% if "placeholder" in object.blog_image.url %}
+                <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678132670/the-ball-stadion-football-the-pitch-46798_nimtac.jpg"
+                    alt="placeholder-image" class="card-img-top">
+                {% else %}    
                 <img src="{{ object.blog_image.url }}" alt="user-upload-image" id="upload-img">
+                {% endif %}
             </div>
         </div>
         <div class="row text-center" id="body-row">
