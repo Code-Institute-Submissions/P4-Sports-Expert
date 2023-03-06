@@ -17,13 +17,17 @@
     <header class="nav-header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><strong>Sports<br>Expert<strong></a>
+                <a class="navbar-brand" href="{% url 'home' %}"><strong>Sports<br>Expert<strong></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <div id="logged-user">
+                    {% if user.is_authenticated %}
+                    <p>Logged in as: {{ user }}</p>
+                    {% endif %}
+                </div>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <p>Logged in as {{ user }}</p>
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'home' %}">Home</a>
@@ -37,7 +41,7 @@
                             <a class="nav-link" href="{% url 'account_login' %}">Log In</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{% url 'account_signup' %}">Sign Up</a>
+                            <a class="nav-link" aria-current="page" href="{% url 'account_signup' %}">Sign Up</a>
                         </li>
                         {% endif %}
                     </ul>
