@@ -2,41 +2,33 @@
 
 {% block content %}
 
-{% for blog in object_list %}
-
-
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-sm-6 col-md-3">
-            <div class="card mt-4">
-                {% if "placeholder" in blog.blog_image.url %}
-                <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678132670/the-ball-stadion-football-the-pitch-46798_nimtac.jpg"
-                    alt="placeholder-image" class="card-img-top">
+<div class="row justify-content-center">
+    {% for blog in object_list %}
+    <div class="col-md-6 col-lg-4" id="blog-card">
+        <div class="card mt-4">
+            {% if "placeholder" in blog.blog_image.url %}
+            <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678132670/the-ball-stadion-football-the-pitch-46798_nimtac.jpg"
+                alt="placeholder-image" class="card-img-top">
+            {% else %}
+            <img src="{{ blog.blog_image.url }}" alt="user-upload-image" class="card-img-top">
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ blog.title }}</h5>
+                <p class="card-text">{{ blog.description }}</p>
+            </div>
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                {% if request.user == blog.created_by %}
+                <a href="{% url 'delete_blog' blog.pk %}" class="btn btn-danger">Delete</a>
+                <a href="{% url 'edit_blog' blog.pk %}" class="btn btn-warning">Edit</a>
+                <a href=" {% url 'blog_detail' blog.pk %}" class="btn btn-success">Blog</a>
                 {% else %}
-                <img src="{{ blog.blog_image.url }}" alt="user-upload-image" class="card-img-top">
+                <a href=" {% url 'blog_detail' blog.pk %}" class="btn btn-success">Blog</a>
                 {% endif %}
-                <div class="card-body">
-                    <h5 class="card-title">{{ blog.title }}</h5>
-                    <p class="card-text">{{ blog.description }}</p>
-                    <div class="row">
-                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                            {% if request.user == blog.created_by %}
-                            <a href="{% url 'delete_blog' blog.pk %}" class="btn btn-danger">Delete</a>
-                            <a href="{% url 'edit_blog' blog.pk %}" class="btn btn-warning">Edit</a>
-                            <a href=" {% url 'blog_detail' blog.pk %}" class="btn btn-success">Blog</a>
-                            {% else %}
-                            <a href=" {% url 'blog_detail' blog.pk %}" class="btn btn-success">Blog</a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-</div>
 
 
+    {% endfor %}
 
-{% endfor %}
-
-{% endblock %}
+    {% endblock %}

@@ -1,6 +1,7 @@
 body {
     margin: 0;
     max-width: 100%;
+    overflow-x:hidden;
 }
 
 /* Blog detail page */
@@ -38,9 +39,5 @@ body {
 
 /* Blog Home Page */
 
-#cards {
-    width: 20%;
-    
-}
 
 
