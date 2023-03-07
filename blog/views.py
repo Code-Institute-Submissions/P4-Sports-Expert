@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib import messages
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from django.views.generic import DeleteView
-from django.http import HttpResponseForbidden
 from django.urls import reverse_lazy
 from cloudinary.forms import cl_init_js_callbacks
 from .models import BlogPost
@@ -39,7 +39,12 @@ class EditBlog(SuccessMessageMixin, UpdateView):
     success_message = "Blog post edited successfully"
 
 
-class DeleteBlog(SuccessMessageMixin, DeleteView):
+class DeleteBlog(DeleteView):
     model = BlogPost
     template_name = 'delete_blog.html'
     success_url = reverse_lazy('bloglist')
+    success_message = "Blog post deleted successfully"
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, self.success_message)
+        return super(DeleteBlog, self).delete(request, *args, **kwargs)
