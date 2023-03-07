@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib import messages
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from django.views.generic import DeleteView
 from django.http import HttpResponseForbidden
