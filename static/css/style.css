@@ -2,9 +2,9 @@ body {
     margin: 0;
     max-width: 100%;
     overflow-x: hidden;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.5)),
-        url(https://res.cloudinary.com/dsdurzeu2/image/upload/v1678229012/pexels-photo-5670148_pguwbv.jpg);
+        url(https://res.cloudinary.com/dsdurzeu2/image/upload/v1678229012/pexels-photo-5670148_pguwbv.jpg);*/
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
