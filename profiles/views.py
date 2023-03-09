@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic import ListView, DetailView, CreateView
 from django.contrib.auth.decorators import login_required
 from django.contrib.messages.views import SuccessMessageMixin
@@ -10,14 +10,9 @@ from django.contrib.auth.models import User
 
 
 @login_required()
-def profile_view(request, username):
-    """
-    Renders the users profile, checks that the user matches profile user
-    """
+def profile(request, username):
     user = get_object_or_404(User, username=username)
-    if not user.username == request.user.username:
-        return redirect(reverse("profile", args=[request.user.username]))
-
+    
     profile = Profile.objects.get(user=user)
 
     context = {
