@@ -14,10 +14,10 @@ class ProfileForm(ModelForm):
         model = Profile
         image = forms.ImageField()
         fields = (
-            'user', 'name', 'about', 
+            'user', 'name', 'about',
             'image',
             )
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
             'about': forms.Textarea(attrs={'class': 'form-control'}),
-        }    
+        }
