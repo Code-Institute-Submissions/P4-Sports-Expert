@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-hjkbjbk
 <div class="row justify-content-center">
     {% for blog in object_list %}
     {% if request.user == blog.created_by %}
@@ -21,9 +20,9 @@ hjkbjbk
                 <a href="{% url 'delete_blog' blog.pk %}" class="btn btn-danger">Delete</a>
                 <a href="{% url 'edit_blog' blog.pk %}" class="btn btn-warning">Edit</a>
                 <a href=" {% url 'blog_detail' blog.pk %}" class="btn btn-success">Blog</a>
-                {% endif %}
             </div>
         </div>
     </div>
+    {% endif %}
     {% endfor %}
     {% endblock %}
