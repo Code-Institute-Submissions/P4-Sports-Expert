@@ -3,6 +3,7 @@ from django.db.models.signals import post_save
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from blog.models import BlogPost
+from django.dispatch import receiver
 
 # Create your models here.
 placeholder = (
@@ -15,15 +16,19 @@ class Profile(models.Model):
     name = models.CharField(max_length=50, null=True, blank=True)
     about = models.TextField(max_length=200, null=True, blank=True)
     image = CloudinaryField('image', default='placeholder')
+    blogs = models.ManyToManyField(
+        BlogPost, related_name="blogs", blank=True,
+        symmetrical=False,
+    )
 
     def __str__(self):
         return self.user.username
 
-
+@receiver(post_save, sender=User)
 def create_profile(sender, instance, created, **kwargs):
     if created:
         user_profile = Profile(user=instance)
         user_profile.save()
+        user_profile.blogs.set([instance.profile.id])
+        user_profile.save()
 
-
-post_save.connect(create_profile, sender=User)

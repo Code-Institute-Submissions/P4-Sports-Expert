@@ -1,24 +1,27 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 from .models import Profile
 from blog.models import BlogPost
 from .forms import ProfileForm
+from django.contrib.auth.models import User
 
 
-class ProfileView(ListView):
-    model = Profile
-    template_name = 'profile.html'
+@login_required()
+def profile_view(request, username):
+    """
+    Renders the users profile, checks that the user matches profile user
+    """
+    user = get_object_or_404(User, username=username)
+    if not user.username == request.user.username:
+        return redirect(reverse("profile", args=[request.user.username]))
 
+    profile = Profile.objects.get(user=user)
 
-class AddProfile(LoginRequiredMixin, SuccessMessageMixin, CreateView):
-    model = Profile
-    template_name = 'add_profile.html'
-    form_class = ProfileForm
-    success_url = reverse_lazy('profileview')
-    success_message = "Profile created successfully"
+    context = {
+        "profile": profile,
+    }
 
-    def get_initial(self):
-        return {'created_by': self.request.user}
+    return render(request, "profile.html", context)

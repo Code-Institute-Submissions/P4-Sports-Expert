@@ -2,6 +2,25 @@
 
 {% block content %}
 
-<a href="{% url 'add_profile' %}">Add a profile</a>
+<div class="container text-center">
+    <div class="row">
+        {% if "placeholder" in profile.image.url %}
+                <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678279560/profile-placeholder_bkm8nk.webp"
+                    alt="placeholder-image">
+        {% else %}            
+        <img src="{{ profile.image.url }}" class="rounded-circle prof-img" alt="...">
+        {% endif %}
+    </div>
+    <div class="row">
+        <h1>Username: {{ profile.user.username }}</h1>
+    </div>
+    <div class="row">
+        <h2>Name: {{ profile.name }}</h2>
+        <h3>About: {{ profile.about }}</h3>
+        <h4>Blogs:{{ blog.user }}</h4>
+        <h5>{{ blog.title }}</h5>
+    </div>
+</div>
+
 
 {% endblock %}
