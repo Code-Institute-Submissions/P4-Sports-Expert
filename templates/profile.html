@@ -18,13 +18,12 @@
         <h2>Name: {{ profile.name }}</h2>
         <h3>About: {{ profile.about }}</h3>
         <h4>Blogs:{{ blog.user }}</h4>
-        {% for blog in profile.blogs.all %}
-        {% if request.user == blog.created_by %}
+        
         <h5>{{ blog.user }}</h5>
         <h6>{{ blog.title }}</h6>
         <h6>{{ blog.created_by }}</h6>
-        {% endif %}
-        {% endfor %}
+      
+        <a href="{% url 'myblogs'%}" class="btn btn-primary"> My Blogs</a>
     </div>
 </div>
 {% endif %}

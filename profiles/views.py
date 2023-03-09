@@ -17,6 +17,12 @@ def profile(request, username):
 
     context = {
         "profile": profile,
-    }
+        }
 
     return render(request, "profile.html", context)
+
+
+class MyBlogs(ListView):
+    model = BlogPost
+    template_name = 'myblogs.html'
+
