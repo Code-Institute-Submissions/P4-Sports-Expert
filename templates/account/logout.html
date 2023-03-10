@@ -5,7 +5,7 @@
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
 {% block content %}
-<div class="mx-auto col-10 col-md-8 col-lg-6 text-center">
+<div class="mx-auto col-10 col-md-8 col-lg-6 text-center" id="sign-out">
   <h1>{% trans "Sign Out" %}</h1>
   <p>{% trans 'Are you sure you want to sign out?' %}</p>
   <form method="post" action="{% url 'account_logout' %}">
@@ -16,7 +16,7 @@
     {% endif %}
     <div class="row text-center">
       <div class="col-12">
-        <button type="submit" class="btn btn-primary">{% trans 'Sign Out' %}</button>
+        <button type="submit" class="btn btn-primary" id="logout-btn">{% trans 'Sign Out' %}</button>
       </div>
     </div>
   </form>

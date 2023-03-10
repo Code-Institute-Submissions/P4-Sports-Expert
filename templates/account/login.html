@@ -9,7 +9,7 @@
 {% block content %}
 
 
-<div class="mx-auto col-10 col-md-8 col-lg-6 text-center">
+<div class="mx-auto col-10 col-md-8 col-lg-6 text-center" id="login-form">
   <form class="login" method="POST" action="{% url 'account_login' %}">
     {% csrf_token %}
     {{ form|crispy }}
@@ -18,7 +18,7 @@
     {% endif %}
     <div class="row">
       <div class="col-12">
-        <button class="btn btn-primary" type="submit">{% trans "Sign In" %}</button>
+        <button class="btn btn-primary" id="login-btn" type="submit">{% trans "Sign In" %}</button>
       </div>
     </div>
   </form>

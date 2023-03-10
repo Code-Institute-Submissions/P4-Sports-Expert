@@ -2,9 +2,9 @@ body {
     margin: 0;
     max-width: 100%;
     overflow-x: hidden;
-    /*background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),
             rgba(0, 0, 0, 0.5)),
-        url(https://res.cloudinary.com/dsdurzeu2/image/upload/v1678229012/pexels-photo-5670148_pguwbv.jpg);*/
+        url(https://res.cloudinary.com/dsdurzeu2/image/upload/v1678229012/pexels-photo-5670148_pguwbv.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -16,7 +16,7 @@ body {
     border-radius: 5px;
     margin: 1rem;
     background-color: darkgray;
-    opacity: 0.8;
+    color: white;
 
 }
 
@@ -54,7 +54,9 @@ body {
 }
 
 /* Blog Home Page */
-
+.card {
+    margin: 2rem;
+}
 
 
 /* Profile page */
@@ -63,4 +65,43 @@ body {
     border: 3px solid gray;
     border-radius: 5px;
     margin: 3rem;
+    background-color: darkgray;
+    color: white;
 }
+
+/* Forms */
+#blog-form {
+    margin: 2rem;
+}
+
+#profile-form {
+    margin: 2rem;
+}
+
+#sign-out {
+    border: 3px solid gray;
+    border-radius: 5px;
+    margin: 5rem;
+    background-color: darkgray;
+    color: white;
+}
+
+#logout-btn {
+    margin: 1rem;
+}
+
+
+/* Login Page */
+#login-form {
+    border: 3px solid gray;
+    border-radius: 5px;
+    margin: 5rem;
+    background-color: darkgray;
+    color: white;
+}
+
+#login-btn {
+    margin: 1rem;
+}
+
+
