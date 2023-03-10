@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% for blog in object_list %}
+{% if request.user == blog.created_by %}
 <div class="row justify-content-center">
-    {% for blog in object_list %}
-    {% if request.user == blog.created_by %}
     <div class="col-md-6 col-lg-4" id="blog-card">
         <div class="card mt-4">
             {% if "placeholder" in blog.blog_image.url %}
