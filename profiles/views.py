@@ -26,6 +26,10 @@ class MyBlogs(ListView):
     model = BlogPost
     template_name = 'myblogs.html'
 
+    def get_queryset(self):
+        user = self.request.user
+        return BlogPost.objects.filter(created_by=user)
+
 
 class EditProfile(SuccessMessageMixin, UpdateView):
     model = Profile
