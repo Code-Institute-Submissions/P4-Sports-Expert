@@ -2,6 +2,7 @@
 
 {% block content %}
 {% for blog in object_list %}
+
 <div class="row justify-content-center">
     <div class="col-md-6 col-lg-4" id="blog-card">
         <div class="card mt-4">
@@ -19,6 +20,15 @@
                 <a href="{% url 'delete_blog' blog.pk %}" class="btn btn-danger">Delete</a>
                 <a href="{% url 'edit_blog' blog.pk %}" class="btn btn-warning">Edit</a>
                 <a href=" {% url 'blog_detail' blog.pk %}" class="btn btn-success">Blog</a>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="mx-auto col-10 col-md-8 col-lg-6 text-center" id="text-containers">
+        <div class="row text-center m-4">
+            <h1>You Dont have any blog posts yet<br> Click below to add one</h1>
+            <div class="col-12 text-center">
+                <a href="{% url 'add_blog' %}" class="btn btn-primary m-4">Add A blog</a>
             </div>
         </div>
     </div>

@@ -104,4 +104,17 @@ body {
     margin: 1rem;
 }
 
+/* General message containers */
+
+#text-containers {
+    border: 3px solid gray;
+    border-radius: 10px;
+    margin: 5rem;
+    background-color: darkgray;
+    color: white;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    
+}
 
