@@ -64,9 +64,20 @@ body {
 #profile-cont {
     border: 3px solid gray;
     border-radius: 5px;
-    margin: 3rem;
     background-color: darkgray;
     color: white;
+    margin: 2rem 2rem;
+    padding: 0 12px;
+}
+
+#profile-hero-text {
+    margin-bottom: 2rem;
+    border-bottom: 3px solid gray;
+    background-color: cornflowerblue
+}
+
+.btn-group {
+    margin-right: 4px;
 }
 
 /* Forms */

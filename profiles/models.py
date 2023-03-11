@@ -21,6 +21,7 @@ class Profile(models.Model):
         BlogPost, related_name="blogs", blank=True,
     )
     date_joined = models.DateTimeField(default=datetime.now, blank=True)
+    last_updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.user.username
