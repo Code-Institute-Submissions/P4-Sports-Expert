@@ -9,11 +9,13 @@
         <button type="button" data-bs-target="#herocarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
+        {% if user.is_authenticated%}
         <div class="carousel-item active c-item">
             <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678465016/pexels-photo-768474_skgnuc.webp"
                 class="d-block w-100 c-image" alt="Blogs">
             <div class="carousel-caption top-0 mt-4 d-md-block">
-                <p class="mt-5 fs-3 text-uppercase">Something to say? Click The button below to add your own blog post.</p>
+                <p class="mt-5 fs-3 text-uppercase">Something to say? Click The button below to add your own blog post.
+                </p>
                 <h1 class="display-1 fw-bolder text-capitalize">Add a blog</h1>
                 <a href="{% url 'add_blog'%}" class="btn btn-primary px-4 py-2 fs-5 mt-5">Add a Blog</a>
             </div>
@@ -32,11 +34,45 @@
             <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678634761/profile_sqffnn.webp"
                 class="d-block w-100 c-image" alt="Profile">
             <div class="carousel-caption top-0 mt-4 d-md-block">
-                <p class="mt-5 fs-3 text-uppercase">Want to update your information? Click the button below to edit your profile</p>
+                <p class="mt-5 fs-3 text-uppercase">Want to update your information? Click the button below to edit your
+                    profile</p>
                 <h1 class="display-1 fw-bolder text-capitalize">Profile</h1>
                 <a href="{% url 'profile' user.username %}" class="btn btn-primary px-4 py-2 fs-5 mt-5">Profile</a>
             </div>
         </div>
+        {% else %}
+        <div class="carousel-item active c-item">
+            <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678366506/yvnhq6mywusgjz0dgoxl.jpg"
+                class="d-block w-100 c-image" alt="Add a Blog">
+            <div class="carousel-caption top-0 mt-4 d-md-block">
+                <p class="mt-5 fs-3 text-uppercase">See what people are saying. Click the button below to view all blog
+                    posts</p>
+                <h1 class="display-1 fw-bolder text-capitalize">Blogs</h1>
+                <a href="{% url 'bloglist'%}" class="btn btn-primary px-4 py-2 fs-5 mt-5">Blogs</a>
+            </div>
+        </div>
+        <div class="carousel-item c-item">
+            <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678636459/document-agreement-documents-sign-48148_ayfzwu.webp"
+                class="d-block w-100 c-image" alt="Sign Up">
+            <div class="carousel-caption top-0 mt-4 d-md-block">
+                <p class="mt-5 fs-3 text-uppercase">Haven't signed up yet? Click the button below to sign up for a free
+                    account.
+                </p>
+                <h1 class="display-1 fw-bolder text-capitalize">Sign Up</h1>
+                <a href="{% url 'account_signup' %}" class="btn btn-primary px-4 py-2 fs-5 mt-5">Sign Up</a>
+            </div>
+        </div>
+        <div class="carousel-item c-item">
+            <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678636905/log-in_lwuvng.webp"
+                class="d-block w-100 c-image" alt="Log In">
+            <div class="carousel-caption top-0 mt-4 d-md-block">
+                <p class="mt-5 fs-3 text-uppercase">Already have an account? Press the login button below to add a blog post or view your profile.
+                </p>
+                <h1 class="display-1 fw-bolder text-capitalize">Log In</h1>
+                <a href="{% url 'account_login' %}" class="btn btn-primary px-4 py-2 fs-5 mt-5">Log In</a>
+            </div>
+        </div>
+        {% endif %}
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#herocarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
