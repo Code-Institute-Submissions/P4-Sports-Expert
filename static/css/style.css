@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text&family=Tilt+Warp&display=swap');
+
 body {
     margin: 0;
     max-width: 100%;
@@ -9,29 +11,7 @@ body {
 
 /* Home Page */
 
-.hero-banner {
-    border: 1px solid gray;
-    border-radius: 5px;
-    opacity: 0.9;
-    color: white;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3),
-            rgba(0, 0, 0, 0.5)),
-        url(https://res.cloudinary.com/dsdurzeu2/image/upload/v1678229012/pexels-photo-5670148_pguwbv.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    font-size: 1rem;
-}
 
-.hero-banner>p {
-    font-size: 1.5rem;
-    margin: 2rem;
-}
-
-.hero-banner>h1 {
-    font-size: 3rem;
-    margin: 0 2rem;
-}
 
 /* Carousel */
 
@@ -43,6 +23,14 @@ body {
     height: 100%;
     object-fit: cover;
     filter: brightness(0.6);
+}
+
+.carousel-caption > p {
+    font-family: 'Golos Text', sans-serif;
+}
+
+.carousel-caption > h1 {
+    font-family: 'Tilt Warp', cursive;
 }
 
 /* Blog detail page */
