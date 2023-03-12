@@ -2,23 +2,35 @@ body {
     margin: 0;
     max-width: 100%;
     overflow-x: hidden;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3),
+    background-image: linear-gradient(grey, black); 
+}
+
+
+
+/* Home Page */
+
+.hero-banner {
+    border: 1px solid gray;
+    border-radius: 5px;
+    opacity: 0.9;
+    color: white;
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.3),
             rgba(0, 0, 0, 0.5)),
-        url(https://res.cloudinary.com/dsdurzeu2/image/upload/v1678229012/pexels-photo-5670148_pguwbv.jpg);
+        url(https://res.cloudinary.com/dsdurzeu2/image/upload/v1678229012/pexels-photo-5670148_pguwbv.jpg); 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    font-size: 1rem;
 }
 
-/* Home Page */
-.hero-text {
-    border: 1px solid gray;
-    border-radius: 5px;
-    margin: 1rem;
-    background-color: darkgray;
-    color: white;
-
+.hero-banner > p {
+    font-size: 1.5rem;
 }
+
+.hero-banner > h1 {
+    font-size: 3rem;
+}
+
 
 /* Blog detail page */
 #blog-form {
@@ -64,7 +76,7 @@ body {
 #profile-cont {
     border: 3px solid gray;
     border-radius: 5px;
-    background-color: darkgray;
+    background-color: #8FBC8F;
     color: white;
     margin: 2rem 2rem;
     padding: 0 12px;
@@ -73,16 +85,13 @@ body {
 #profile-hero-text {
     margin-bottom: 2rem;
     border-bottom: 3px solid gray;
-    background-color: cornflowerblue
-}
-
-.btn-group {
-    margin-right: 4px;
+    background-color: #7CB9E8
 }
 
 /* Forms */
 #blog-form {
     margin: 2rem;
+    background-color: aliceblue;
 }
 
 #profile-form {
@@ -93,8 +102,7 @@ body {
     border: 3px solid gray;
     border-radius: 5px;
     margin: 5rem;
-    background-color: darkgray;
-    color: white;
+    background-color: #8FBC8F color: white;
 }
 
 #logout-btn {
@@ -107,7 +115,7 @@ body {
     border: 3px solid gray;
     border-radius: 5px;
     margin: 5rem;
-    background-color: darkgray;
+    background-color: #8FBC8F;
     color: white;
 }
 
@@ -121,11 +129,10 @@ body {
     border: 3px solid gray;
     border-radius: 10px;
     margin: 5rem;
-    background-color: darkgray;
+    background-color: #8FBC8F;
     color: white;
     width: 60vw;
     display: flex;
     justify-content: center;
-    
-}
 
+}

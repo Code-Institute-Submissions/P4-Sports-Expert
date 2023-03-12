@@ -1,21 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<div class="container">
-    <div class="row text-center hero-text">
-        <h1>Welcome to sports expert!</h1>
-        <p>Where like minded sports fanatics can share, compare and discuss all things sports<br>
-            Whether its GAA, Football or Rugby you can find it all here.<br>
-            NB: Please respect community guidelines when commenting on Posts.
-        </p>
+<div class="container text-center hero-banner">
+    <h1 class="hero-text">Welcome to sports expert!</h1>
+    <p>Where like minded sports fanatics can share, compare and discuss all things sports<br>
+        Whether its GAA, Football or Rugby you can find it all here.<br>
+        NB: Please respect community guidelines when commenting on Posts.
+    </p>
+</div>
+<div class="row text-center">
+    <div class="col-12">
+        <a href="{% url 'bloglist'%}" class="btn btn-primary">Blogs</a>
+        <a href="{% url 'add_blog'%}" class="btn btn-primary">Add a blog post</a>
     </div>
-    <div class="row text-center">
-        <div class="col-12">
-            <a href="{% url 'bloglist'%}" class="btn btn-primary">Blogs</a>
-            <a href="{% url 'add_blog'%}" class="btn btn-primary">Add a blog post</a>
-        </div>
-    </div>
+</div>
+</div>
 
 
 
