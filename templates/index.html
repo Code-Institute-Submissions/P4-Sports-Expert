@@ -1,20 +1,53 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container text-center hero-banner">
-    <h1 class="hero-text">Welcome to sports expert!</h1>
-    <p>Where like minded sports fanatics can share, compare and discuss all things sports<br>
-        Whether its GAA, Football or Rugby you can find it all here.<br>
-        NB: Please respect community guidelines when commenting on Posts.
-    </p>
-</div>
-<div class="row text-center">
-    <div class="col-12">
-        <a href="{% url 'bloglist'%}" class="btn btn-primary">Blogs</a>
-        <a href="{% url 'add_blog'%}" class="btn btn-primary">Add a blog post</a>
+<div id="herocarousel" class="carousel slide">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#herocarousel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#herocarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#herocarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active c-item">
+            <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678465016/pexels-photo-768474_skgnuc.webp"
+                class="d-block w-100 c-image" alt="Blogs">
+            <div class="carousel-caption top-0 mt-4 d-md-block">
+                <p class="mt-5 fs-3 text-uppercase">Something to say? Click The button below to add your own blog post.</p>
+                <h1 class="display-1 fw-bolder text-capitalize">Add a blog</h1>
+                <a href="{% url 'add_blog'%}" class="btn btn-primary px-4 py-2 fs-5 mt-5">Add a Blog</a>
+            </div>
+        </div>
+        <div class="carousel-item c-item">
+            <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678366506/yvnhq6mywusgjz0dgoxl.jpg"
+                class="d-block w-100 c-image" alt="Add a Blog">
+            <div class="carousel-caption top-0 mt-4 d-md-block">
+                <p class="mt-5 fs-3 text-uppercase">See what people are saying. Click the button below to view all blog
+                    posts</p>
+                <h1 class="display-1 fw-bolder text-capitalize">Blogs</h1>
+                <a href="{% url 'bloglist'%}" class="btn btn-primary px-4 py-2 fs-5 mt-5">Blogs</a>
+            </div>
+        </div>
+        <div class="carousel-item c-item">
+            <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678634761/profile_sqffnn.webp"
+                class="d-block w-100 c-image" alt="Profile">
+            <div class="carousel-caption top-0 mt-4 d-md-block">
+                <p class="mt-5 fs-3 text-uppercase">Want to update your information? Click the button below to edit your profile</p>
+                <h1 class="display-1 fw-bolder text-capitalize">Profile</h1>
+                <a href="{% url 'profile' user.username %}" class="btn btn-primary px-4 py-2 fs-5 mt-5">Profile</a>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#herocarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#herocarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
-</div>
+
 
 
 
