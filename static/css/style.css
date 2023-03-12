@@ -11,6 +11,22 @@ body {
 
 /* Home Page */
 
+.logged-user {
+    color: white;
+    justify-content: center;
+    margin-left: 0;
+}
+
+.container-fluid > a {
+    font-family: 'Tilt Warp', cursive;
+}
+
+.nav-item > a {
+    font-family: 'Tilt Warp', cursive;
+    font-weight: bolder;
+}
+
+
 
 
 /* Carousel */
