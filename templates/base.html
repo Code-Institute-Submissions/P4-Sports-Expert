@@ -15,15 +15,15 @@
 
 <body class="d-flex flex-column min-vh-100">
     <header class="nav-header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-md navbar-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{% url 'home' %}"><strong>Sports<br>Expert<strong></a>
+                <a class="navbar-brand" href="{% url 'home' %}"><strong>Sports Expert</strong></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mb-0">
+                    <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'home' %}">Home</a>
                         </li>
@@ -35,6 +35,12 @@
                             <a class="nav-link" href="{% url 'profile' user.username %}">Profile</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="{% url 'bloglist'%}">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="{% url 'add_blog'%}">Add A Blog</a>
+                        </li>
+                        <li class="nav-item">
                             <p class="nav-link" id="logged-text">Logged in as: {{ user }}</p>
                         </li>
                         {% else %}
@@ -44,23 +50,15 @@
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="{% url 'account_signup' %}">Sign Up</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="{% url 'bloglist'%}">Blogs</a>
+                        </li>
+
                         {% endif %}
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    {% for message in messages %}
-                    <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-                        {{ message | safe }}
-                        <button type="button" class="btn-close" data-ds-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
     </header>
     <main>
         {% block content %}

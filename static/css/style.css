@@ -10,11 +10,48 @@ body {
 /* Navbar */
 
 #logged-text {
-    color: blue;
-    border: 1px solid gray;
-    border-radius: 10px;
-    background-color: white;
+    color: white;
+    border-top: 2px solid #fff;
     margin: 1px;
+    font-family: 'Golos Text', sans-serif;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+}
+
+/* Navbar media query */
+@media screen and (min-width: 768px) {
+
+    .navbar .container-fluid {
+        flex-direction: column;
+    }
+
+    .navbar .navbar-nav .nav-item {
+        padding: 0.5em 1em;
+    }
+
+    .navbar-nav {
+        border-bottom: 2px solid #fff;
+    }
+
+    .navbar-brand {
+        font-size: 2.8rem;
+    }
+
+    #logged-text {
+        display: none;
+    }
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #fff;
+    font-size: 1.1em;
+}
+
+.navbar .navbar-nav {
+    border-top: 2px solid #fff;
+    margin-top: 0.5em;
 }
 
 
@@ -22,11 +59,11 @@ body {
 /* Home Page */
 
 
-.container-fluid > a {
+.container-fluid>a {
     font-family: 'Tilt Warp', cursive;
 }
 
-.nav-item > a {
+.nav-item>a {
     font-family: 'Tilt Warp', cursive;
     font-weight: bolder;
 }
@@ -46,11 +83,11 @@ body {
     filter: brightness(0.6);
 }
 
-.carousel-caption > p {
+.carousel-caption>p {
     font-family: 'Golos Text', sans-serif;
 }
 
-.carousel-caption > h1 {
+.carousel-caption>h1 {
     font-family: 'Tilt Warp', cursive;
 }
 
