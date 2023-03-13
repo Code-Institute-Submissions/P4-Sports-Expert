@@ -54,6 +54,29 @@ body {
     margin-top: 0.5em;
 }
 
+/* Footer */
+
+.footer-text {
+    color: white;
+    border-top: 2px solid #fff;
+    margin: 1rem;
+    font-size: 1.2rem;
+    font-family: 'Golos Text', sans-serif;
+}
+
+.footer-hero {
+    color: white;
+    margin: 1rem;
+    font-size: 1.2rem;
+    font-family: 'Golos Text', sans-serif;
+}
+
+.icon-item {
+    color: white;
+    font-size: 2rem;
+    margin: 1rem;
+}
+
 
 
 /* Home Page */
