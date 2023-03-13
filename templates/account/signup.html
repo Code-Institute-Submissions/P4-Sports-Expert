@@ -6,7 +6,7 @@
 
 {% block content %}
 
-<div class="mx-auto col-10 col-md-8 col-lg-6 text-center">
+<div class="mx-auto col-10 col-md-8 col-lg-6 text-center" id="signup-form">
   <h1>{% trans "Sign Up" %}</h1>
   <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
   <form class="form-control" id="signup_form" method="post" action="{% url 'account_signup' %}">

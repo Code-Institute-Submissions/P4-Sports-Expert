@@ -203,25 +203,37 @@ body {
 }
 
 #sign-out {
-    border: 3px solid gray;
-    border-radius: 5px;
+    border: 3px solid #fff;
+    border-radius: 10px;
     margin: 5rem;
-    background-color: #8FBC8F;
-    color: #fff;
+    font-family: 'Tilt Warp', cursive;
+    color: white;
 }
 
 #logout-btn {
     margin: 1rem;
 }
 
+#signup-form {
+    border: 3px solid #fff;
+    border-radius: 10px;
+    margin: 5rem;
+    color: white;
+    justify-content: center;
+    padding: 2rem;
+    font-size: 1rem;
+}
+
 
 /* Login Page */
 #login-form {
-    border: 3px solid gray;
-    border-radius: 5px;
+    border: 3px solid #fff;
+    border-radius: 10px;
     margin: 5rem;
-    background-color: #8FBC8F;
     color: white;
+    justify-content: center;
+    padding: 2rem;
+    font-size: 1rem;
 }
 
 #login-btn {
@@ -231,10 +243,10 @@ body {
 /* General message containers */
 
 #text-containers {
-    border: 3px solid gray;
+    border: 3px solid #fff;
     border-radius: 10px;
     margin: 5rem;
-    background-color: #8FBC8F;
+    font-family: 'Tilt Warp', cursive;
     color: white;
     width: 60vw;
     display: flex;
