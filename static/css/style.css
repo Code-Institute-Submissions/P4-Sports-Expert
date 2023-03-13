@@ -160,17 +160,37 @@ body {
 #profile-cont {
     border: 3px solid gray;
     border-radius: 5px;
-    background-color: #8FBC8F;
-    color: white;
-    margin: 2rem 2rem;
-    padding: 0 12px;
+    color: #696969;
+    font-family: 'Golos Text', sans-serif;
+    margin-top: 2rem;
+    padding: 12px;
+    background-color: #D3D3D3;    
+}
+
+#profile-image {
+    border-bottom: 3px solid gray;
+    padding-bottom: 2rem;
+}
+
+#profile-image > img {
+    border-radius: 50%;
 }
 
 #profile-hero-text {
     margin-bottom: 2rem;
     border-bottom: 3px solid gray;
-    background-color: #7CB9E8
 }
+
+.profile-item {
+    border-bottom: 3px solid gray;
+    margin-top: 1rem;
+    font-family: 'Tilt Warp', cursive;
+}
+
+#profile-btns {
+    padding-top: 15px;
+}
+
 
 /* Forms */
 #blog-form {

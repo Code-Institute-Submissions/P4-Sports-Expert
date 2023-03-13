@@ -8,8 +8,8 @@
         <div class="row text-center" id="profile-hero-text">
             <h1>My Profile</h1>
         </div>
-        <div class="row text-center" id="blog-image">
-            <div class="col justify-content-center">
+        <div class="row text-center" id="profile-image">
+            <div class="col-12 justify-content-center mb-2" id="profile-image">
                 {% if "placeholder" in profile.image.url %}
                 <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678279560/profile-placeholder_bkm8nk.webp"
                     alt="placeholder-image">
@@ -18,18 +18,23 @@
                 {% endif %}
             </div>
         </div>
-        <div class="row text-center">
+        <div class="row text-center profile-item text-capitalize">
             <h2>Username: {{ profile.user.username }}</h2>
         </div>
-        <div class="row text-center">
+        <div class="row text-center profile-item text-capitalize">
             <h3>Name: {{ profile.name }}</h2>
-            <h3>About: {{ profile.about }}</h3>
-            <h3>Profile Created: {{ profile.date_joined }}</h3>
-            <h3>Last Updated: {{ profile.last_updated }}</h3>
-
         </div>
-        <div class="row text-center">
-            <div class="btn-group justify-content-center" role="group" aria-label="Basic mixed styles example">
+        <div class="row text-center profile-item text-capitalize">
+            <h3>About: {{ profile.about }}</h3>
+        </div>
+        <div class="row text-center profile-item text-capitalize">
+            <h3>Profile Created: {{ profile.date_joined }}</h3>
+        </div>
+        <div class="row text-center profile-item text-capitalize">
+            <h3>Last Updated: {{ profile.last_updated }}</h3>
+        </div>
+        <div class="row">
+            <div class="btn-group col-12" id="profile-btns" role="group" aria-label="Profile buttons">
                 <a href=" {% url 'myblogs' %}" class="btn btn-warning">My Blogs</a>
                 <a href=" {% url 'home' %}" class="btn btn-success">Home</a>
                 <a href=" {% url 'edit_profile' profile.pk %}" class="btn btn-danger">Edit Profile</a>
