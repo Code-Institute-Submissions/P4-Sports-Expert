@@ -82,16 +82,18 @@ body {
 /* Home Page */
 
 
-.container-fluid>a {
+.container-fluid > a {
     font-family: 'Tilt Warp', cursive;
 }
 
-.nav-item>a {
+.nav-item > a {
     font-family: 'Tilt Warp', cursive;
     font-weight: bolder;
 }
 
-
+.hero-text {
+    font-family: 'Golos Text', sans-serif;
+}
 
 
 /* Carousel */
@@ -184,7 +186,8 @@ body {
     border: 3px solid gray;
     border-radius: 5px;
     margin: 5rem;
-    background-color: #8FBC8F color: white;
+    background-color: #8FBC8F;
+    color: #fff;
 }
 
 #logout-btn {
