@@ -7,15 +7,20 @@ body {
     background-image: linear-gradient(grey, black);
 }
 
+/* Navbar */
+
+#logged-text {
+    color: blue;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: white;
+    margin: 1px;
+}
+
 
 
 /* Home Page */
 
-.logged-user {
-    color: white;
-    justify-content: center;
-    margin-left: 0;
-}
 
 .container-fluid > a {
     font-family: 'Tilt Warp', cursive;

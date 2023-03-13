@@ -1,14 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container">
-    <div class="row logged-user">
-            {% if user.is_authenticated %}
-            <p>Logged in as: {{ user }}</p>
-            {% endif %}
-        </div>
-    </div>
-</div>
+
 
 <div id="herocarousel" class="carousel slide">
     <div class="carousel-indicators">
@@ -75,8 +68,7 @@
             <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678636905/log-in_lwuvng.webp"
                 class="d-block w-100 c-image" alt="Log In">
             <div class="carousel-caption top-0 mt-4 d-md-block">
-                <p class="mt-5 fs-3 text-uppercase">Already have an account? Press the login button below to add a blog
-                    post or view your profile.
+                <p class="mt-5 fs-3 text-uppercase">Already have an account? Press the login button below.
                 </p>
                 <h1 class="display-1 fw-bolder text-capitalize">Log In</h1>
                 <a href="{% url 'account_login' %}" class="btn btn-primary px-4 py-2 fs-5 mt-5">Log In</a>
