@@ -14,6 +14,13 @@
     <title>Sports Blog</title>
 </head>
 
+{% url 'home' as home %}
+{% url 'account_logout' as logout %}
+{% url 'bloglist' as bloglist %}
+{% url 'add_blog' as add_blog %}
+{% url 'account_login' as login %}
+{% url 'account_signup' as signup %}
+
 <body class="d-flex flex-column min-vh-100">
     <header class="nav-header">
         <nav class="navbar navbar-expand-md navbar-dark">
@@ -26,33 +33,33 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'home' %}">Home</a>
+                            <a class="nav-link {% if request.path == home %} active {% endif %}"  href="{% url 'home' %}">Home</a>
                         </li>
                         {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'account_logout' %}">Log Out</a>
+                            <a class="nav-link {% if request.path == logout %} active {% endif %}" href="{% url 'account_logout' %}">Log Out</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'profile' user.username %}">Profile</a>
+                            <a class="nav-link {% if request.resolver_match.url_name == 'profile' %}active{% endif %}" href="{% url 'profile' user.username %}">Profile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="{% url 'bloglist'%}">Blogs</a>
+                            <a class="nav-link {% if request.path == bloglist %} active {% endif %}" aria-current="page" href="{% url 'bloglist'%}">Blogs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="{% url 'add_blog'%}">Add A Blog</a>
+                            <a class="nav-link {% if request.path == add_blog %} active {% endif %}" aria-current="page" href="{% url 'add_blog'%}">Add A Blog</a>
                         </li>
                         <li class="nav-item">
                             <p class="nav-link" id="logged-text">Logged in as: {{ user }}</p>
                         </li>
                         {% else %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'account_login' %}">Log In</a>
+                            <a class="nav-link {% if request.path == login %} active {% endif %}" href="{% url 'account_login' %}">Log In</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="{% url 'account_signup' %}">Sign Up</a>
+                            <a class="nav-link {% if request.path == signup %} active {% endif %}" aria-current="page" href="{% url 'account_signup' %}">Sign Up</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="{% url 'bloglist'%}">Blogs</a>
+                            <a class="nav-link {% if request.path == bloglist %} active {% endif %}" aria-current="page" href="{% url 'bloglist'%}">Blogs</a>
                         </li>
 
                         {% endif %}

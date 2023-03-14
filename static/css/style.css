@@ -24,6 +24,11 @@ strong {
     font-size: 3rem;
 }
 
+.active {
+    text-decoration: underline blue 5px;
+}
+
+
 /* Navbar media query */
 @media screen and (min-width: 768px) {
 
@@ -46,6 +51,7 @@ strong {
     #logged-text {
         display: none;
     }
+
 }
 
 .navbar .navbar-nav .nav-link {
@@ -100,7 +106,7 @@ strong {
     font-weight: bolder;
 }
 
-.hero-text > h1 {
+.hero-text>h1 {
     font-family: 'Tilt Warp', cursive;
     font-size: 3rem;
     margin-top: 1.5rem;
@@ -108,7 +114,7 @@ strong {
     font-weight: bolder;
 }
 
-.hero-text > p {
+.hero-text>p {
     font-family: 'Golos Text', sans-serif;
     font-size: 1.6rem;
     margin: 0 1rem;
@@ -116,6 +122,8 @@ strong {
 
 
 /* Carousel */
+
+
 
 .c-item {
     height: 480px;
