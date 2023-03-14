@@ -201,6 +201,17 @@ strong {
     color: #fff;
 }
 
+.card-title {
+    font-family: 'Tilt Warp', cursive;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+.card-text {
+    font-family: 'Golos Text', sans-serif; 
+    font-weight: bolder;
+}
+
 
 /* Profile page */
 
