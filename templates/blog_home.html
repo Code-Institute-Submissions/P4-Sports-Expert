@@ -5,7 +5,7 @@
 <div class="row justify-content-center">
     {% for blog in object_list %}
     <div class="col-md-6 col-lg-4" id="blog-card">
-        <div class="card mt-4 mr-4">
+        <div class="card mt-4">
             {% if "placeholder" in blog.blog_image.url %}
             <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678132670/the-ball-stadion-football-the-pitch-46798_nimtac.jpg"
                 alt="placeholder-image" class="card-img-top">
@@ -32,4 +32,31 @@
 
     {% endfor %}
 
-    {% endblock %}
+    <div class="pagination" id="page-btns">
+        <div class=" container step-links">
+            <div class="row text-center">
+                <div class="col-12">
+                    {% if page_obj.has_previous %}
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <a href="?page=1" class="btn btn-primary m-3">First</a>
+                        <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-primary m-3">previous</a>
+                    </div>
+                    {% endif %}
+
+                    {% if page_obj.has_next %}
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <a href="?page={{ page_obj.next_page_number }}" class="btn btn-primary m-3">next</a>
+                        <a href="?page={{ page_obj.paginator.num_pages }}" class="btn btn-primary m-3">last</a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="current text-center mt-4">
+        <h3>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</h3>
+    </div>
+</div>
+</div>
+
+{% endblock %}

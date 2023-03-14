@@ -25,7 +25,7 @@ strong {
 }
 
 .active {
-    text-decoration: underline blue 5px;
+    text-decoration: underline #fff 4px;
 }
 
 
@@ -179,6 +179,26 @@ strong {
 /* Blog Home Page */
 .card {
     margin: 2rem;
+}
+
+#page-btns {
+    justify-content: center;
+    font-size: 2rem;
+    color: #fff;
+}
+
+#page-btns a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.current > h3 {
+    font-size: 2rem;
+    font-family: 'Golos Text', sans-serif;
+    color: #fff;
 }
 
 

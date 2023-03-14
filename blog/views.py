@@ -13,6 +13,7 @@ from .forms import BlogForm
 class BlogList(ListView):
     model = BlogPost
     template_name = 'blog_home.html'
+    paginate_by = 6
 
 
 class BlogDetail(DetailView):
