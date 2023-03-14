@@ -20,6 +20,10 @@ body {
     font-size: 2rem;
 }
 
+strong {
+    font-size: 3rem;
+}
+
 /* Navbar media query */
 @media screen and (min-width: 768px) {
 
@@ -56,9 +60,13 @@ body {
 
 /* Footer */
 
+.footer {
+    border-top: 3px solid #fff;
+    margin-top: 5rem;
+}
+
 .footer-text {
     color: white;
-    border-top: 2px solid #fff;
     margin: 1rem;
     font-size: 1.2rem;
     font-family: 'Golos Text', sans-serif;
@@ -67,7 +75,8 @@ body {
 .footer-hero {
     color: white;
     margin: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    padding-top: 2rem;
     font-family: 'Golos Text', sans-serif;
 }
 
@@ -82,17 +91,27 @@ body {
 /* Home Page */
 
 
-.container-fluid > a {
+.container-fluid>a {
     font-family: 'Tilt Warp', cursive;
 }
 
-.nav-item > a {
+.nav-item>a {
     font-family: 'Tilt Warp', cursive;
     font-weight: bolder;
 }
 
-.hero-text {
+.hero-text > h1 {
+    font-family: 'Tilt Warp', cursive;
+    font-size: 3rem;
+    margin-top: 1.5rem;
+    padding-bottom: 1rem;
+    font-weight: bolder;
+}
+
+.hero-text > p {
     font-family: 'Golos Text', sans-serif;
+    font-size: 1.6rem;
+    margin: 0 1rem;
 }
 
 
@@ -164,7 +183,7 @@ body {
     font-family: 'Golos Text', sans-serif;
     margin-top: 2rem;
     padding: 12px;
-    background-color: #D3D3D3;    
+    background-color: #D3D3D3;
 }
 
 #profile-image {
@@ -172,7 +191,7 @@ body {
     padding-bottom: 2rem;
 }
 
-#profile-image > img {
+#profile-image>img {
     border-radius: 50%;
 }
 
