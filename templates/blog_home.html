@@ -6,9 +6,15 @@
     {% for blog in object_list %}
     <div class="col-md-6 col-lg-4" id="blog-card">
         <div class="card mt-4">
-            {% if "placeholder" in blog.blog_image.url %}
+            {% if "placeholder" in blog.blog_image.url and blog.category == "Football" %}
             <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678132670/the-ball-stadion-football-the-pitch-46798_nimtac.jpg"
                 alt="placeholder-image" class="card-img-top">
+            {% elif "placeholder" in blog.blog_image.url and blog.category == "GAA"%}
+            <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678833173/static/css/the-gaa-a-community-more-than-a-sporting-organisation_mkrkfd.webp"
+                alt="placeholder-image" class="card-img-top">
+                {% elif "placeholder" in blog.blog_image.url and blog.category == "Rugby"%}
+                <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678833501/pexels-photo-6373836_tqigji.jpg"
+                    alt="placeholder-image" class="card-img-top">        
             {% else %}
             <img src="{{ blog.blog_image.url }}" alt="user-upload-image" class="card-img-top">
             {% endif %}
