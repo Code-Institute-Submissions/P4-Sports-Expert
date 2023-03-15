@@ -28,6 +28,11 @@ strong {
     text-decoration: underline #fff 4px;
 }
 
+.messages {
+    position: absolute;
+    color: black;
+}
+
 
 /* Navbar media query */
 @media screen and (min-width: 768px) {

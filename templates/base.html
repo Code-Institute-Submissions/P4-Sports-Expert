@@ -23,6 +23,18 @@
 
 <body class="d-flex flex-column min-vh-100">
     <header class="nav-header">
+        <div class="container messages">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 messages">
+                    {% for message in messages %}
+                    <div class="alert {{ message.tags }} alert-dismissible fade show justify-content-center" id="msg" role="alert">
+                        {{ message | safe }}
+                        <button type="button" class="btn-close" data-ds-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
         <nav class="navbar navbar-expand-md navbar-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{% url 'home' %}"><strong>Sports Expert</strong></a>
@@ -33,35 +45,42 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == home %} active {% endif %}"  href="{% url 'home' %}">Home</a>
+                            <a class="nav-link {% if request.path == home %} active {% endif %}"
+                                href="{% url 'home' %}">Home</a>
                         </li>
                         {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == logout %} active {% endif %}" href="{% url 'account_logout' %}">Log Out</a>
+                            <a class="nav-link {% if request.path == logout %} active {% endif %}"
+                                href="{% url 'account_logout' %}">Log Out</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.resolver_match.url_name == 'profile' %}active{% endif %}" href="{% url 'profile' user.username %}">Profile</a>
+                            <a class="nav-link {% if request.resolver_match.url_name == 'profile' %}active{% endif %}"
+                                href="{% url 'profile' user.username %}">Profile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == bloglist %} active {% endif %}" aria-current="page" href="{% url 'bloglist'%}">Blogs</a>
+                            <a class="nav-link {% if request.path == bloglist %} active {% endif %}" aria-current="page"
+                                href="{% url 'bloglist'%}">Blogs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == add_blog %} active {% endif %}" aria-current="page" href="{% url 'add_blog'%}">Add A Blog</a>
+                            <a class="nav-link {% if request.path == add_blog %} active {% endif %}" aria-current="page"
+                                href="{% url 'add_blog'%}">Add A Blog</a>
                         </li>
                         <li class="nav-item">
                             <p class="nav-link" id="logged-text">Logged in as: {{ user }}</p>
                         </li>
                         {% else %}
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == login %} active {% endif %}" href="{% url 'account_login' %}">Log In</a>
+                            <a class="nav-link {% if request.path == login %} active {% endif %}"
+                                href="{% url 'account_login' %}">Log In</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == signup %} active {% endif %}" aria-current="page" href="{% url 'account_signup' %}">Sign Up</a>
+                            <a class="nav-link {% if request.path == signup %} active {% endif %}" aria-current="page"
+                                href="{% url 'account_signup' %}">Sign Up</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == bloglist %} active {% endif %}" aria-current="page" href="{% url 'bloglist'%}">Blogs</a>
+                            <a class="nav-link {% if request.path == bloglist %} active {% endif %}" aria-current="page"
+                                href="{% url 'bloglist'%}">Blogs</a>
                         </li>
-
                         {% endif %}
                     </ul>
                 </div>
@@ -89,11 +108,11 @@
                 <a href="https://www.twitter.com/" target="_blank" rel="noopener"
                     aria-label="Visit our twitter. opens in new tab" class="icon-item">
                     <i class="fa-brands fa-twitter"></i></a>
-                <a  href="https://instagram.com" target="_blank" rel="noopener"
+                <a href="https://instagram.com" target="_blank" rel="noopener"
                     aria-label="Visit our Instagram page (opens in a new tab)" class="icon-item"><i
                         class="fa-brands fa-instagram"></i></a>
-                <a  href="https://github.com/seanj06/P4-Sports-Expert" target="_blank"
-                    rel="noopener" aria-label="Visit our Github page (opens in a new tab)" class="icon-item"><i
+                <a href="https://github.com/seanj06/P4-Sports-Expert" target="_blank" rel="noopener"
+                    aria-label="Visit our Github page (opens in a new tab)" class="icon-item"><i
                         class="fa-brands fa-github"></i></a>
             </div>
         </div>

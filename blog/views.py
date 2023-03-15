@@ -26,7 +26,7 @@ class AddBlog(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     template_name = 'add_blog.html'
     form_class = BlogForm
     success_url = reverse_lazy('bloglist')
-    success_message = "Blog post created successfully"
+    success_message = "Blog post created."
 
     def get_initial(self):
         return {'created_by': self.request.user}
