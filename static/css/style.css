@@ -221,38 +221,43 @@ strong {
 /* Profile page */
 
 #profile-cont {
-    border: 3px solid gray;
+    border: 12px solid gray;
     border-radius: 5px;
     color: #696969;
     font-family: 'Golos Text', sans-serif;
     margin-top: 2rem;
-    padding: 12px;
     background-color: #D3D3D3;
 }
 
 #profile-image {
-    border-bottom: 3px solid gray;
     padding-bottom: 2rem;
 }
 
 #profile-image>img {
     border-radius: 50%;
+    justify-content: center;
+    align-items: center;
 }
 
 #profile-hero-text {
     margin-bottom: 2rem;
     border-bottom: 3px solid gray;
-}
-
-.profile-item {
-    border-bottom: 3px solid gray;
-    margin-top: 1rem;
     font-family: 'Tilt Warp', cursive;
 }
 
-#profile-btns {
-    padding-top: 15px;
+.profile-item {
+    border-top: 3px solid gray;
+    margin-top: 1rem ;
+    font-family: 'Tilt Warp', cursive;
+    justify-content: space-between;
 }
+
+.profile-item > span {
+    font-family: 'Golos Text', sans-serif;
+    margin-bottom: 1rem; 
+    font-size: 1.4rem;
+}
+
 
 
 /* Forms */
@@ -261,9 +266,7 @@ strong {
     background-color: aliceblue;
 }
 
-#profile-form {
-    margin: 2rem;
-}
+
 
 #sign-out {
     border: 3px solid #fff;
