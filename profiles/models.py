@@ -14,8 +14,12 @@ placeholder = (
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    name = models.CharField(max_length=50, null=True, blank=True)
-    about = models.TextField(max_length=200, null=True, blank=True)
+    name = models.CharField(
+        max_length=50, null=True, blank=True, default="Enter your full name"
+        )
+    about = models.TextField(
+        max_length=200, null=True, blank=True, default="Tell us about yourself"
+    )
     image = CloudinaryField('image', default='placeholder')
     blogs = models.ManyToManyField(
         BlogPost, related_name="blogs", blank=True,
