@@ -34,7 +34,8 @@ class MyBlogs(ListView):
 class EditProfile(SuccessMessageMixin, UpdateView):
     model = Profile
     template_name = 'edit_profile.html'
-    fields = ['name', 'about', 'image']
-    success_url = reverse_lazy('home')
+    form_class = ProfileForm
     success_message = "Profile edited successfully"
+    success_url = reverse_lazy('home')
+    
 
