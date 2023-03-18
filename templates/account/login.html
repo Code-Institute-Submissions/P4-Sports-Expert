@@ -9,8 +9,8 @@
 {% block content %}
 
 
-<div class="mx-auto col-10 col-md-8 col-lg-6" id="login-form">
-  <form class="login" method="POST" action="{% url 'account_login' %}">
+<div class="mx-auto col-10 col-md-8 col-lg-6">
+  <form class="login forms" method="POST" action="{% url 'account_login' %}">
     {% csrf_token %}
     {{ form|crispy }}
     {% if redirect_field_value %}

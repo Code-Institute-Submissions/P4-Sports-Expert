@@ -149,12 +149,7 @@ strong {
 }
 
 /* Blog detail page */
-#blog-form {
-    border: 1px solid grey;
-    border-radius: 5px;
-    margin: 1rem;
-    width: 60%;
-}
+
 
 #upload-img {
     width: 100%;
@@ -268,7 +263,8 @@ strong {
 
 
 /* Forms */
-#blog-form {
+
+.forms {
     border-radius: 10px;
     color: black;
     font-family: 'Golos Text', sans-serif;
@@ -279,7 +275,27 @@ strong {
     width: 100%;
 }
 
-#delete-form {
+
+
+/* General message containers */
+
+#text-containers {
+    border: 3px solid gray;
+    border-radius: 10px;
+    margin: 5rem;
+    background-color: #D3D3D3;
+    font-family: 'Tilt Warp', cursive;
+    color: black;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+}
+
+#text-containers > h1 {
+    color: black;
+}
+
+.confirmation {
     border-radius: 5px;
     color: black;
     font-family: 'Golos Text', sans-serif;
@@ -287,75 +303,4 @@ strong {
     padding: 2em;
     background-color: #D3D3D3;
     border: 4px solid gray;
-}
-
-
-
-
-
-#sign-out {
-    border: 3px solid #fff;
-    border-radius: 5px;
-    margin: 3rem auto;
-    font-family: 'Golos Text', sans-serif;
-    color: black;
-    background-color: #D3D3D3;
-    border: 4px solid gray;
-}
-
-#logout-btn {
-    margin: 1rem;
-}
-
-#signup-form {
-    border-radius: 5px;
-    color: black;
-    font-family: 'Golos Text', sans-serif;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: #D3D3D3;
-    border: 4px solid gray;
-    width: 100%;
-}
-
-#signup-cont {
-    border-radius: 5px;
-    color: #696969;
-    font-family: 'Golos Text', sans-serif;
-    margin-top: 2rem;
-    background-color: #D3D3D3;
-    border: 4px solid gray;
-    font-size: 1.5rem;
-}
-
-
-/* Login Page */
-#login-form {
-    border: 3px solid #fff;
-    border-radius: 5px;
-    margin: 3rem auto;
-    font-family: 'Golos Text', sans-serif;
-    color: black;
-    background-color: #D3D3D3;
-    border: 4px solid gray;
-    padding: 2rem;
-    font-size: 1.5rem;
-}
-
-#login-btn {
-    margin: 1rem;
-}
-
-/* General message containers */
-
-#text-containers {
-    border: 3px solid #fff;
-    border-radius: 10px;
-    margin: 5rem;
-    font-family: 'Tilt Warp', cursive;
-    color: white;
-    width: 60vw;
-    display: flex;
-    justify-content: center;
-
 }

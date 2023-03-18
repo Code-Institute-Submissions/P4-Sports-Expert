@@ -18,7 +18,7 @@ class ProfileView(DetailView):
         profile = Profile.objects.get(user=user)
 
         context = {
-        "profile": profile,
+            "profile": profile,
         }
 
         return render(request, self.template_name, context)
