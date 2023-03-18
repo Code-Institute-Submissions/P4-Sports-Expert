@@ -9,17 +9,19 @@ from .forms import ProfileForm
 from django.contrib.auth.models import User
 
 
-@login_required()
-def profile(request, username):
-    user = get_object_or_404(User, username=username)
-    
-    profile = Profile.objects.get(user=user)
-    
-    context = {
+class ProfileView(DetailView):
+    model = Profile
+    template_name = 'profile.html'
+
+    def get(self, request, username):
+        user = get_object_or_404(User, username=username)
+        profile = Profile.objects.get(user=user)
+
+        context = {
         "profile": profile,
         }
 
-    return render(request, "profile.html", context)
+        return render(request, self.template_name, context)
 
 
 class MyBlogs(ListView):
@@ -37,5 +39,4 @@ class EditProfile(SuccessMessageMixin, UpdateView):
     form_class = ProfileForm
     success_message = "Profile edited successfully"
     success_url = reverse_lazy('home')
-    
 
