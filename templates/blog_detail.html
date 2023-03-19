@@ -20,7 +20,7 @@
                 {% if "placeholder" in object.blog_image.url %}
                 <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678132670/the-ball-stadion-football-the-pitch-46798_nimtac.jpg"
                     alt="placeholder-image" class="card-img-top">
-                {% else %}    
+                {% else %}
                 <img src="{{ object.blog_image.url }}" alt="user-upload-image" id="upload-img">
                 {% endif %}
             </div>
@@ -31,6 +31,14 @@
         <div class="row text-center">
             <div class="col-12">
                 <a href="{% url 'home'%}" class="btn btn-primary" id="blog-btn">Home</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row text-center">
+                <h1>Comments</h1>
+            </div>
+            <div class="row text-center">
+                <a href="#">Add a comment</h2>
             </div>
         </div>
     </div>

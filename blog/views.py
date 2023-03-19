@@ -6,7 +6,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from django.views.generic import DeleteView
 from django.urls import reverse_lazy
 from cloudinary.forms import cl_init_js_callbacks
-from .models import BlogPost
+from .models import BlogPost, Comments
 from .forms import BlogForm
 
 
@@ -30,6 +30,13 @@ class AddBlog(LoginRequiredMixin, SuccessMessageMixin, CreateView):
 
     def get_initial(self):
         return {'created_by': self.request.user}
+
+
+class AddComment(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+    model = Comments
+    template_name = 'add_comment.html'
+    success_url = reverse_lazy('bloglist')
+    success_message = "Comment added."       
 
 
 class EditBlog(SuccessMessageMixin, UpdateView):
