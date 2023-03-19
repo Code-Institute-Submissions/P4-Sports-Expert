@@ -51,10 +51,10 @@ class DeleteBlog(DeleteView):
         return super(DeleteBlog, self).delete(request, *args, **kwargs)
 
 
-def categorylist(request, category):
-    categories = BlogPost.objects.filter(category=category)
+def CategoryView(request, cats):
+    category_posts = BlogPost.objects.filter(category=cats)
     context = {
-        'category': category,
-        'categories': categories
+        'cats': cats,
+        'category_posts': category_posts
     }
     return render(request, 'categories.html', context)    

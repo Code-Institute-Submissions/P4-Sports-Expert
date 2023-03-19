@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="row">
+    <h1>Filter By Category</h1>
+</div>
 
 <div class="row justify-content-center">
     {% for blog in object_list %}
@@ -22,7 +25,7 @@
                 <h5 class="card-title">Author: {{ blog.created_by }}</h5>
                 <p class="card-text"> Title: {{ blog.title }}</p>
                 <p class="card-text"> Posted: {{ blog.date_created }}</p>
-                <p class="card-text"> Category: {{ blog.category }}</p>    
+                <a href="{% url 'category' blog.category %}" class="card-text"> Category: {{ blog.category }}</p>    
             </div>
             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                 {% if request.user == blog.created_by %}

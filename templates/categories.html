@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-{{ categories}}
+{{ cats }}
+
+
 <div class="row justify-content-center">
-    {% for blog in object_list %}
+    {% for post in category_posts %}
     <div class="col-md-6 col-lg-4" id="blog-card">
         <div class="card mt-4">
             {% if "placeholder" in blog.blog_image.url and blog.category == "Football" %}
@@ -24,15 +26,7 @@
                 <p class="card-text"> Posted: {{ blog.date_created }}</p>
                 <p class="card-text"> Category: {{ blog.category }}</p>    
             </div>
-            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                {% if request.user == blog.created_by %}
-                <a href="{% url 'delete_blog' blog.pk %}" class="btn btn-danger">Delete</a>
-                <a href="{% url 'edit_blog' blog.pk %}" class="btn btn-warning">Edit</a>
-                <a href=" {% url 'blog_detail' blog.pk %}" class="btn btn-success">Blog</a>
-                {% else %}
-                <a href=" {% url 'blog_detail' blog.pk %}" class="btn btn-success">Blog</a>
-                {% endif %}
-            </div>
+            
         </div>
     </div>
 
@@ -66,5 +60,7 @@
     </div>
 </div>
 </div>
+
+
 
 {% endblock %}
