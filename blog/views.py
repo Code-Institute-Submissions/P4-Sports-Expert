@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, reverse
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin 
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
@@ -40,6 +40,17 @@ class BlogDetail(DetailView):
         return context
 
 
+class DeleteComment(DeleteView):
+    model = Comments
+    template_name = 'delete_comment.html'
+    success_url = reverse_lazy('bloglist')
+    success_message = "Comment deleted successfully"
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, self.success_message)
+        return super(DeleteComment, self).delete(request, *args, **kwargs)
+
+
 class AddBlog(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = BlogPost
     template_name = 'add_blog.html'
@@ -49,14 +60,6 @@ class AddBlog(LoginRequiredMixin, SuccessMessageMixin, CreateView):
 
     def get_initial(self):
         return {'created_by': self.request.user}
-
-
-class AddComment(LoginRequiredMixin, SuccessMessageMixin, CreateView):
-    model = Comments
-    template_name = 'add_comment.html'
-    success_url = reverse_lazy('bloglist')
-    success_message = "Comment added."
-    fields = '__all__'      
 
 
 class EditBlog(SuccessMessageMixin, UpdateView):
