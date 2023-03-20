@@ -44,6 +44,7 @@
             </div>
             {% endfor %}
         </div>
+        {% if user.is_authenticated%}
         <div class="mx-auto col-10 col-md-8 col-lg-6" id="blog-container">
             <form class="form-control forms" method="post" enctype="multipart/form-data">
                 {% csrf_token%}
@@ -53,6 +54,7 @@
                 </div>
             </form>
         </div>
+        {% endif %}
         <div class="row text-center">
             <div class="col-12">
                 <a href="{% url 'home'%}" class="btn btn-primary" id="blog-btn">Home</a>
