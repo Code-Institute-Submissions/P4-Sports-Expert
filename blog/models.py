@@ -37,7 +37,7 @@ class Comments(models.Model):
         BlogPost, related_name="comments", on_delete=models.CASCADE,
         )
     comment = models.TextField(null=True, blank=False)
-    time = models.DateField(auto_now_add=True, null=True)
+    time = models.DateTimeField(auto_now_add=True, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
