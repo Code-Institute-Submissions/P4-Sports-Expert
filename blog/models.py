@@ -33,12 +33,12 @@ class BlogPost(models.Model):
 
 
 class Comments(models.Model):
-    blog_post = models.ForeignKey(
-        BlogPost, related_name="comments", on_delete=models.CASCADE
+    post = models.ForeignKey(
+        BlogPost, related_name="comments", on_delete=models.CASCADE,
         )
-    comment = models.TextField()
-    time = models.DateField(auto_now_add=True)
+    comment = models.TextField(null=True, blank=False)
+    time = models.DateField(auto_now_add=True, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"Comment by {self.user} on {self.time} on {self.blog_post.title}"
+        return f"Comment by {self.user} on {self.time}"

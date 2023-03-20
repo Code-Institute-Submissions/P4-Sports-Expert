@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from .models import BlogPost
+from .models import BlogPost, Comments
 from django import forms
 from django_summernote.widgets import SummernoteWidget
 from cloudinary.forms import CloudinaryFileField
@@ -25,5 +25,14 @@ class BlogForm(ModelForm):
             'category': forms.Select(attrs={'class': 'form-control'}),
         }
 
+
+class CommentForm(ModelForm):
+
+    class Meta:
+        model = Comments
+        fields = ('comment',)
+        widgets = {
+            'comment': forms.Textarea(attrs={'class': 'form-control'}),
+        }
 
 

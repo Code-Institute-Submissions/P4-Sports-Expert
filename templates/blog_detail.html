@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
@@ -38,11 +39,26 @@
                 <h1>Comments</h1>
             </div>
             <div class="row text-center">
-                <a href="#">Add a comment</h2>
+                {% for comment in comments%}
+                {{ comment.time }}
+                {{ comment.user}}
+                {{ comment.comment }}
+                {% endfor %}
+            </div>
+            <div class="mx-auto col-10 col-md-8 col-lg-6" id="blog-container">
+                <form class="form-control forms"  method="post" enctype="multipart/form-data">
+                    {% csrf_token%}
+                    {{ form|crispy }}
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+    
 </main>
+
 
 
 

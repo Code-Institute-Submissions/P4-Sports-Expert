@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
@@ -7,7 +7,7 @@ from django.views.generic import DeleteView
 from django.urls import reverse_lazy
 from cloudinary.forms import cl_init_js_callbacks
 from .models import BlogPost, Comments
-from .forms import BlogForm
+from .forms import BlogForm, CommentForm
 
 
 class BlogList(ListView):
@@ -19,6 +19,25 @@ class BlogList(ListView):
 class BlogDetail(DetailView):
     model = BlogPost
     template_name = 'blog_detail.html'
+    form = CommentForm
+
+    def post(self, request, *args, **kwargs):
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            post = self.get_object()
+            form.instance.user = request.user
+            form.instance.post = post
+            form.save()
+            return redirect(reverse('home'))
+
+    def get_context_data(self, **kwargs):
+        comments = Comments.objects.filter(post=self.object.id)
+        context = super().get_context_data(**kwargs)
+        context.update({
+            'form': self.form,
+            'comments': comments
+        })
+        return context
 
 
 class AddBlog(LoginRequiredMixin, SuccessMessageMixin, CreateView):
@@ -36,7 +55,8 @@ class AddComment(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = Comments
     template_name = 'add_comment.html'
     success_url = reverse_lazy('bloglist')
-    success_message = "Comment added."       
+    success_message = "Comment added."
+    fields = '__all__'      
 
 
 class EditBlog(SuccessMessageMixin, UpdateView):
