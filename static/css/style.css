@@ -317,8 +317,12 @@ strong {
     border: 1px solid gray;
     background-color: #fff;
     margin: auto;
-    max-width: 100%;
+    width: 100%;
     height: auto;
+}
+
+.comment-row {
+    margin: auto;
 }
 
 .comment-content {
@@ -330,6 +334,6 @@ strong {
 }
 
 .comment-content > p {
-    max-width: 80%;
+    
 }
 
