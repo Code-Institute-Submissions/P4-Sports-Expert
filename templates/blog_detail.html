@@ -30,33 +30,36 @@
             <p>{{ object.body }}</p>
         </div>
         <div class="row text-center">
+            <h1>Comments</h1>
+            <hr>
+        </div>
+        <div class="row">
+            {% for comment in comments%}
+            <div class="col-lg-8 mx-auto comment-cont text-center">
+                <div class="comment-content">
+                    <b>Posted By: {{ comment.user}}</b>
+                    <time> On: {{ comment.time }}</time>
+                    <p>{{ comment.comment }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="mx-auto col-10 col-md-8 col-lg-6" id="blog-container">
+            <form class="form-control forms" method="post" enctype="multipart/form-data">
+                {% csrf_token%}
+                {{ form|crispy }}
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="row text-center">
             <div class="col-12">
                 <a href="{% url 'home'%}" class="btn btn-primary" id="blog-btn">Home</a>
             </div>
         </div>
-        <div class="container">
-            <div class="row text-center">
-                <h1>Comments</h1>
-            </div>
-            <div class="row text-center">
-                {% for comment in comments%}
-                {{ comment.time }}
-                {{ comment.user}}
-                {{ comment.comment }}
-                {% endfor %}
-            </div>
-            <div class="mx-auto col-10 col-md-8 col-lg-6" id="blog-container">
-                <form class="form-control forms"  method="post" enctype="multipart/form-data">
-                    {% csrf_token%}
-                    {{ form|crispy }}
-                    <div class="col-12 text-center">
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </div>
     </div>
-    
+
 </main>
 
 
