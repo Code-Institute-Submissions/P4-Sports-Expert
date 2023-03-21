@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin 
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
@@ -28,8 +28,11 @@ class BlogDetail(DetailView):
             form.instance.user = request.user
             form.instance.post = post
             form.save()
-            return redirect(reverse('home'))
-
+            messages.success(
+                request, "Your comment has been added"
+            )
+            return redirect(request.META['HTTP_REFERER'])
+        
     def get_context_data(self, **kwargs):
         comments = Comments.objects.filter(post=self.object.id)
         context = super().get_context_data(**kwargs)
@@ -40,11 +43,11 @@ class BlogDetail(DetailView):
         return context
 
 
-class DeleteComment(DeleteView):
+class DeleteComment(DeleteView, SuccessMessageMixin):
     model = Comments
     template_name = 'delete_comment.html'
+    success_message = "Your comment has been deleted"
     success_url = reverse_lazy('bloglist')
-    success_message = "Comment deleted successfully"
 
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, self.success_message)

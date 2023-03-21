@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views.generic import ListView, DetailView, UpdateView
 from django.contrib.auth.decorators import login_required
 from django.contrib.messages.views import SuccessMessageMixin
@@ -27,6 +27,7 @@ class ProfileView(DetailView):
 class MyBlogs(ListView):
     model = BlogPost
     template_name = 'myblogs.html'
+    paginate_by = 6
 
     def get_queryset(self):
         user = self.request.user
