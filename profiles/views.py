@@ -42,5 +42,3 @@ class EditProfile(SuccessMessageMixin, UpdateView):
     
     def get_success_url(self):
         return reverse('profile', args=[self.request.user.username])
-
-
