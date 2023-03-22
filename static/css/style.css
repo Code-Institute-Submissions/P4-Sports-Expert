@@ -10,10 +10,8 @@ body {
 /* Navbar */
 
 #logged-text {
-    color: white;
+    color: lightblue;
     border-top: 2px solid #fff;
-    margin: 1px;
-    font-family: 'Golos Text', sans-serif;
 }
 
 .navbar-brand {
@@ -54,10 +52,23 @@ strong {
     }
 
     #logged-text {
-        display: none;
+        border: none
+    }
+
+    .active {
+        border-bottom: 4px solid lightblue;
+        text-decoration: none;
     }
 
 }
+
+@media screen and (min-width: 768px) and (max-width: 840px) {
+    #logged-text {
+        display: none;
+    }
+}
+
+
 
 .navbar .navbar-nav .nav-link {
     color: #fff;
