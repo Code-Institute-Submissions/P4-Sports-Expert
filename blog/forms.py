@@ -6,8 +6,13 @@ from cloudinary.forms import CloudinaryFileField
 
 
 class BlogForm(ModelForm):
-
+    """
+    Model form for creating a blog
+    """
     def __init__(self, *args, **kwargs):
+        """
+        Disables user field on form
+        """
         super().__init__(*args, **kwargs)
         self.fields['created_by'].disabled = True
 
@@ -15,7 +20,7 @@ class BlogForm(ModelForm):
         model = BlogPost
         blog_image = forms.ImageField()
         fields = (
-            'created_by', 'description', 'title', 
+            'created_by', 'description', 'title',
             'blog_image', 'body', 'category'
             )
         widgets = {
@@ -27,12 +32,12 @@ class BlogForm(ModelForm):
 
 
 class CommentForm(ModelForm):
-
+    """
+    Model form for creating a comment
+    """
     class Meta:
         model = Comments
         fields = ('comment',)
         widgets = {
             'comment': forms.Textarea(attrs={'class': 'form-control'}),
         }
-
-

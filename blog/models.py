@@ -12,6 +12,9 @@ CATEGORY = (
 
 
 class BlogPost(models.Model):
+    """
+    Database model for blogposts
+    """
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
     description = models.CharField(max_length=200)
     title = models.CharField(max_length=200)
@@ -33,6 +36,9 @@ class BlogPost(models.Model):
 
 
 class Comments(models.Model):
+    """
+    Database model for comments
+    """
     post = models.ForeignKey(
         BlogPost, related_name="comments", on_delete=models.CASCADE,
         )

@@ -11,17 +11,28 @@ from .forms import BlogForm, CommentForm
 
 
 class BlogList(ListView):
+    """
+    Renders a list view of blogposts
+    """
     model = BlogPost
     template_name = 'blog_home.html'
     paginate_by = 6
 
 
 class BlogDetail(DetailView):
+    """
+    Renders a detailview of a single blogpost
+    """
     model = BlogPost
     template_name = 'blog_detail.html'
     form = CommentForm
 
     def post(self, request, *args, **kwargs):
+        """
+        Overides post method, gives user success
+        message and redirects them back to the
+        same page.
+        """
         form = CommentForm(request.POST)
         if form.is_valid():
             post = self.get_object()
@@ -32,8 +43,12 @@ class BlogDetail(DetailView):
                 request, "Your comment has been added"
             )
             return redirect(request.META['HTTP_REFERER'])
-        
+
     def get_context_data(self, **kwargs):
+        """
+        Overides context data method to get post i.d and
+        link to comment form
+        """
         comments = Comments.objects.filter(post=self.object.id)
         context = super().get_context_data(**kwargs)
         context.update({
@@ -44,19 +59,34 @@ class BlogDetail(DetailView):
 
 
 class DeleteComment(DeleteView, SuccessMessageMixin):
+    """
+    View for deleting a comment
+    """
     model = Comments
     template_name = 'delete_comment.html'
     success_message = "Your comment has been deleted"
 
     def delete(self, request, *args, **kwargs):
+        """
+        Overides delete method and gives user
+        success message
+        """
         messages.success(self.request, self.success_message)
         return super(DeleteComment, self).delete(request, *args, **kwargs)
 
     def get_success_url(self):
+        """
+        Overides get success url method,
+        gets blog post id and redirects user
+        there
+        """
         return reverse_lazy('blog_detail', kwargs={'pk': self.object.post_id})
 
 
 class AddBlog(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+    """
+    View to add a blog
+    """
     model = BlogPost
     template_name = 'add_blog.html'
     form_class = BlogForm
@@ -64,10 +94,17 @@ class AddBlog(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     success_message = "Blog post created."
 
     def get_initial(self):
+        """
+        Pre populates created by field with
+        current logged in user
+        """
         return {'created_by': self.request.user}
 
 
 class EditBlog(SuccessMessageMixin, UpdateView):
+    """
+    View for editing a blog post
+    """
     model = BlogPost
     template_name = 'edit_blog.html'
     fields = ['description', 'title', 'blog_image', 'body', 'category']
@@ -76,20 +113,18 @@ class EditBlog(SuccessMessageMixin, UpdateView):
 
 
 class DeleteBlog(DeleteView):
+    """
+    View for deleting a blog post
+    """
     model = BlogPost
     template_name = 'delete_blog.html'
     success_url = reverse_lazy('bloglist')
     success_message = "Blog post deleted successfully"
 
     def delete(self, request, *args, **kwargs):
+        """
+        Overides delete method and gives user
+        success message
+        """
         messages.success(self.request, self.success_message)
         return super(DeleteBlog, self).delete(request, *args, **kwargs)
-
-
-def CategoryView(request, cats):
-    category_posts = BlogPost.objects.filter(category=cats)
-    context = {
-        'cats': cats,
-        'category_posts': category_posts
-    }
-    return render(request, 'categories.html', context)    
