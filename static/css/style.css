@@ -223,6 +223,12 @@ strong {
     font-weight: bolder;
 }
 
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
 
 /* Profile page */
 
