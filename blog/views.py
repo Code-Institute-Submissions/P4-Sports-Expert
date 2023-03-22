@@ -47,11 +47,13 @@ class DeleteComment(DeleteView, SuccessMessageMixin):
     model = Comments
     template_name = 'delete_comment.html'
     success_message = "Your comment has been deleted"
-    success_url = reverse_lazy('bloglist')
 
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, self.success_message)
         return super(DeleteComment, self).delete(request, *args, **kwargs)
+
+    def get_success_url(self):
+        return reverse_lazy('blog_detail', kwargs={'pk': self.object.post_id})
 
 
 class AddBlog(LoginRequiredMixin, SuccessMessageMixin, CreateView):
