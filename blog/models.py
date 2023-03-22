@@ -29,7 +29,7 @@ class BlogPost(models.Model):
         return f"Blog post by {self.created_by} on {self.date_created}"
 
     def get_absolute_url(self):
-        return reverse('home')    
+        return reverse('home')
 
 
 class Comments(models.Model):

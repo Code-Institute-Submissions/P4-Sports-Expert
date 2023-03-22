@@ -39,5 +39,8 @@ class EditProfile(SuccessMessageMixin, UpdateView):
     template_name = 'edit_profile.html'
     form_class = ProfileForm
     success_message = "Profile edited successfully"
-    success_url = reverse_lazy('home')
+    
+    def get_success_url(self):
+        return reverse('profile', args=[self.request.user.username])
+
 
