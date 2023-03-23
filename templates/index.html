@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block title %} Home {% endblock %}
 {% block content %}
-
-<div id="herocarousel" class="carousel slide">
+<!--Bootstrap Carousel-->
+<section id="herocarousel" class="carousel slide">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#herocarousel" data-bs-slide-to="0" class="active" aria-current="true"
             aria-label="Slide 1"></button>
@@ -10,6 +10,7 @@
         <button type="button" data-bs-target="#herocarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
+        <!--Slides to display if user is logged in-->
         {% if user.is_authenticated%}
         <div class="carousel-item active c-item">
             <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678465016/pexels-photo-768474_skgnuc.webp"
@@ -41,6 +42,7 @@
                 <a href="{% url 'profile' user.username %}" class="btn btn-primary px-4 py-2 fs-5 mt-5">Profile</a>
             </div>
         </div>
+        <!--Slides to display if user is not logged in-->
         {% else %}
         <div class="carousel-item active c-item">
             <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678366506/yvnhq6mywusgjz0dgoxl.jpg"
@@ -83,8 +85,9 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </button>
-</div>
-<div class="container-fluid mt-3">
+</section>
+<!--Home page information section-->
+<section class="container-fluid mt-3">
     <div class="row text-white text-center">
         <div class="col-12 hero-text">
             <h1>Welcome to Sports Expert !</h1>
@@ -96,9 +99,6 @@
                 Whether its GAA, Football or Rugby you can find it all here.</p>
         </div>
     </div>
-</div>
-
-
-
+</section>
 
 {% endblock %}

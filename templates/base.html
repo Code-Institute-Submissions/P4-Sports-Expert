@@ -7,13 +7,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap link-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>{% block title%} Sports Blog {% endblock %}</title>
 </head>
-
+<!--Importing and re naming urls for active class-->
 {% url 'home' as home %}
 {% url 'account_logout' as logout %}
 {% url 'bloglist' as bloglist %}
@@ -22,12 +23,15 @@
 {% url 'account_signup' as signup %}
 
 <body class="d-flex flex-column min-vh-100">
+    <!--Header-->
     <header class="nav-header">
         <div class="container messages">
             <div class="row">
                 <div class="col-md-8 offset-md-2 messages">
+                    <!--Loops through messages-->
                     {% for message in messages %}
-                    <div class="alert {{ message.tags }} alert-dismissible fade show justify-content-center" id="msg" role="alert">
+                    <div class="alert {{ message.tags }} alert-dismissible fade show justify-content-center" id="msg"
+                        role="alert">
                         {{ message | safe }}
                         <button type="button" class="btn-close" data-ds-dismiss="alert" aria-label="Close"></button>
                     </div>
@@ -35,6 +39,7 @@
                 </div>
             </div>
         </div>
+        <!--Bootstrap navbar-->
         <nav class="navbar navbar-expand-md navbar-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{% url 'home' %}"><strong class="hero-text">Sports Expert</strong></a>
@@ -49,6 +54,7 @@
                                 href="{% url 'home' %}">Home</a>
                         </li>
                         {% if user.is_authenticated %}
+                        <!--Navbar links if user is logged in-->
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == logout %} active {% endif %}"
                                 href="{% url 'account_logout' %}">Log Out</a>
@@ -69,6 +75,7 @@
                             <b class="nav-link" id="logged-text">Logged in as: {{ user }}</b>
                         </li>
                         {% else %}
+                        <!--Navbar links if user is logged out-->
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == login %} active {% endif %}"
                                 href="{%url 'account_login' %}">Log In</a>
@@ -92,6 +99,7 @@
         <!-- Main page content-->
         {% endblock content %}
     </main>
+    <!--Footer-->
     <footer class="text-center text-white footer">
         <div class="container">
             <div class="mb-3">
@@ -101,6 +109,7 @@
                     </div>
                 </div>
             </div>
+            <!--Social media font awesome icons-->
             <div class="text-center mb-5">
                 <a href="https://www.facebook.com/" target="_blank" rel="noopener"
                     aria-label="Visit our facebook .opens in new tab" class="icon-item">
@@ -120,10 +129,13 @@
             <p class="footer-text">© 2023 Copyright: Sean Johnston </p>
         </div>
     </footer>
+    <!--Bootstrap javacript init link-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
+    <!--Font awesome init link-->
     <script src="https://kit.fontawesome.com/5f82fbac61.js" crossorigin="anonymous"></script>
+    <!--Time out function for success messges to dissapear after 3 seconds-->
     <script>
         setTimeout(function () {
             let messages = document.getElementById("msg");

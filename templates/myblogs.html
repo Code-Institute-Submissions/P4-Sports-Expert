@@ -3,12 +3,15 @@
 {% block content %}
 
 <div class="row justify-content-center">
+    <!--Loops through all blog posts-->
     {% for blog in object_list %}
     <div class="col-md-6 col-lg-4" id="blog-card">
         <div class="card mt-4">
+            <!--If user has not uploaded their own image-->
             {% if "placeholder" in blog.blog_image.url %}
             <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678132670/the-ball-stadion-football-the-pitch-46798_nimtac.jpg"
                 alt="placeholder-image" class="card-img-top">
+            <!--If user has uploaded their own image-->
             {% else %}
             <img src="{{ blog.blog_image.url }}" alt="user-upload-image" class="card-img-top">
             {% endif %}
@@ -23,6 +26,7 @@
             </div>
         </div>
     </div>
+    <!--If user has no blogs-->
     {% empty %}
     <div class="mx-auto col-10 col-md-8 col-lg-6 text-center" id="text-containers">
         <div class="row text-center m-4">
@@ -32,9 +36,8 @@
             </div>
         </div>
     </div>
-
     {% endfor %}
-
+    <!--Pagination if more than 6 blog posts-->
     <div class="pagination" id="page-btns">
         <div class=" container step-links">
             <div class="row text-center">
@@ -42,7 +45,8 @@
                     {% if page_obj.has_previous %}
                     <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                         <a href="?page=1" class="btn btn-primary m-1">First Page</a>
-                        <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-primary m-1">Previous Page</a>
+                        <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-primary m-1">Previous
+                            Page</a>
                     </div>
                     {% endif %}
 
@@ -60,5 +64,4 @@
         <h3>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</h3>
     </div>
 </div>
-</div>
-    {% endblock %}
+{% endblock %}

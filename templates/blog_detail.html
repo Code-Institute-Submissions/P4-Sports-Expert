@@ -5,6 +5,7 @@
 {% block content %}
 
 <main class="container-fluid" id="blog">
+    <!--Blog post container-->
     <div class="mx-auto col-10 col-md-8 col-lg-6" id="blog-form">
         <div class="row text-center" id="author-row">
             <div class="col-6 justify-content-center">
@@ -19,9 +20,11 @@
         </div>
         <div class="row text-center" id="blog-image">
             <div class="col justify-content-center">
+                <!--If user has not uploaded an image-->
                 {% if "placeholder" in object.blog_image.url %}
                 <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678132670/the-ball-stadion-football-the-pitch-46798_nimtac.jpg"
                     alt="placeholder-image" class="card-img-top">
+                <!--If user has uploaded their own image-->    
                 {% else %}
                 <img src="{{ object.blog_image.url }}" alt="user-upload-image" id="upload-img">
                 {% endif %}
@@ -33,18 +36,22 @@
         <div class="row text-center">
             <h1>Comments</h1>
         </div>
+        <!--Comments section-->
         <div class="row comment-row text-center">
+            <!--Loops through comments-->
             {% for comment in comments%}
             <div class="col-lg-8 mx-auto comment-cont text-center">
                 <div class="comment-content">
                     <b>Posted By: {{ comment.user}}</b>
                     <b> On: {{ comment.time }}</b>
                     <p>{{ comment.comment }}</p>
+                    <!--Checks if logged in user is the author of the comment-->
                     {% if request.user == comment.user %}
                         <a href="{% url 'delete_comment' comment.pk %}" class="btn btn-danger mb-2">Delete</a>
                     {% endif %}
                 </div>
             </div>
+            <!--If there are no comments-->
             {% empty %}
             <div class="row text-center">
                 <h3>No Comments on this post yet</h3>
@@ -54,6 +61,7 @@
             </div>
             {% endfor %}
         </div>
+        <!--Comment form if user is logged in-->
         {% if user.is_authenticated%}
         <div class="row comment-row">
             <form class="form-control" method="post" enctype="multipart/form-data">
@@ -64,6 +72,7 @@
                 </div>
             </form>
         </div>
+        <!--User message if user is not logged in-->
         {% else %}
         <div class="row text-center">
             <h5>You must be logged in to comment on a post</h5>

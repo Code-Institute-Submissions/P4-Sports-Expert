@@ -4,15 +4,18 @@
 {% if profile %}
 
 <div class="container-fluid">
+    <!--User profile container-->
     <div class="mx-auto col-10 col-md-8 col-lg-6" id="profile-cont">
         <div class="row text-center" id="profile-hero-text">
             <h1>My Profile</h1>
         </div>
         <div class="row text-center">
             <div class="col-12 justify-content-center mb-2" id="profile-image">
+                <!--If user has no uploaded their own profile image-->
                 {% if "placeholder" in profile.image.url %}
                 <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678279560/profile-placeholder_bkm8nk.webp"
                     alt="placeholder-image">
+                <!--If user has uploaded their own profile image-->
                 {% else %}
                 <img src="{{ profile.image.url }}" alt="user-upload-image">
                 {% endif %}
