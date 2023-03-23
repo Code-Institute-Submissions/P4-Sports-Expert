@@ -393,7 +393,7 @@ body {
 }
 
 /* Media queries for small screens */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .hero-text {
         font-size: 2rem;
     }
