@@ -9,11 +9,14 @@ from django.dispatch import receiver
 
 # Create your models here.
 placeholder = (
-    "https://res.cloudinary.com/dsdurzeu2/image/upload/v1678279560/profile-placeholder_bkm8nk.webp"
+    "bit.ly/3JXQzON"
     )
 
 
 class Profile(models.Model):
+    """
+    Database model for user profile
+    """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(
         max_length=50, null=True, blank=True, default="Enter your full name"
@@ -29,5 +32,8 @@ class Profile(models.Model):
     last_updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
+        """
+        Returns user profile username
+        in admin page
+        """
         return self.user.username
-
