@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import BlogList, BlogDetail, AddBlog, EditBlog, DeleteBlog
-from .views import DeleteComment
+from .views import DeleteComment, EditComment
 
 urlpatterns = [
     path('', BlogList.as_view(), name='bloglist'),
@@ -12,5 +12,6 @@ urlpatterns = [
          'delete_comment/<int:pk>',
          DeleteComment.as_view(),
          name='delete_comment'
-         )
+         ),
+    path('edit_comment/<int:pk>', EditComment.as_view(), name='edit_comment')
 ]

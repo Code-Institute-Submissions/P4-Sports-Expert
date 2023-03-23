@@ -83,6 +83,24 @@ class DeleteComment(DeleteView, SuccessMessageMixin):
         return reverse_lazy('blog_detail', kwargs={'pk': self.object.post_id})
 
 
+class EditComment(SuccessMessageMixin, UpdateView):
+    """
+    Model for editing comment
+    """
+    model = Comments
+    template_name = "edit_comment.html"
+    fields = ['comment']
+    success_message = "Your comment has been edited"
+
+    def get_success_url(self):
+        """
+        Overides get success url method,
+        gets blog post id and redirects user
+        there
+        """
+        return reverse_lazy('blog_detail', kwargs={'pk': self.object.post_id})
+
+
 class AddBlog(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     """
     View to add a blog
