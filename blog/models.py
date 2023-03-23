@@ -17,7 +17,7 @@ class BlogPost(models.Model):
     """
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
     description = models.CharField(max_length=200)
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=100)
     date_created = models.DateField(auto_now_add=True)
     blog_image = CloudinaryField('image', default='placeholder')
     body = models.TextField()

@@ -4,19 +4,21 @@
 
 {% block content %}
 
-<main class="container-fluid" id="blog">
+<main class="container-fluid">
     <!--Blog post container-->
     <div class="mx-auto col-10 col-md-8 col-lg-6" id="blog-form">
-        <div class="row text-center" id="author-row">
-            <div class="col-6 justify-content-center">
+        <div class="row text-center hero-row">
+            <div class="col-10 justify-content-center blog-text">
                 <h1>Blog By: {{ object.created_by }}</h1>
             </div>
-            <div class="col-6 justify-content-center">
+            <div class="col-10 justify-content-center blog-text">
                 <h3> Posted On: {{ object.date_created}}</h3>
             </div>
         </div>
-        <div class="row text-center" id="title-row">
-            <h2>{{ object.title}}</h2>
+        <div class="row text-center hero-row">
+            <div class="col-10 blog-text justify-content-center">
+                <h2>{{ object.title}}</h2>
+            </div>
         </div>
         <div class="row text-center" id="blog-image">
             <div class="col justify-content-center">
@@ -24,7 +26,7 @@
                 {% if "placeholder" in object.blog_image.url %}
                 <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678132670/the-ball-stadion-football-the-pitch-46798_nimtac.jpg"
                     alt="placeholder-image" class="card-img-top">
-                <!--If user has uploaded their own image-->    
+                <!--If user has uploaded their own image-->
                 {% else %}
                 <img src="{{ object.blog_image.url }}" alt="user-upload-image" id="upload-img">
                 {% endif %}
@@ -47,8 +49,8 @@
                     <p>{{ comment.comment }}</p>
                     <!--Checks if logged in user is the author of the comment-->
                     {% if request.user == comment.user %}
-                        <a href="{% url 'delete_comment' comment.pk %}" class="btn btn-danger mb-2">Delete</a>
-                        <a href="{% url 'edit_comment' comment.pk%}" class="btn btn-warning">Edit</a>
+                    <a href="{% url 'delete_comment' comment.pk %}" class="btn btn-danger mb-2">Delete</a>
+                    <a href="{% url 'edit_comment' comment.pk%}" class="btn btn-warning">Edit</a>
                     {% endif %}
                 </div>
             </div>
@@ -77,7 +79,8 @@
         {% else %}
         <div class="row text-center">
             <h5>You must be logged in to comment on a post</h5>
-            <h6>Please <a href="{%url 'account_login' %}">Login</a> or <a href="{% url 'account_signup' %}">Signup</a> if you havent already</h6>
+            <h6>Please <a href="{%url 'account_login' %}">Login</a> or <a href="{% url 'account_signup' %}">Signup</a>
+                if you havent already</h6>
         </div>
         {% endif %}
         <div class="row text-center">
