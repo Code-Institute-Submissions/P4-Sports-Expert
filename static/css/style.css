@@ -205,21 +205,30 @@ body {
 }
 
 #title-row {
-    border: 1px solid grey;
+    border-top: 1px solid grey;
     margin: auto;
-}
-
-.title-row > h3 {
-
 }
 
 #body-row {
-    border: 1px solid grey;
-    margin: auto;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: auto 1rem;
+    padding-top: 1rem;
 }
+
+#body-row > p {
+    font-family: 'Golos Text', sans-serif;
+    font-size: 1rem;
+}
+
 
 #blog-btn {
     margin: 1rem;
+}
+
+#blog-image {
+    height: 35vh;
+    margin-bottom: 2rem;
 }
 
 /* Blog Home Page */
