@@ -412,6 +412,13 @@ body {
     font-size: 1rem;
 }
 
+/* Error Pages */
+
+.error-text {
+    font-size: 2rem;
+    color: white;
+}
+
 /* Media queries for small screens */
 @media screen and (max-width: 500px) {
     /* Home page */

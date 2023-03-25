@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row text-center">
+        <div class="col-12">
+            <h1 class="error-text">This page does not exist. Press the home button to return to the homepage</h1>
+        </div>
+    </div>
+    <div class="row-text-center">
+        <div class="col-12 justify-content-center">
+            <a href="{% url 'home' %}" class="btn btn-primary">Home</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
