@@ -126,7 +126,7 @@ body {
 
 .hero-text>h1 {
     font-family: 'Tilt Warp', cursive;
-    font-size: 3rem;
+    font-size: 2.2rem;
     margin-top: 1.5rem;
     padding-bottom: 1rem;
     font-weight: bolder;
@@ -134,7 +134,7 @@ body {
 
 .hero-text>p {
     font-family: 'Golos Text', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin: 0 1rem;
 }
 
@@ -167,8 +167,7 @@ body {
     background-color: #D3D3D3;
     margin-top: 1rem;
     border-radius: 10px;
-    border: 2px;
-    border: 4px solid white;
+    border: 2px solid white;
     max-width: 100%;
 }
 
@@ -212,17 +211,19 @@ body {
 #body-row {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    margin: auto 1rem;
+    margin: 1px;
     padding-top: 1rem;
+    background-color: white;
 }
 
 #body-row > p {
     font-family: 'Golos Text', sans-serif;
     font-size: 1rem;
+    font-weight: bolder;
 }
 
-.hero-text {
-    font-size: 1.5rem;
+.hero-text-comm {
+    font-size: 1.9rem;
     font-family: 'Tilt Warp', cursive; 
 }
 
@@ -332,6 +333,7 @@ body {
     font-family: 'Golos Text', sans-serif;
     margin-bottom: 1rem; 
     font-size: 1.4rem;
+    padding: 2px;
 }
 
 
@@ -392,7 +394,7 @@ body {
 }
 
 .comment-row {
-    margin: auto;
+    margin: 5px auto;
 }
 
 .comment-content {
@@ -400,18 +402,29 @@ body {
 }
 
 .comment-content > b {
-    margin: 1rem;
+    margin: auto 1rem;
+    font-size: 1.1rem;
+    border-bottom : 2px solid gray
 }
 
 .comment-content > p {
-    
+    margin-top: 1rem;
+    font-size: 1rem;
 }
 
 /* Media queries for small screens */
 @media screen and (max-width: 500px) {
+    /* Home page */
+    
     .hero-text {
         font-size: 2rem;
     }
+
+    .carousel-caption {
+        padding-top: 0;
+    }
+
+    /* Blog detail page */
 
     .card-img-top {
         height: 25vh;
@@ -422,7 +435,14 @@ body {
         font-size: 1rem;
     }
 
-    .carousel-caption {
-        padding-top: 0;
+
+    /* Blog detail comment section */
+
+    .hero-text-comm {
+        font-size: 1.4rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
     }
 }

@@ -5,7 +5,7 @@
 
 <div class="container-fluid">
     <!--User profile container-->
-    <div class="mx-auto col-10 col-md-8 col-lg-6" id="profile-cont">
+    <div class="mx-auto col-12 col-md-8 col-lg-6" id="profile-cont">
         <div class="row text-center" id="profile-hero-text">
             <h1>My Profile</h1>
         </div>
@@ -37,7 +37,7 @@
             <h2>Last Updated:</h2><span>{{ profile.last_updated }}</span>
         </div>
         <div class="row">
-            <div class="btn-group col-12" id="profile-btns" role="group" aria-label="Profile buttons">
+            <div class="btn-group col-12" role="group" aria-label="Profile buttons">
                 <a href=" {% url 'myblogs' %}" class="btn btn-warning">My Blogs</a>
                 <a href=" {% url 'home' %}" class="btn btn-success">Home</a>
                 <a href=" {% url 'edit_profile' profile.pk %}" class="btn btn-danger">Edit Profile</a>

@@ -5,7 +5,7 @@
 
 
 {% block content %}
-<div class="mx-auto col-10 col-md-8 col-lg-6" id="blog-container">
+<div class="mx-auto col-12 col-md-8 col-lg-6" id="blog-container">
     <form class="form-control forms"  method="post" enctype="multipart/form-data">
         {% csrf_token%}
         {{ form|crispy }}

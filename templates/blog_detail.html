@@ -6,7 +6,7 @@
 
 <main class="container-fluid">
     <!--Blog post container-->
-    <div class="mx-auto col-10 col-md-8 col-lg-6" id="blog-form">
+    <div class="mx-auto col-12 col-md-8 col-lg-6" id="blog-form">
         <div class="row text-center hero-row">
             <div class="col-10 justify-content-center blog-text">
                 <h1>Blog By: {{ object.created_by }}</h1>
@@ -33,16 +33,16 @@
             </div>
         </div>
         <div class="row text-center" id="body-row">
-            <p>{{ object.body }}</p>
+            <p>{{ object.body|linebreaks }}</p>
         </div>
         <div class="row text-center">
-            <h2 class="hero-text">Comments:</h2>
+            <h2 class="hero-text-comm">Comments:</h2>
         </div>
         <!--Comments section-->
         <div class="row comment-row text-center">
             <!--Loops through comments-->
             {% for comment in comments%}
-            <div class="col-lg-8 mx-auto comment-cont text-center">
+            <div class="col-lg-8 mx-auto comment-cont">
                 <div class="comment-content">
                     <b>Posted By: {{ comment.user}}</b>
                     <b> On: {{ comment.time }}</b>
@@ -50,8 +50,8 @@
                     <!--Checks if logged in user is the author of the comment-->
                     {% if request.user == comment.user %}
                     <div class="btn-group">
-                        <a href="{% url 'delete_comment' comment.pk %}" class="btn btn-danger">Delete</a>
-                        <a href="{% url 'edit_comment' comment.pk%}" class="btn btn-warning">Edit</a>
+                        <a href="{% url 'delete_comment' comment.pk %}" class="btn btn-danger mb-1">Delete</a>
+                        <a href="{% url 'edit_comment' comment.pk%}" class="btn btn-warning mb-1">Edit</a>
                     </div>
                     {% endif %}
                 </div>
@@ -59,11 +59,13 @@
             <!--If there are no comments-->
             {% empty %}
             <div class="row text-center">
-                <h3 class="hero-text">No Comments on this post yet</h3>
+                <h3 class="hero-text-comm">No Comments yet</h3>
             </div>
+            {% if user.is_authenticated %}
             <div class="row text-center">
                 <h5>Add your comment below</h5>
             </div>
+            {% endif %}
             {% endfor %}
         </div>
         <!--Comment form if user is logged in-->
