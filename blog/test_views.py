@@ -4,7 +4,7 @@ from django.contrib.messages import get_messages
 from django.contrib.auth.models import User
 from .models import BlogPost, Comments
 from .forms import CommentForm
-from .views import BlogList, BlogDetail, DeleteBlog, AddBlog
+from .views import BlogList, BlogDetail, DeleteBlog, AddBlog, EditBlog
 
 
 class TestListView(TestCase):
@@ -119,6 +119,50 @@ class TestDeleteBlogView(TestCase):
         messages = list(get_messages(response.wsgi_request))
         self.assertEqual(len(messages), 1)
         self.assertEqual(str(messages[0]), "Blog post deleted successfully")
+
+
+class EditBlogTest(TestCase):
+    """
+    Unit Tests for edit blog view
+    """
+    def setUp(self):
+        """Creates valid comment database entry"""
+        # Needed for created_by id non null constraint
+        test_user = User.objects.create_user(
+            username='testuser1', password='testpassword1'
+        )
+        self.blogpost = BlogPost.objects.create(
+            created_by=test_user,
+            description="This is a test",
+            title="This is a test blogpost title",
+            body='This is a test blogpost body',
+            category='Football',
+        )
+        self.new_data = {
+            'created_by': 'test_user',
+            'description': 'This is a new test',
+            'title': 'New title',
+            'body': 'New body',
+            'category': 'Rugby',
+        }
+        self.url = reverse('edit_blog', kwargs={'pk': self.blogpost.pk})
+
+    def test_edit_blog(self):
+        """
+        Inserts new form data, checks that its valid, checks that the
+        correct reverse url is rendered and checks that
+        the correct user message is rendered
+        """
+        response = self.client.post(self.url, data=self.new_data, follow=True)
+        self.assertRedirects(response, reverse('bloglist'))
+        updated_blogpost = BlogPost.objects.get(pk=self.blogpost.pk)
+        self.assertEqual(updated_blogpost.title, self.new_data['title'])
+        self.assertEqual(updated_blogpost.body, self.new_data['body'])
+        self.assertEqual(updated_blogpost.category, self.new_data['category'])
+        messages = list(get_messages(response.wsgi_request))
+        self.assertEqual(len(messages), 1)
+        self.assertEqual(str(messages[0]), "Blog post edited successfully")
+
 
 
 
