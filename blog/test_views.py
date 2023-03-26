@@ -1,10 +1,10 @@
 from django.test import TestCase, Client
 from django.urls import reverse
-from django.core.files.uploadedfile import SimpleUploadedFile
+from django.contrib.messages import get_messages
 from django.contrib.auth.models import User
 from .models import BlogPost, Comments
 from .forms import CommentForm
-from .views import BlogList, BlogDetail
+from .views import BlogList, BlogDetail, DeleteBlog, AddBlog
 
 
 class TestListView(TestCase):
@@ -80,6 +80,45 @@ class TestAddBlogView(TestCase):
         form = response.context_data['form']
         self.assertEqual(form.initial['created_by'], self.user)    
 
+
+class TestDeleteBlogView(TestCase):
+    def setUp(self):
+        """Creates valid comment database entry"""
+        # Needed for created_by id non null constraint
+        test_user = User.objects.create_user(
+            username='testuser1', password='testpassword1'
+        )
+        self.user = User.objects.create_user(
+            username='testuser', password='testpass'
+        )
+        self.blogpost = BlogPost.objects.create(
+            created_by=test_user,
+            description="This is a test",
+            title="This is a test blogpost title",
+            body='This is a test blogpost body',
+            category='Football',
+        )
+        self.url = reverse('delete_blog', args=[self.blogpost.pk])
+        self.client.login(username='testuser', password='testpassword')
+
+    def test_delete_blog_page(self):
+        """
+        Checks correct template is rendered
+        """
+        response = self.client.get(self.url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'delete_blog.html')
+
+    def test_delete_blog(self):
+        """
+        Checks message is rendered correctly when post is deleted
+        """
+        response = self.client.post(self.url, follow=True)
+        self.assertRedirects(response, reverse('bloglist'))
+        self.assertFalse(BlogPost.objects.filter(pk=self.blogpost.pk).exists())
+        messages = list(get_messages(response.wsgi_request))
+        self.assertEqual(len(messages), 1)
+        self.assertEqual(str(messages[0]), "Blog post deleted successfully")
 
 
 
