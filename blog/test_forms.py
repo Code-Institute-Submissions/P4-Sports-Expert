@@ -1,6 +1,7 @@
 from django.test import TestCase
 from .forms import BlogForm, CommentForm
 from .models import BlogPost
+from django.contrib.auth.models import User
 
 
 class TestBlogForm(TestCase):
@@ -20,6 +21,7 @@ class TestBlogForm(TestCase):
         self.assertTrue(form.is_valid())
 
     def test_blogform_body_is_required(self):
+        """Checks if form is invalid with blank body"""
         form = BlogForm(
             {
                 "created_by": "superuser90",
@@ -35,6 +37,7 @@ class TestBlogForm(TestCase):
         self.assertEqual(form.errors['body'][0], 'This field is required.')
 
     def test_image_field_must_be_file(self):
+        """Checks if form is invalid with integer in image field"""
         form = BlogForm(
             {
                 "created_by": "superuser90",
