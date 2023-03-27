@@ -1,4 +1,4 @@
-from django.test import TestCase, Client
+from django.test import TestCase, Client, RequestFactory
 from django.urls import reverse
 from django.contrib.messages import get_messages
 from django.contrib.auth.models import User
@@ -57,6 +57,8 @@ class TestBlogDetailView(TestCase):
         self.form = CommentForm(data=self.comment_data)
         self.url = reverse('blog_detail', kwargs={'pk': self.blogpost.pk})
         self.client = Client()
+        self.view = BlogDetail.as_view()
+        self.factory = RequestFactory()
 
     def test_post_method(self):
         """
@@ -76,17 +78,32 @@ class TestBlogDetailView(TestCase):
         messages = list(get_messages(response.wsgi_request))
         self.assertEqual(len(messages), 1)
         self.assertEqual(str(messages[0]), 'Your comment has been added')
-        self.assertEqual(Comments.objects.count(), 1)    
+        self.assertEqual(Comments.objects.count(), 1)
+
+    def test_get_context_data(self):
+        """
+        Creates a blogpost and a request object, 
+        checks that the context contains the correct objects
+        """
+        post = self.blogpost
+        request = self.factory.get(reverse('bloglist'))
+        view = BlogList.as_view()
+        context = view(request).context_data
+        self.assertIn('object_list', context)
+        self.assertIn('paginator', context)
+        self.assertIn('page_obj', context)
+        self.assertIn('is_paginated', context)
+        self.assertEqual(len(context['object_list']), 1)
+        self.assertEqual(context['object_list'][0], post)
 
     def test_view_returns_200_and_expected_content(self):
+        """
+        Checks that view returns correct status code and content
+        """
         response = self.client.get(self.url)
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'This is a test')
         self.assertContains(response, 'This is a test blogpost body')
-
-
-
-
 
 
 class TestAddBlogView(TestCase):
