@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import HttpResponseRedirect
 from django.contrib.auth.mixins import LoginRequiredMixin 
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
@@ -25,10 +26,7 @@ class BlogDetail(DetailView):
     """
     model = BlogPost
     template_name = 'blog_detail.html'
-
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-        self.comment_form = CommentForm()
+    form = CommentForm
 
     def post(self, request, *args, **kwargs):
         """
@@ -45,11 +43,13 @@ class BlogDetail(DetailView):
             messages.success(
                 request, "Your comment has been added"
             )
-            return redirect(request.META['HTTP_REFERER'])
+            return HttpResponseRedirect(
+                reverse('blog_detail', kwargs={'pk': post.pk})
+                )
         else:
             context = self.get_context_data(**kwargs)
             context['form'] = form
-            return self.render_to_response(context)    
+            return self.render_to_response(context)        
 
     def get_context_data(self, **kwargs):
         """
@@ -59,7 +59,7 @@ class BlogDetail(DetailView):
         comments = Comments.objects.filter(post=self.object.id)
         context = super().get_context_data(**kwargs)
         context.update({
-            'form': self.comment_form,
+            'form': self.form,
             'comments': comments
         })
         return context
