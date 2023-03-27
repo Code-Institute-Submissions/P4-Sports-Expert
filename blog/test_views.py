@@ -32,7 +32,7 @@ class TestListView(TestCase):
         self.assertTemplateUsed(response, 'blog_home.html')
 
 
-class BlogDetailViewTestCase(TestCase):
+class TestBlogDetailView(TestCase):
     def setUp(self):
         """Creates valid comment database entry"""
         # Needed for created_by id non null constraint
@@ -49,13 +49,44 @@ class BlogDetailViewTestCase(TestCase):
             body='This is a test blogpost body',
             category='Football',
         )
+        self.comment_data = {
+            'post': 'testpost',
+            'comment': 'Test comment',
+            'user': 'Test user',
+        }
+        self.form = CommentForm(data=self.comment_data)
         self.url = reverse('blog_detail', kwargs={'pk': self.blogpost.pk})
+        self.client = Client()
+
+    def test_post_method(self):
+        """
+        Creates client to post comment data, checks the correct url 
+        and data is being rendered, correct response status code and
+        correct page redirect
+        """
+        self.client.login(username='testuser', password='testpass')
+        response = self.client.post(self.url, data=self.comment_data)
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(
+            response,
+            reverse('blog_detail', kwargs={'pk': self.blogpost.pk}),
+            status_code=302,
+            target_status_code=200,
+        )
+        messages = list(get_messages(response.wsgi_request))
+        self.assertEqual(len(messages), 1)
+        self.assertEqual(str(messages[0]), 'Your comment has been added')
+        self.assertEqual(Comments.objects.count(), 1)    
 
     def test_view_returns_200_and_expected_content(self):
         response = self.client.get(self.url)
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'This is a test')
         self.assertContains(response, 'This is a test blogpost body')
+
+
+
+
 
 
 class TestAddBlogView(TestCase):
