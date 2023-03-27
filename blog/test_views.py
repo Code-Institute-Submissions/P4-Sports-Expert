@@ -32,6 +32,50 @@ class TestListView(TestCase):
         self.assertTemplateUsed(response, 'blog_home.html')
 
 
+class TestBlogDetail(TestCase):
+    def setUp(self):
+        """Creates valid comment database entry"""
+        # Needed for created_by id non null constraint
+        test_user = User.objects.create_user(
+            username='testuser1', password='testpassword1'
+        )
+        self.client = Client()
+        self.user = User.objects.create_user(
+            username='testuser', password='testpass'
+        )
+        self.blogpost = BlogPost.objects.create(
+            created_by=test_user,
+            description="This is a test",
+            title="This is a test blogpost title",
+            body='This is a test blogpost body',
+            category='Football',
+        )
+        self.comment_form = CommentForm()
+        self.comment_data = {
+            'content': 'This is a test comment.'
+        }
+        self.comment_form_data = self.comment_form.initial
+        self.comment_form_data.update(self.comment_data)
+        self.comment = Comments.objects.create(
+            user=self.user,
+            post=self.blogpost,
+            comment=self.comment_data['content']
+        )
+        self.url = reverse('blog_detail', args=[self.blogpost.id])
+        self.template_name = 'blog_detail.html'
+
+    def test_blog_detail_get(self):
+        response = self.client.get(self.url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, self.template_name)
+        self.assertEqual(response.context['object'], self.blogpost)
+        self.assertIsInstance(response.context['form'], CommentForm)
+        self.assertEqual(
+            response.context['comments'].count(), 
+            Comment.objects.filter(post=self.blogpost.id).count()
+        )
+
+
 class TestAddBlogView(TestCase):
     """
     Unit Tests for add blog view

@@ -25,7 +25,10 @@ class BlogDetail(DetailView):
     """
     model = BlogPost
     template_name = 'blog_detail.html'
-    form = CommentForm
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.comment_form = CommentForm()
 
     def post(self, request, *args, **kwargs):
         """
@@ -52,7 +55,7 @@ class BlogDetail(DetailView):
         comments = Comments.objects.filter(post=self.object.id)
         context = super().get_context_data(**kwargs)
         context.update({
-            'form': self.form,
+            'form': self.comment_form,
             'comments': comments
         })
         return context
