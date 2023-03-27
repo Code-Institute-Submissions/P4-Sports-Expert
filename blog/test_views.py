@@ -72,8 +72,25 @@ class TestBlogDetail(TestCase):
         self.assertIsInstance(response.context['form'], CommentForm)
         self.assertEqual(
             response.context['comments'].count(), 
-            Comment.objects.filter(post=self.blogpost.id).count()
+            Comments.objects.filter(post=self.blogpost.id).count()
         )
+
+    def test_post(self):
+        url = reverse('blog_detail', args=[self.blogpost.pk])
+        self.client.login(username='testuser', password='testpass')
+        response = self.client.post(url, data=self.comment_data)
+        self.assertRedirects(response, url)
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(Comments.objects.count(), 1)
+        comment = Comments.objects.first()
+        self.assertEqual(comment.name, self.comment_data['name'])
+        self.assertEqual(comment.email, self.comment_data['email'])
+        self.assertEqual(comment.content, self.comment_data['comment'])
+        self.assertEqual(comment.post, self.post)
+        self.assertEqual(comment.user, self.user)
+        messages = list(response.context.get('messages'))
+        self.assertEqual(len(messages), 1)
+        self.assertEqual(str(messages[0]), 'Your comment has been added')    
 
 
 class TestAddBlogView(TestCase):

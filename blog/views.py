@@ -46,6 +46,10 @@ class BlogDetail(DetailView):
                 request, "Your comment has been added"
             )
             return redirect(request.META['HTTP_REFERER'])
+        else:
+            context = self.get_context_data(**kwargs)
+            context['form'] = form
+            return self.render_to_response(context)    
 
     def get_context_data(self, **kwargs):
         """
