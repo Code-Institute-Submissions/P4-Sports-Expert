@@ -1,16 +1,21 @@
 from django.test import TestCase, Client, RequestFactory
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.contrib.messages import get_messages
 from django.contrib.auth.models import User
 from .models import BlogPost, Comments
 from .forms import CommentForm
 from .views import BlogList, BlogDetail, DeleteBlog, AddBlog, EditBlog
+from .views import DeleteComment
 
 
 class TestListView(TestCase):
-    """Unit tests for blog list view"""
+    """
+    Unit tests for blog list view
+    """
     def setUp(self):
-        """Creates valid comment database entry"""
+        """
+        Creates valid comment database entry
+        """
         # Needed for created_by id non null constraint
         test_user = User.objects.create_user(
             username='testuser', password='testpassword1'
@@ -25,8 +30,10 @@ class TestListView(TestCase):
         )
 
     def test_blog_list_view(self):
-        """Checks the correct response code and template
-        is rendered"""
+        """
+        Checks the correct response code and template
+        is rendered
+        """
         response = self.client.get(self.url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'blog_home.html')
@@ -62,7 +69,7 @@ class TestBlogDetailView(TestCase):
 
     def test_post_method(self):
         """
-        Creates client to post comment data, checks the correct url 
+        Creates client to post comment data, checks the correct url
         and data is being rendered, correct response status code and
         correct page redirect
         """
@@ -82,7 +89,7 @@ class TestBlogDetailView(TestCase):
 
     def test_get_context_data(self):
         """
-        Creates a blogpost and a request object, 
+        Creates a blogpost and a request object,
         checks that the context contains the correct objects
         """
         post = self.blogpost
@@ -152,7 +159,7 @@ class TestAddBlogView(TestCase):
         """
         response = self.client.get(self.url)
         form = response.context_data['form']
-        self.assertEqual(form.initial['created_by'], self.user)    
+        self.assertEqual(form.initial['created_by'], self.user)
 
 
 class TestDeleteBlogView(TestCase):
@@ -236,6 +243,61 @@ class EditBlogTest(TestCase):
         messages = list(get_messages(response.wsgi_request))
         self.assertEqual(len(messages), 1)
         self.assertEqual(str(messages[0]), "Blog post edited successfully")
+
+
+class TestDeleteComment(TestCase):
+    """
+    Unit tests for delete comment view
+    """
+    def setUp(self):
+        """
+        Creates valid comment database entry
+        """
+        # Needed for created_by id non null constraint
+        test_user = User.objects.create_user(
+            username='testuser1', password='testpassword1'
+        )
+        self.blogpost = BlogPost.objects.create(
+            created_by=test_user,
+            description="This is a test",
+            title="This is a test blogpost title",
+            body='This is a test blogpost body',
+            category='Football',
+        )
+        self.comment = Comments.objects.create(
+            post=self.blogpost,
+            user=self.blogpost.created_by,
+            comment='This is a test comment'
+        )
+        self.url = reverse_lazy(
+            'delete_comment', kwargs={'pk': self.comment.pk}
+            )
+
+    def test_delete_comment(self):
+        """
+        Checks that the correct status code is returned, 
+        checks that the comment no longer exists after being deleted
+        and checks correct success message is rendered
+        """
+        response = self.client.post(self.url)
+        self.assertEqual(response.status_code, 302)
+        self.assertFalse(Comments.objects.filter(pk=self.comment.pk).exists())
+        storage = get_messages(response.wsgi_request)
+        self.assertEqual(
+            list(storage)[0].message, 'Your comment has been deleted'
+            )
+
+    def test_get_success_url(self):
+        """
+        Checks correct success url is rendered after comment is
+        deleted by user
+        """
+        view = DeleteComment()
+        view.object = self.comment
+        url = view.get_success_url()
+        self.assertEqual(
+            url, reverse_lazy('blog_detail', kwargs={'pk': self.blogpost.pk})
+            )
 
 
 
