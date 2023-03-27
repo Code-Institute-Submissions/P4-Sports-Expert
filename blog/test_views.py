@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from .models import BlogPost, Comments
 from .forms import CommentForm
 from .views import BlogList, BlogDetail, DeleteBlog, AddBlog, EditBlog
-from .views import DeleteComment
+from .views import DeleteComment, EditComment
 
 
 class TestListView(TestCase):
@@ -86,6 +86,22 @@ class TestBlogDetailView(TestCase):
         self.assertEqual(len(messages), 1)
         self.assertEqual(str(messages[0]), 'Your comment has been added')
         self.assertEqual(Comments.objects.count(), 1)
+
+    def test_invalid_post_form(self):
+        """
+        Checks if form is posted with invalid data, response
+        code is correct and checks that invalid form was not saved
+        to the database
+        """
+        self.client.login(username='testuser', password='testpass')
+        response = self.client.post(self.url, {
+            'comment': '',
+        })
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'blog_detail.html')
+        self.assertContains(response, 'This field is required.')
+        comments_count = Comments.objects.count()
+        self.assertEqual(comments_count, 0)
 
     def test_get_context_data(self):
         """
@@ -245,7 +261,7 @@ class EditBlogTest(TestCase):
         self.assertEqual(str(messages[0]), "Blog post edited successfully")
 
 
-class TestDeleteComment(TestCase):
+class TestDeleteAndEditComment(TestCase):
     """
     Unit tests for delete comment view
     """
@@ -275,7 +291,7 @@ class TestDeleteComment(TestCase):
 
     def test_delete_comment(self):
         """
-        Checks that the correct status code is returned, 
+        Checks that the correct status code is returned,
         checks that the comment no longer exists after being deleted
         and checks correct success message is rendered
         """
@@ -287,7 +303,7 @@ class TestDeleteComment(TestCase):
             list(storage)[0].message, 'Your comment has been deleted'
             )
 
-    def test_get_success_url(self):
+    def test_get_success_url_delete(self):
         """
         Checks correct success url is rendered after comment is
         deleted by user
@@ -299,15 +315,14 @@ class TestDeleteComment(TestCase):
             url, reverse_lazy('blog_detail', kwargs={'pk': self.blogpost.pk})
             )
 
-
-
-
-
-
-
-
-
-
-
-
-
+    def test_get_success_url_edit(self):
+        """
+        Checks correct success url is rendered after comment is
+        edited by user
+        """
+        view = EditComment()
+        view.object = self.comment
+        url = view.get_success_url()
+        self.assertEqual(
+            url, reverse_lazy('blog_detail', kwargs={'pk': self.blogpost.pk})
+            )

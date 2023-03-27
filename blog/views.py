@@ -56,6 +56,7 @@ class BlogDetail(DetailView):
         Overides context data method to get post i.d and
         link to comment form
         """
+        self.object = self.get_object()
         comments = Comments.objects.filter(post=self.object.id)
         context = super().get_context_data(**kwargs)
         context.update({
