@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 from django.db.models.signals import post_save
 from django.contrib.auth.models import User
 from django.urls import reverse
@@ -28,7 +29,7 @@ class Profile(models.Model):
     blogs = models.ManyToManyField(
         BlogPost, related_name="blogs", blank=True,
     )
-    date_joined = models.DateTimeField(default=datetime.now, blank=True)
+    date_joined = models.DateTimeField(default=timezone.now, blank=True)
     last_updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
