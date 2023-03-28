@@ -1,7 +1,6 @@
 from django.forms import ModelForm
 from .models import BlogPost, Comments
 from django import forms
-from django_summernote.widgets import SummernoteWidget
 from cloudinary.forms import CloudinaryFileField
 
 

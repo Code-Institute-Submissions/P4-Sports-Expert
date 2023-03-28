@@ -6,7 +6,6 @@ from django.contrib import messages
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from django.views.generic import DeleteView
 from django.urls import reverse_lazy
-from cloudinary.forms import cl_init_js_callbacks
 from .models import BlogPost, Comments
 from .forms import BlogForm, CommentForm
 
