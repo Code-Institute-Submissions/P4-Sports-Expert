@@ -2,7 +2,7 @@ from django.test import TestCase, Client
 from django.contrib.auth.models import User
 from django.urls import reverse
 from .models import Profile, BlogPost
-from .views import ProfileView, MyBlogs
+from .views import ProfileView, MyBlogs, EditProfile
 
 
 class TestProfileView(TestCase):
@@ -66,3 +66,6 @@ class TestMyBlogsView(TestCase):
         queryset = response.context_data['object_list']
         self.assertEqual(queryset.count(), 1)
         self.assertIn(self.blogpost, queryset)
+
+
+

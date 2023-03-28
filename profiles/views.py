@@ -64,4 +64,7 @@ class EditProfile(SuccessMessageMixin, UpdateView):
         Redirects user to their profile page when
         form is posted
         """
-        return reverse('profile', args=[self.request.user.username])
+        if self.request.user.is_authenticated:
+            return reverse('profile', args=[self.request.user.username])
+        else:
+            return reverse('home')
