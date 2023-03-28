@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.shortcuts import HttpResponseRedirect
-from django.contrib.auth.mixins import LoginRequiredMixin 
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
@@ -49,7 +49,7 @@ class BlogDetail(DetailView):
         else:
             context = self.get_context_data(**kwargs)
             context['form'] = form
-            return self.render_to_response(context)        
+            return self.render_to_response(context)
 
     def get_context_data(self, **kwargs):
         """

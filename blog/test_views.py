@@ -41,7 +41,9 @@ class TestListView(TestCase):
 
 class TestBlogDetailView(TestCase):
     def setUp(self):
-        """Creates valid comment database entry"""
+        """
+        Creates valid comment database entry
+        """
         # Needed for created_by id non null constraint
         test_user = User.objects.create_user(
             username='testuser1', password='testpassword1'

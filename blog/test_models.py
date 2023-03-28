@@ -6,7 +6,9 @@ from datetime import datetime, date
 
 
 class TestBlogPostModel(TestCase):
-    """Unit tests for blogpost model"""
+    """
+    Unit tests for blogpost model
+    """
     @classmethod
     def setUpTestData(cls):
         test_user = User.objects.create_user(
@@ -21,13 +23,17 @@ class TestBlogPostModel(TestCase):
         )
 
     def test_description_max_chars(self):
-        """Tests description max characters is 200"""
+        """
+        Tests description max characters is 200
+        """
         test_post = BlogPost.objects.get(id=1)
         max_length = test_post._meta.get_field('description').max_length
         self.assertEqual(max_length, 200)
 
     def test_title_max_chars(self):
-        """Tests title max characters is 50"""
+        """
+        Tests title max characters is 50
+        """
         test_post = BlogPost.objects.get(id=1)
         max_length = test_post._meta.get_field('title').max_length
         self.assertEqual(max_length, 50)
@@ -40,15 +46,19 @@ class TestBlogPostModel(TestCase):
             'Football': 'Football',
             'GAA': 'GAA',
             'Rugby': 'Rugby',
-        }) 
+        })
 
     def test_absolute_url(self):
-        """Tests the absolute url reverses to home page"""
+        """
+        Tests the absolute url reverses to home page
+        """
         test_post = BlogPost.objects.get(id=1)
         self.assertEqual(test_post.get_absolute_url(), reverse('home'))
 
     def test__str__(self):
-        """Tests the string method returns correct data in correct format"""
+        """
+        Tests the string method returns correct data in correct format
+        """
         test_post = BlogPost.objects.get(id=1)
         test_string = (
             f"Blog post by {test_post.created_by} on {test_post.date_created}"
@@ -57,9 +67,13 @@ class TestBlogPostModel(TestCase):
 
 
 class TestCommentModel(TestCase):
-    """Unit Tests for comments model"""
+    """
+    Unit Tests for comments model
+    """
     def setUp(self):
-        """Creates valid comment database entry"""
+        """
+        Creates valid comment database entry
+        """
         # Needed for created_by id non null constraint
         test_user = User.objects.create_user(
             username='testuser2', password='testpassword1'
@@ -76,7 +90,9 @@ class TestCommentModel(TestCase):
         )
 
     def test_comment_is_valid(self):
-        """Tests that asserted values are valid"""
+        """
+        Tests that asserted values are valid
+        """
         comment = Comments.objects.create(
             post=self.blog_post,
             comment='This is a test comment.',
@@ -87,7 +103,9 @@ class TestCommentModel(TestCase):
         self.assertEqual(comment.user, self.user)
 
     def test_comment__str__(self):
-        """ Tests __str__ method returns correct value"""
+        """
+        Tests __str__ method returns correct value
+        """
         comment = Comments.objects.create(
             post=self.blog_post,
             comment='This is a test comment.',
