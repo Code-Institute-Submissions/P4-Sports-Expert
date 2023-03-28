@@ -68,4 +68,42 @@ class TestMyBlogsView(TestCase):
         self.assertIn(self.blogpost, queryset)
 
 
+class EditProfileTest(TestCase):
+    """
+    Unit tests for EditProfile view
+    """
+    def setUp(self):
+        """
+        Sets up mock client for user login
+        """
+        self.client = Client()
+        self.user = User.objects.create_user(
+            username='testuser', password='testpass'
+            )
+        self.profile = Profile.objects.get(user=self.user)
 
+    def test_authenticated_user(self):
+        """
+        Checks if user is logged in they are directed to their profile page,
+        checks if correct status code in response
+        """
+        self.client.login(username='testuser', password='testpass')
+        response = self.client.post(reverse(
+            'edit_profile', kwargs={'pk': self.profile.pk}
+            ), {'about': 'Test about post'})
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response.url, reverse(
+            'profile', args=[self.user.username]
+            ))
+
+    def test_unauthenticated_user(self):
+        """
+        Checks if user is logged out they are directed to the home page,
+        checks if correct status code in response
+        """
+        self.client.logout()
+        response = self.client.post(reverse(
+            'edit_profile', kwargs={'pk': self.profile.pk}
+            ), {'about': 'Test about post'})
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response.url, reverse('home'))
