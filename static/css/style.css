@@ -288,11 +288,6 @@ body {
     font-weight: bolder;
 }
 
-.card-img-top {
-    width: 100%;
-    height: 15vw;
-    object-fit: cover;
-}
 
 
 /* Profile page */
@@ -301,6 +296,13 @@ body {
     width: 100%;
     object-fit: cover;
     max-height: 100%;
+}
+
+/* Media query for user upload image for medium screens */
+@media screen and (min-width: 500px) and (max-width: 768px) {
+    .user-image {
+        height: 25vh;
+    }
 }
 
 #profile-cont {
