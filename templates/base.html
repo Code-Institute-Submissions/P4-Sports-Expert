@@ -25,9 +25,9 @@
 <body class="d-flex flex-column min-vh-100">
     <!--Header-->
     <header class="nav-header">
-        <div class="container messages">
-            <div class="row">
-                <div class="col-md-8 offset-md-2 messages">
+        <div class="container-fluid messages justify-content-center">
+            <div class="row text-center">
+                <div class="col-12 messages">
                     <!--Loops through messages-->
                     {% for message in messages %}
                     <div class="alert {{ message.tags }} alert-dismissible fade show justify-content-center" id="msg"
@@ -50,25 +50,25 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == home %} active {% endif %}"
+                            <a class="nav-link {% if request.path == home %} active-nav {% endif %}"
                                 href="{% url 'home' %}">Home</a>
                         </li>
                         {% if user.is_authenticated %}
                         <!--Navbar links if user is logged in-->
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == logout %} active {% endif %}"
+                            <a class="nav-link {% if request.path == logout %} active-nav {% endif %}"
                                 href="{% url 'account_logout' %}">Log Out</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.resolver_match.url_name == 'profile' %}active{% endif %}"
+                            <a class="nav-link {% if request.resolver_match.url_name == 'profile' %} active-nav {% endif %}"
                                 href="{% url 'profile' user.username %}">Profile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == bloglist %} active {% endif %}" aria-current="page"
+                            <a class="nav-link {% if request.path == bloglist %} active-nav {% endif %}" aria-current="page"
                                 href="{% url 'bloglist'%}">Blogs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == add_blog %} active {% endif %}" aria-current="page"
+                            <a class="nav-link {% if request.path == add_blog %} active-nav {% endif %}" aria-current="page"
                                 href="{% url 'add_blog'%}">Add A Blog</a>
                         </li>
                         <li class="nav-item">
@@ -77,15 +77,15 @@
                         {% else %}
                         <!--Navbar links if user is logged out-->
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == login %} active {% endif %}"
+                            <a class="nav-link {% if request.path == login %} active-nav {% endif %}"
                                 href="{%url 'account_login' %}">Log In</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == signup %} active {% endif %}" aria-current="page"
+                            <a class="nav-link {% if request.path == signup %} active-nav {% endif %}" aria-current="page"
                                 href="{% url 'account_signup' %}">Sign Up</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == bloglist %} active {% endif %}" aria-current="page"
+                            <a class="nav-link {% if request.path == bloglist %} active-nav {% endif %}" aria-current="page"
                                 href="{% url 'bloglist'%}">Blogs</a>
                         </li>
                         {% endif %}

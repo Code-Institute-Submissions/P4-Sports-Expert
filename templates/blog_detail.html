@@ -37,15 +37,16 @@
         </div>
         <div class="row text-center">
             <h2 class="hero-text-comm">Comments:</h2>
+            <hr>
         </div>
         <!--Comments section-->
+        <!--Loops through comments-->
+        {% for comment in comments%}
         <div class="row comment-row text-center">
-            <!--Loops through comments-->
-            {% for comment in comments%}
             <div class="col-lg-8 mx-auto comment-cont">
                 <div class="comment-content">
-                    <b>Posted By: {{ comment.user}}</b>
-                    <b> On: {{ comment.time }}</b>
+                    <b>{{ comment.user}}</b>
+                    <b>{{ comment.time }}</b>
                     <p>{{ comment.comment }}</p>
                     <!--Checks if logged in user is the author of the comment-->
                     {% if request.user == comment.user %}
@@ -56,40 +57,49 @@
                     {% endif %}
                 </div>
             </div>
-            <!--If there are no comments-->
-            {% empty %}
-            <div class="row text-center">
-                <h3 class="hero-text-comm">No Comments yet</h3>
-            </div>
-            {% if user.is_authenticated %}
-            <div class="row text-center">
-                <h5>Add your comment below</h5>
-            </div>
-            {% endif %}
-            {% endfor %}
         </div>
+        <!--If there are no comments-->
+        {% empty %}
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 class="comm-text">No Comments yet</h3>
+            </div>
+        </div>
+        {% if user.is_authenticated %}
+        <div class="row">
+            <div class="col-12 text-center">
+                <h5 class="comm-text">Add your comment below</h5>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
         <!--Comment form if user is logged in-->
         {% if user.is_authenticated%}
-        <div class="row comment-row">
-            <form class="form-control" method="post" enctype="multipart/form-data">
-                {% csrf_token%}
-                {{ form|crispy }}
-                <div class="col-12 text-center">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </form>
-        </div>
+            <div class="row comment-row">
+                <form class="form-control" method="post" enctype="multipart/form-data">
+                    {% csrf_token%}
+                    {{ form|crispy }}
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
         <!--User message if user is not logged in-->
         {% else %}
         <div class="row text-center">
-            <h5>You must be logged in to comment on a post</h5>
-            <h6>Please <a href="{%url 'account_login' %}">Login</a> or <a href="{% url 'account_signup' %}">Signup</a>
-                if you havent already</h6>
+            <div class="col-12 text-center">
+                <h5>You must be logged in to comment on a post</h5>
+                <h6>Please <a href="{%url 'account_login' %}">Login</a> or <a
+                        href="{% url 'account_signup' %}">Signup</a>
+                    if you havent already</h6>
+            </div>
         </div>
         {% endif %}
-        <div class="row text-center">
-            <div class="col-12">
-                <a href="{% url 'home'%}" class="btn btn-primary" id="blog-btn">Home</a>
+        <div class="container-fluid justify-content-center">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <a href="{% url 'home'%}" class="btn btn-primary" id="blog-btn">Home</a>
+                </div>
             </div>
         </div>
     </div>
@@ -98,8 +108,5 @@
 
 
 
-
-
-<a href="{% url 'home'%}"></a>
 
 {% endblock %}
