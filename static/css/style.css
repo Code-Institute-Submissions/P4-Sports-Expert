@@ -113,13 +113,13 @@ body {
 }
 
 
-
 /* Home Page */
 
 #msg {
     font-size: 1rem;
     z-index: 1;
 }
+
 .container-fluid>a {
     font-family: 'Tilt Warp', cursive;
 }
@@ -181,14 +181,14 @@ body {
     font-family: 'Golos Text', sans-serif;
 }
 
-.blog-text > h1 {
+.blog-text>h1 {
     border-bottom: 3px solid gray;
     padding-bottom: 10px;
     font-family: 'Tilt Warp', cursive;
     margin-top: 10px;
 }
 
-.blog-text > h2 {
+.blog-text>h2 {
     font-family: 'Tilt Warp', cursive;
     font-size: 1.5rem;
     border-top: 3px solid gray;
@@ -221,7 +221,7 @@ body {
     background-color: white;
 }
 
-#body-row > p {
+#body-row>p {
     font-family: 'Golos Text', sans-serif;
     font-size: 1rem;
     font-weight: bolder;
@@ -229,7 +229,7 @@ body {
 
 .hero-text-comm {
     font-size: 1.9rem;
-    font-family: 'Tilt Warp', cursive; 
+    font-family: 'Tilt Warp', cursive;
     margin: 10px auto;
 }
 
@@ -246,10 +246,6 @@ body {
     margin: 1rem;
 }
 
-#blog-image {
-    height: 35vh;
-    margin-bottom: 2rem;
-}
 
 /* Blog Home Page */
 
@@ -271,7 +267,7 @@ body {
     border-radius: 10px;
 }
 
-.current > h3 {
+.current>h3 {
     font-size: 2rem;
     font-family: 'Golos Text', sans-serif;
     color: #fff;
@@ -284,10 +280,26 @@ body {
 }
 
 .card-text {
-    font-family: 'Golos Text', sans-serif; 
+    font-family: 'Golos Text', sans-serif;
     font-weight: bolder;
+    margin: 0.9rem;
 }
 
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 992px) {
+    .card {
+        height: 65vh;
+    }
+
+    .card-text {
+        font-size: 1.1rem;
+    }
+}
 
 
 /* Profile page */
@@ -299,7 +311,7 @@ body {
 }
 
 /* Media query for user upload image for medium screens */
-@media screen and (min-width: 500px) and (max-width: 768px) {
+@media screen and (min-width: 500px) and (max-width: 760px) {
     .user-image {
         height: 25vh;
     }
@@ -346,9 +358,9 @@ body {
     color: black;
 }
 
-.profile-item > span {
+.profile-item>span {
     font-family: 'Golos Text', sans-serif;
-    margin-bottom: 1rem; 
+    margin-bottom: 1rem;
     font-size: 1.4rem;
     padding: 2px;
 }
@@ -384,7 +396,7 @@ body {
     justify-content: center;
 }
 
-#text-containers > h1 {
+#text-containers>h1 {
     color: black;
 }
 
@@ -418,13 +430,13 @@ body {
     max-width: 100%;
 }
 
-.comment-content > b {
+.comment-content>b {
     margin: auto 1rem;
     font-size: 1.1rem;
-    border-bottom : 2px solid gray
+    border-bottom: 2px solid gray
 }
 
-.comment-content > p {
+.comment-content>p {
     margin-top: 1rem;
     font-size: 1rem;
 }
@@ -439,7 +451,7 @@ body {
 /* Media queries for small screens */
 @media screen and (max-width: 500px) {
     /* Home page */
-    
+
     .hero-text {
         font-size: 2rem;
     }
@@ -474,12 +486,12 @@ body {
         padding: 0;
     }
 
-    .comment-content > b {
+    .comment-content>b {
         font-size: 0.8rem;
         margin: auto 0.2rem;
     }
 
-    .comment-content > p {
+    .comment-content>p {
         font-size: 0.8rem;
     }
 }
