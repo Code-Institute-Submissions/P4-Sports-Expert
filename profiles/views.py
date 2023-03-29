@@ -1,7 +1,10 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
-from django.views.generic import ListView, DetailView, UpdateView
+from django.views.generic import ListView, DetailView, UpdateView, DeleteView
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
+from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.urls import reverse_lazy
 from .models import Profile
 from blog.models import BlogPost
@@ -49,7 +52,9 @@ class MyBlogs(ListView):
         return BlogPost.objects.filter(created_by=user)
 
 
-class EditProfile(SuccessMessageMixin, UpdateView):
+class EditProfile(
+    LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, UpdateView
+        ):
     """
     Renders form for editing profile
     """
@@ -68,3 +73,10 @@ class EditProfile(SuccessMessageMixin, UpdateView):
             return reverse('profile', args=[self.request.user.username])
         else:
             return reverse('home')
+
+    def test_func(self):
+        """
+        Check if the user is the author of the comment
+        """
+        profile = self.get_object()
+        return self.request.user == profile.user

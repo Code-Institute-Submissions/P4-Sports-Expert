@@ -329,7 +329,7 @@ body {
 
 .profile-img-cont {
     border-radius: 50%;
-    border: 5px solid gray;
+    border: 1px solid gray;
     max-height: 45vh;
     max-width: 45%;
     margin: auto;

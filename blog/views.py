@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.shortcuts import HttpResponseRedirect
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
@@ -65,7 +65,9 @@ class BlogDetail(DetailView):
         return context
 
 
-class DeleteComment(DeleteView, SuccessMessageMixin):
+class DeleteComment(
+    LoginRequiredMixin, UserPassesTestMixin, DeleteView, SuccessMessageMixin
+        ):
     """
     View for deleting a comment
     """
@@ -89,8 +91,17 @@ class DeleteComment(DeleteView, SuccessMessageMixin):
         """
         return reverse_lazy('blog_detail', kwargs={'pk': self.object.post_id})
 
+    def test_func(self):
+        """
+        Check if the user is the author of the comment
+        """
+        comment = self.get_object()
+        return self.request.user == comment.user
 
-class EditComment(SuccessMessageMixin, UpdateView):
+
+class EditComment(
+    LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, UpdateView
+        ):
     """
     Model for editing comment
     """
@@ -106,6 +117,13 @@ class EditComment(SuccessMessageMixin, UpdateView):
         there
         """
         return reverse_lazy('blog_detail', kwargs={'pk': self.object.post_id})
+
+    def test_func(self):
+        """
+        Check if the user is the author of the comment
+        """
+        comment = self.get_object()
+        return self.request.user == comment.user
 
 
 class AddBlog(LoginRequiredMixin, SuccessMessageMixin, CreateView):
@@ -126,7 +144,9 @@ class AddBlog(LoginRequiredMixin, SuccessMessageMixin, CreateView):
         return {'created_by': self.request.user}
 
 
-class EditBlog(SuccessMessageMixin, UpdateView):
+class EditBlog(
+    LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, UpdateView
+        ):
     """
     View for editing a blog post
     """
@@ -136,8 +156,15 @@ class EditBlog(SuccessMessageMixin, UpdateView):
     success_url = reverse_lazy('bloglist')
     success_message = "Blog post edited successfully"
 
+    def test_func(self):
+        """
+        Check if the user is the author of the blog post
+        """
+        blog = self.get_object()
+        return self.request.user == blog.created_by
 
-class DeleteBlog(DeleteView):
+
+class DeleteBlog(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """
     View for deleting a blog post
     """
@@ -153,3 +180,10 @@ class DeleteBlog(DeleteView):
         """
         messages.success(self.request, self.success_message)
         return super(DeleteBlog, self).delete(request, *args, **kwargs)
+
+    def test_func(self):
+        """
+        Check if the user is the author of the blog post
+        """
+        blog = self.get_object()
+        return self.request.user == blog.created_by
