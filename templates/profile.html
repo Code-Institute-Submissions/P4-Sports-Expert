@@ -10,14 +10,14 @@
             <h1>My Profile</h1>
         </div>
         <div class="row text-center">
-            <div class="col-12 justify-content-center mb-2" id="profile-image">
-                <!--If user has no uploaded their own profile image-->
+            <div class="col-12 justify-content-center mb-3 mt-3 profile-img-cont">
+                <!--If user has not uploaded their own profile image-->
                 {% if "placeholder" in profile.image.url %}
                 <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678279560/profile-placeholder_bkm8nk.webp"
-                    alt="placeholder-image">
+                    alt="placeholder-image" id="profile-image">
                 <!--If user has uploaded their own profile image-->
                 {% else %}
-                <img src="{{ profile.image.url }}" alt="user-upload-image">
+                <img src="{{ profile.image.url }}" alt="user-upload-image" id="profile-image">
                 {% endif %}
             </div>
         </div>
