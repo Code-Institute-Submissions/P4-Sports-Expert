@@ -25,9 +25,9 @@
 <body class="d-flex flex-column min-vh-100">
     <!--Header-->
     <header class="nav-header">
-        <div class="container-fluid messages justify-content-center">
-            <div class="row text-center">
-                <div class="col-12 messages">
+        <div class="container-fluid">
+            <div class="row text-center justify-content-center">
+                <div class="mx-auto col-12 col-md-10 col-lg-8 messages">
                     <!--Loops through messages-->
                     {% for message in messages %}
                     <div class="alert {{ message.tags }} alert-dismissible fade show justify-content-center" id="msg"

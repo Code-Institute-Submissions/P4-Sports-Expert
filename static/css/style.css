@@ -118,7 +118,7 @@ body {
 
 #msg {
     font-size: 1rem;
-    opacity: 1;
+    z-index: 1;
 }
 .container-fluid>a {
     font-family: 'Tilt Warp', cursive;
