@@ -30,6 +30,9 @@ class ProfileView(DetailView):
         context = {
             "profile": profile,
         }
+        # If current user is not profile owner returns status 403 forbidden
+        if request.user != profile.user:
+            return render(request, '403.html', status=403)
 
         return render(request, self.template_name, context)
 
