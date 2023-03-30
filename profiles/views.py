@@ -38,7 +38,7 @@ class ProfileView(DetailView):
         return render(request, self.template_name, context)
 
 
-class MyBlogs(LoginRequiredMixin, UserPassesTestMixin, ListView):
+class MyBlogs(LoginRequiredMixin, ListView):
     """
     Renders a list of all user blogs
     """
@@ -54,15 +54,6 @@ class MyBlogs(LoginRequiredMixin, UserPassesTestMixin, ListView):
         """
         user = self.request.user
         return BlogPost.objects.filter(created_by=user)
-
-    def test_func(self):
-        """
-        Check if the logged in user is the owner of the blog
-        ensures user only brought to their own blog page
-        """
-        user = self.request.user
-        blogpost = self.get_queryset().first()
-        return blogpost.created_by == user
 
 
 class EditProfile(
