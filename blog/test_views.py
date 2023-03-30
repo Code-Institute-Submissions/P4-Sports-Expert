@@ -309,8 +309,8 @@ class TestDeleteAndEditComment(TestCase):
         """
         Test only author of comment can edit it. Client first logs in
         as a different user, test to make sure a 302 action forbidden response
-        is returned, client then logs in as author of comment and test to make sure
-        a status 200 is returned
+        is returned, client then logs in as author of comment and test to
+        make sure a status 200 is returned
         """
         self.client.login(username='otheruser', password='testpass')
         url = reverse('edit_comment', kwargs={'pk': self.comment.pk})
