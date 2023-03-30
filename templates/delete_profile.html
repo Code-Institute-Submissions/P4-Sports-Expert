@@ -8,9 +8,9 @@
     <form class="form-control confirmation" action="{% url 'delete_profile' profile.pk %}"method="post">
         {% csrf_token%}
         <div class="col-12 text-center">
-            <h1>Are you sure you want Your profile</h1>
-            <button type="submit" class="btn btn-primary">Delete</button>
-            <a href="{% url 'bloglist'%}" class="btn btn-warning">Cancel</a>
+            <h1>Are you sure you want to delete your profile  {{ user.username }}?</h1>
+            <button type="submit" class="btn btn-primary mt-3">Delete</button>
+            <a href="{% url 'profile' user.username %}" class="btn btn-warning mt-3">Cancel</a>
         </div>
     </form>
 </div>
