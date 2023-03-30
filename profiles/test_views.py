@@ -17,6 +17,9 @@ class TestProfileView(TestCase):
         self.user = User.objects.create_user(
             username='testuser', password='testpass',
         )
+        self.second_user = User.objects.create_user(
+            username='testuser2', password='testpass2',
+        )
         self.profile = Profile.objects.get(user=self.user)
 
     def test_profile_detail_view_get_method(self):
@@ -32,6 +35,18 @@ class TestProfileView(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'profile.html')
         self.assertEqual(response.context['profile'], self.profile)
+
+    def test_profile_detail_view_403_response(self):
+        """
+        Client logs in as created user, sends a get method to second user
+        account, makes sure correct 403 status code is returned
+        """
+        self.client.login(username='testuser', password='testpass')
+        response = self.client.get(
+            reverse('profile', args=[self.second_user.username])
+        )
+        self.assertEqual(response.status_code, 403)
+        self.assertTemplateUsed(response, '403.html')
 
 
 class TestMyBlogsView(TestCase):
@@ -69,7 +84,7 @@ class TestMyBlogsView(TestCase):
         self.assertIn(self.blogpost, queryset)
 
 
-class EditProfileTest(TestCase):
+class TestEditProfile(TestCase):
     """
     Unit tests for EditProfile view
     """
@@ -97,3 +112,32 @@ class EditProfileTest(TestCase):
             'profile', args=[self.user.username]
             ))
 
+
+class TestDeleteProfile(TestCase):
+    """
+    Unit tests for delete profile view
+    """
+    def setUp(self):
+        """
+        Creates user and links to profile for client mocking
+        """
+        self.client = Client()
+        self.user = User.objects.create_user(
+            username='testuser',  password='testpass'
+        )
+        self.profile = Profile.objects.get(user=self.user)
+        self.client.login(username='testuser', password='testpass')
+        self.url = reverse('delete_profile', kwargs={'pk': self.profile.pk})
+
+    def test_delete_profile(self):
+        """
+        Deletes client profile, checks that it doesnt exist, checks
+        the linked user doesnt exist and checks the correct reverse url
+        is called
+        """
+        profile = self.profile
+        url = self.url
+        response = self.client.delete(url)
+        self.assertFalse(Profile.objects.filter(pk=profile.pk).exists())
+        self.assertFalse(Profile.objects.filter(user=self.user).exists())
+        self.assertRedirects(response, reverse('home'))
