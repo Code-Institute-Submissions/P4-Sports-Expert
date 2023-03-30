@@ -305,6 +305,21 @@ class TestDeleteAndEditComment(TestCase):
             list(storage)[0].message, 'Your comment has been deleted'
             )
 
+    def test_edit_comment(self):
+        """
+        Test only author of comment can edit it. Client first logs in
+        as a different user, test to make sure a 302 action forbidden response
+        is returned, client then logs in as author of comment and test to make sure
+        a status 200 is returned
+        """
+        self.client.login(username='otheruser', password='testpass')
+        url = reverse('edit_comment', kwargs={'pk': self.comment.pk})
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 302)
+        self.client.login(username='testuser1', password='testpassword1')
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+
     def test_get_success_url_delete(self):
         """
         Checks correct success url is rendered after comment is
@@ -328,4 +343,3 @@ class TestDeleteAndEditComment(TestCase):
         self.assertEqual(
             url, reverse_lazy('blog_detail', kwargs={'pk': self.blogpost.pk})
             )
-
