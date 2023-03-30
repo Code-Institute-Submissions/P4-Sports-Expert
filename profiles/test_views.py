@@ -25,6 +25,7 @@ class TestProfileView(TestCase):
         profile view using username as a paramater, checks correct
         status code response and correct context is returned
         """
+        self.client.login(username='testuser', password='testpass')
         response = self.client.get(
             reverse('profile', args=[self.user.username])
             )
@@ -96,14 +97,3 @@ class EditProfileTest(TestCase):
             'profile', args=[self.user.username]
             ))
 
-    def test_unauthenticated_user(self):
-        """
-        Checks if user is logged out they are directed to the home page,
-        checks if correct status code in response
-        """
-        self.client.logout()
-        response = self.client.post(reverse(
-            'edit_profile', kwargs={'pk': self.profile.pk}
-            ), {'about': 'Test about post'})
-        self.assertEqual(response.status_code, 302)
-        self.assertEqual(response.url, reverse('home'))

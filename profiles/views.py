@@ -73,10 +73,7 @@ class EditProfile(
         Redirects user to their profile page when
         form is posted
         """
-        if self.request.user.is_authenticated:
-            return reverse('profile', args=[self.request.user.username])
-        else:
-            return reverse('home')
+        return reverse_lazy('profile', args=[self.request.user.username])
 
     def test_func(self):
         """

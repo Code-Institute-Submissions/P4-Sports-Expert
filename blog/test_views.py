@@ -183,27 +183,24 @@ class TestAddBlogView(TestCase):
 class TestDeleteBlogView(TestCase):
     def setUp(self):
         """Creates valid comment database entry"""
-        # Needed for created_by id non null constraint
-        test_user = User.objects.create_user(
-            username='testuser1', password='testpassword1'
-        )
         self.user = User.objects.create_user(
             username='testuser', password='testpass'
         )
         self.blogpost = BlogPost.objects.create(
-            created_by=test_user,
+            created_by=self.user,
             description="This is a test",
             title="This is a test blogpost title",
             body='This is a test blogpost body',
             category='Football',
         )
         self.url = reverse('delete_blog', args=[self.blogpost.pk])
-        self.client.login(username='testuser', password='testpassword')
+        self.client.login(username='testuser1', password='testpassword1')
 
     def test_delete_blog_page(self):
         """
         Checks correct template is rendered
         """
+        self.client.login(username='testuser', password='testpass')
         response = self.client.get(self.url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'delete_blog.html')
@@ -212,6 +209,7 @@ class TestDeleteBlogView(TestCase):
         """
         Checks message is rendered correctly when post is deleted
         """
+        self.client.login(username='testuser', password='testpass')
         response = self.client.post(self.url, follow=True)
         self.assertRedirects(response, reverse('bloglist'))
         self.assertFalse(BlogPost.objects.filter(pk=self.blogpost.pk).exists())
@@ -227,11 +225,11 @@ class EditBlogTest(TestCase):
     def setUp(self):
         """Creates valid comment database entry"""
         # Needed for created_by id non null constraint
-        test_user = User.objects.create_user(
+        self.test_user = User.objects.create_user(
             username='testuser1', password='testpassword1'
         )
         self.blogpost = BlogPost.objects.create(
-            created_by=test_user,
+            created_by=self.test_user,
             description="This is a test",
             title="This is a test blogpost title",
             body='This is a test blogpost body',
@@ -252,6 +250,7 @@ class EditBlogTest(TestCase):
         correct reverse url is rendered and checks that
         the correct user message is rendered
         """
+        self.client.login(username='testuser1', password='testpassword1')
         response = self.client.post(self.url, data=self.new_data, follow=True)
         self.assertRedirects(response, reverse('bloglist'))
         updated_blogpost = BlogPost.objects.get(pk=self.blogpost.pk)
@@ -272,11 +271,11 @@ class TestDeleteAndEditComment(TestCase):
         Creates valid comment database entry
         """
         # Needed for created_by id non null constraint
-        test_user = User.objects.create_user(
+        self.test_user = User.objects.create_user(
             username='testuser1', password='testpassword1'
         )
         self.blogpost = BlogPost.objects.create(
-            created_by=test_user,
+            created_by=self.test_user,
             description="This is a test",
             title="This is a test blogpost title",
             body='This is a test blogpost body',
@@ -297,6 +296,7 @@ class TestDeleteAndEditComment(TestCase):
         checks that the comment no longer exists after being deleted
         and checks correct success message is rendered
         """
+        self.client.login(username='testuser1', password='testpassword1')
         response = self.client.post(self.url)
         self.assertEqual(response.status_code, 302)
         self.assertFalse(Comments.objects.filter(pk=self.comment.pk).exists())
@@ -328,3 +328,4 @@ class TestDeleteAndEditComment(TestCase):
         self.assertEqual(
             url, reverse_lazy('blog_detail', kwargs={'pk': self.blogpost.pk})
             )
+
