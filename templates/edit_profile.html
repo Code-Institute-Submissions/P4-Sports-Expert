@@ -10,6 +10,7 @@
         {{ form|crispy }}
         <div class="col-12 text-center">
             <button type="submit" class="btn btn-primary">Submit</button>
+            <a href="{% url 'delete_profile' profile.pk %}">Delete</a>
         </div>
     </form>
 </div>

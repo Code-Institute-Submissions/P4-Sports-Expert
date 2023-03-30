@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} Delete Comment {% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="mx-auto col-10 col-md-8 col-lg-6">
+    <form class="form-control confirmation" action="{% url 'delete_profile' profile.pk %}"method="post">
+        {% csrf_token%}
+        <div class="col-12 text-center">
+            <h1>Are you sure you want Your profile</h1>
+            <button type="submit" class="btn btn-primary">Delete</button>
+            <a href="{% url 'bloglist'%}" class="btn btn-warning">Cancel</a>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

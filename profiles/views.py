@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.shortcuts import HttpResponseRedirect
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
@@ -92,3 +93,29 @@ class EditProfile(
         """
         profile = self.get_object()
         return self.request.user == profile.user
+
+
+class DeleteProfile(LoginRequiredMixin, DeleteView):
+    """
+    Deletes a user's profile and associated User
+    """
+    model = Profile
+    success_url = reverse_lazy('home')
+    template_name = 'delete_profile.html'
+
+    def delete(self, request, *args, **kwargs):
+        """
+        Set the success message and delete the profile and the associated user
+        """
+        user = self.get_object().user
+        user.delete()
+        messages.success(self.request, "Profile was deleted successfully.")
+        return HttpResponseRedirect(self.success_url)
+
+        return super(DeleteProfile, self).delete(request, *args, **kwargs)
+
+    def get_queryset(self):
+        """
+        Filters the Profile queryset to only include the user's own profile
+        """
+        return Profile.objects.filter(user=self.request.user)
