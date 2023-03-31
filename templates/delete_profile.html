@@ -9,6 +9,8 @@
         {% csrf_token%}
         <div class="col-12 text-center">
             <h1>Are you sure you want to delete your profile  {{ user.username }}?</h1>
+            <hr>
+            <h2>Your user account will also be deleted aswell as all of your blog posts!</h2>
             <button type="submit" class="btn btn-primary mt-3">Delete</button>
             <a href="{% url 'profile' user.username %}" class="btn btn-warning mt-3">Cancel</a>
         </div>

@@ -3,30 +3,45 @@
 {% block content %}
 
 <div class="row justify-content-center">
-    <!--Loops through all blog posts-->
+    <!--Loops through blog object-->
     {% for blog in object_list %}
-    <div class="col-md-6 col-lg-4" id="blog-card">
-        <div class="card mt-4">
-            <!--If user has not uploaded their own image-->
-            {% if "placeholder" in blog.blog_image.url %}
+    <div class="col-md-6 col-lg-4 mt-3 d-flex blog-card">
+        <div class="card flex-fill">
+            <!--If user has not uploaded an image to the blog and the category is Football-->
+            {% if "placeholder" in blog.blog_image.url and blog.category == "Football" %}
             <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678132670/the-ball-stadion-football-the-pitch-46798_nimtac.jpg"
-                alt="placeholder-image" class="card-img-top">
+                alt="placeholder-image" class="card-img-top user-image">
+            <!--If user has not uploaded an image to the blog and the category is GAA-->
+            {% elif "placeholder" in blog.blog_image.url and blog.category == "GAA"%}
+            <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678833173/static/css/the-gaa-a-community-more-than-a-sporting-organisation_mkrkfd.webp"
+                alt="placeholder-image" class="card-img-top user-image">
+            <!--If user has not uploaded an image to the blog and the category is Rugby-->
+            {% elif "placeholder" in blog.blog_image.url and blog.category == "Rugby"%}
+            <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678833501/pexels-photo-6373836_tqigji.jpg"
+                alt="placeholder-image" class="card-img-top user-image">
             <!--If user has uploaded their own image-->
             {% else %}
-            <img src="{{ blog.blog_image.url }}" alt="user-upload-image" class="card-img-top">
+            <img src="{{ blog.blog_image.url }}" alt="user-upload-image" class="card-img-top user-image">
             {% endif %}
-            <div class="card-body">
-                <h5 class="card-title">{{ blog.title }}</h5>
-                <p class="card-text">{{ blog.description }}</p>
+            <div class="card-body text-center flex-fill">
+                <h5 class="card-title">Author: {{ blog.created_by }}</h5>
+                <p class="card-text">Title: {{ blog.title }}</p>
+                <p class="card-text">Description: {{ blog.description }}</p>
+                <p class="card-text">Posted: {{ blog.date_created }}</p>
+                <p class="card-text"> Category: {{ blog.category }}</p>
             </div>
-            <div class="btn-group" role="group" aria-label="Control Buttons">
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <!--Chceks if blog author is current logged in user-->
+                {% if request.user == blog.created_by %}
                 <a href="{% url 'delete_blog' blog.pk %}" class="btn btn-danger">Delete</a>
                 <a href="{% url 'edit_blog' blog.pk %}" class="btn btn-warning">Edit</a>
                 <a href=" {% url 'blog_detail' blog.pk %}" class="btn btn-success">Blog</a>
+                {% else %}
+                <a href=" {% url 'blog_detail' blog.pk %}" class="btn btn-success">Blog</a>
+                {% endif %}
             </div>
         </div>
     </div>
-    <!--If user has no blogs-->
     {% empty %}
     <div class="mx-auto col-10 col-md-8 col-lg-6 text-center" id="text-containers">
         <div class="row text-center m-4">
@@ -37,10 +52,10 @@
         </div>
     </div>
     {% endfor %}
-    <!--Pagination if more than 6 blog posts-->
+    <!--Pagination if there are more than 6 blog posts-->
     <div class="pagination" id="page-btns">
         <div class=" container step-links">
-            <div class="row text-center">
+            <div class="row text-center mt-4">
                 <div class="col-12">
                     {% if page_obj.has_previous %}
                     <div class="btn-group" role="group" aria-label="Basic mixed styles example">
@@ -51,7 +66,7 @@
                     {% endif %}
 
                     {% if page_obj.has_next %}
-                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                    <div class="btn-group" role="group" aria-label="Pagination buttons">
                         <a href="?page={{ page_obj.next_page_number }}" class="btn btn-primary m-1">Next Page</a>
                         <a href="?page={{ page_obj.paginator.num_pages }}" class="btn btn-primary m-1">Last Page</a>
                     </div>
@@ -64,4 +79,7 @@
         <h3>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</h3>
     </div>
 </div>
+</div>
+
+
 {% endblock %}
