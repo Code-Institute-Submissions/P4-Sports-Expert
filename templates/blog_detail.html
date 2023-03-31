@@ -20,90 +20,63 @@
                 <h2>{{ object.title}}</h2>
             </div>
         </div>
-        <div class="row text-center" id="blog-image">
+        <div class="row text-center">
             <div class="col-12 justify-content-center">
-                <!--If user has not uploaded an image-->
-                {% if "placeholder" in object.blog_image.url %}
+                <!--If user has not uploaded an image to the blog and the category is Football-->
+                {% if "placeholder" in object.blog_image.url and object.category == "Football" %}
                 <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678132670/the-ball-stadion-football-the-pitch-46798_nimtac.jpg"
-                    alt="placeholder-image" id="blog-image">
+                    alt="placeholder-image" class="blog-image">
+                <!--If user has not uploaded an image to the blog and the category is GAA-->
+                {% elif "placeholder" in object.blog_image.url and object.category == "GAA"%}
+                <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678833173/static/css/the-gaa-a-community-more-than-a-sporting-organisation_mkrkfd.webp"
+                    alt="placeholder-image" class="blog-image">
+                <!--If user has not uploaded an image to the blog and the category is Rugby-->
+                {% elif "placeholder" in object.blog_image.url and object.category == "Rugby"%}
+                <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678833501/pexels-photo-6373836_tqigji.jpg"
+                    alt="placeholder-image" class="blog-image">
                 <!--If user has uploaded their own image-->
                 {% else %}
-                <img src="{{ object.blog_image.url }}" alt="user-upload-image" id="blog-image">
+                <img src="{{ object.blog_image.url }}" alt="user-upload-image" class="blog-image">
                 {% endif %}
             </div>
         </div>
         <div class="row" id="body-row">
             <p>{{ object.body|linebreaks }}</p>
         </div>
+    </div>
+    <!--Comment section-->
+    <div class="container mx-auto col-12 col-md-10 col-lg-8 comment-cont">
         <div class="row text-center">
-            <h2 class="hero-text-comm">Comments:</h2>
-            <hr>
+            <div class="col-12">
+                <h2>Comments:</h2>
+            </div>
         </div>
-        <!--Comments section-->
+        <hr>
         <!--Loops through comments-->
         {% for comment in comments%}
-        <div class="row comment-row text-center">
-            <div class="col-lg-8 mx-auto comment-cont">
-                <div class="comment-content">
-                    <b>{{ comment.user}}</b>
-                    <b>{{ comment.time }}</b>
-                    <p>{{ comment.comment }}</p>
-                    <!--Checks if logged in user is the author of the comment-->
-                    {% if request.user == comment.user %}
-                    <div class="btn-group">
-                        <a href="{% url 'delete_comment' comment.pk %}" class="btn btn-danger mb-1">Delete</a>
-                        <a href="{% url 'edit_comment' comment.pk%}" class="btn btn-warning mb-1">Edit</a>
-                    </div>
-                    {% endif %}
-                </div>
+        <div class="row commment-row text-center">
+            <div class="col-lg-4 col-12">
+                <h3>Comment by: {{ comment.user}}</h3>
             </div>
+            <div class="col">
+                <h3>On: {{ comment.time }}</h3>
+            </div>
+            <!--Checks if logged in user is the author of the comment-->
+            {% if request.user == comment.user %}
+            <div class="btn-group col">
+                <a href="{% url 'delete_comment' comment.pk %}" class="btn btn-danger mb-1">Delete</a>
+                <a href="{% url 'edit_comment' comment.pk%}" class="btn btn-warning mb-1">Edit</a>
+            </div>
+            {% endif %}
         </div>
-        <!--If there are no comments-->
-        {% empty %}
-        <div class="row">
-            <div class="col-12 text-center">
-                <h3 class="comm-text">No Comments yet</h3>
-            </div>
-        </div>
-        {% if user.is_authenticated %}
-        <div class="row">
-            <div class="col-12 text-center">
-                <h5 class="comm-text">Add your comment below</h5>
-            </div>
-        </div>
-        {% endif %}
-        {% endfor %}
-        <!--Comment form if user is logged in-->
-        {% if user.is_authenticated%}
-            <div class="row comment-row">
-                <form class="form-control" method="post" enctype="multipart/form-data">
-                    {% csrf_token%}
-                    {{ form|crispy }}
-                    <div class="col-12 text-center">
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
-                </form>
-            </div>
-        <!--User message if user is not logged in-->
-        {% else %}
-        <div class="row text-center">
-            <div class="col-12 text-center">
-                <h5>You must be logged in to comment on a post</h5>
-                <h6>Please <a href="{%url 'account_login' %}">Login</a> or <a
-                        href="{% url 'account_signup' %}">Signup</a>
-                    if you havent already</h6>
-            </div>
-        </div>
-        {% endif %}
-        <div class="container-fluid justify-content-center">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <a href="{% url 'home'%}" class="btn btn-primary" id="blog-btn">Home</a>
-                </div>
+        <hr>
+        <div class="row commment-row">
+            <div class="col-12">
+                <p>{{ comment.comment }}</p>
             </div>
         </div>
     </div>
-
+    {% endfor %}
 </main>
 
 
