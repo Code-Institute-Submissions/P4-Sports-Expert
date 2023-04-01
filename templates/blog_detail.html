@@ -43,40 +43,69 @@
         <div class="row" id="body-row">
             <p>{{ object.body|linebreaks }}</p>
         </div>
-    </div>
-    <!--Comment section-->
-    <div class="container mx-auto col-12 col-md-10 col-lg-8 comment-cont">
-        <div class="row text-center">
-            <div class="col-12">
-                <h2>Comments:</h2>
-            </div>
-        </div>
-        <hr>
+
+        <!--Comments section-->
         <!--Loops through comments-->
-        {% for comment in comments%}
-        <div class="row commment-row text-center">
-            <div class="col-lg-4 col-12">
-                <h3>Comment by: {{ comment.user}}</h3>
+        <div class="row text-center">
+            <h2 class="hero-text-comm">Comments:</h2>
+        </div>
+        <!--Comments section-->
+        <div class="row comment-row text-center">
+            <!--Loops through comments-->
+            {% for comment in comments%}
+            <div class="col-lg-8 mx-auto comment-cont">
+                <div class="comment-content">
+                    <b>{{ comment.user}}</b>
+                    <b>{{ comment.time }}</b>
+
+                    <!--Checks if logged in user is the author of the comment-->
+                    {% if request.user == comment.user %}
+                    <a href="{% url 'delete_comment' comment.pk %}" class="mx-3">Delete Comment</a>
+                    <a href="{% url 'edit_comment' comment.pk%}">Edit Comment</a>
+                    <div class="text-center mt-3">
+                        <p>{{ comment.comment }}</p>
+                    </div>
+                    <hr>
+                    {% endif %}
+                </div>
             </div>
-            <div class="col">
-                <h3>On: {{ comment.time }}</h3>
+            <!--If there are no comments-->
+            {% empty %}
+            <div class="row text-center">
+                <h3 class="hero-text-comm">No Comments yet</h3>
             </div>
-            <!--Checks if logged in user is the author of the comment-->
-            {% if request.user == comment.user %}
-            <div class="btn-group col">
-                <a href="{% url 'delete_comment' comment.pk %}" class="btn btn-danger mb-1">Delete</a>
-                <a href="{% url 'edit_comment' comment.pk%}" class="btn btn-warning mb-1">Edit</a>
+            {% if user.is_authenticated %}
+            <div class="row text-center">
+                <h5>Add your comment below</h5>
             </div>
             {% endif %}
+            {% endfor %}
         </div>
-        <hr>
-        <div class="row commment-row">
+        <!--Comment form if user is logged in-->
+        {% if user.is_authenticated%}
+        <div class="row comment-row">
+            <form class="form-control" method="post" enctype="multipart/form-data">
+                {% csrf_token%}
+                {{ form|crispy }}
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+        <!--User message if user is not logged in-->
+        {% else %}
+        <div class="row text-center">
+            <h5>You must be logged in to comment on a post</h5>
+            <h6>Please <a href="{%url 'account_login' %}">Login</a> or <a href="{% url 'account_signup' %}">Signup</a>
+                if you havent already</h6>
+        </div>
+        {% endif %}
+        <div class="row text-center">
             <div class="col-12">
-                <p>{{ comment.comment }}</p>
+                <a href="{% url 'home'%}" class="btn btn-primary" id="blog-btn">Home</a>
             </div>
         </div>
     </div>
-    {% endfor %}
 </main>
 
 
