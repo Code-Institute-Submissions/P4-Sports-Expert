@@ -114,7 +114,7 @@ This Epic had 3 acceptance criterias
 
 This milstone was centered around the creation of the blog home page. Note: The filter functionality of accpetance criteria 2 was not completed due to time constraints and the relevant user story was moved into the backlog.
 
-#### **EPIC: Blog view page creation [#Milestone 7](https://github.com/seanj06/P4-Sports-Expert/milestone/4)**
+#### **EPIC: U/X [#Milestone 7](https://github.com/seanj06/P4-Sports-Expert/milestone/4)**
 
 This Epic had 7 acceptance criterias
 
@@ -150,6 +150,152 @@ There are 4 user stories in the backlog milestone due to not being complete beca
 - A search bar on the home page [USER STORY:Search bar #16](https://github.com/seanj06/P4-Sports-Expert/issues/16)
 
 - User being able to reset password - [USER STORY:Reset Password #7](https://github.com/seanj06/P4-Sports-Expert/issues/7)
+
+### **User Stories**
+
+Below is a list of user stories completed In epic milestones.
+Comments were left below user stories with commit numbers as per taksks completed.
+
+#### **EPIC: Django Installation and app setup [#Milestone 1](https://github.com/seanj06/P4-Sports-Expert/milestone/1?closed=1)**
+
+User Story 1
+ - [USER STORY:Create new django project and app #2](https://github.com/seanj06/P4-Sports-Expert/issues/2)
+
+ This user story had a Must Have label
+   - Title:
+       -  As a developer I can create a new Django project correctly so that my project can be built in the correct way
+
+   - Tasks: 
+       - Task 1 - Create new django project from command line
+       - Task 2 - Create new app inside project andadd to installed apps on settings.py
+       - Task 3 - Migrate all changes to database
+       - Task 4 - Run app on server to make sure it was created successfully
+
+   - Comments:
+       - Project created and server run to make sure app was correctly installed - [b6338d3](https://github.com/seanj06/P4-Sports-Expert/commit/b6338d35869a468eff9b5bcf4f7d6ad2b46fb3e0) 
+
+User story 2
+  - [USER STORY:Django package installation #3](https://github.com/seanj06/P4-Sports-Expert/issues/3)  
+
+  This user story had a Must Have label
+   - Title:
+       - As a developer I can install the needed librarys and packages so that my project is set up correctly
+
+   - Tasks:
+       -  Task 1 - Install Django + Heroku server from command line
+       - Task 2 - Install PostgreSql database from command line
+       - Task 3 - Install Cloudinary from command line
+       -  Task 4 - Create requirements.txt file
+
+   - Comments:
+       - All packages installed - [64203e7](https://github.com/seanj06/P4-Sports-Expert/commit/b6338d35869a468eff9b5bcf4f7d6ad2b46fb3e0)  
+
+#### **EPIC: First Heroku Deployment [#Milestone 2](https://github.com/seanj06/P4-Sports-Expert/milestone/2?closed=1)**
+
+User Story 1
+ - [USER STORY: First Heroku Deployment #1](https://github.com/seanj06/P4-Sports-Expert/issues/1)
+
+  This user story had a Must Have label
+
+   - Title:
+       - As a developer I can deploy my project on Heroku so that it can be seen and used by other users
+
+   - Tasks:
+       - Task 1 - Create new app on Heroku
+       - Task 2 - Create new instance on ElephantSql dashboard
+       - Task 3 - Create env.py file and change settings.py as required
+       - Task 4 - Migrate changes to database
+       - Task 5 - Add config vars on Heroku
+       - Task 6 - Create procfile
+       - Task 7 - Deploy Branch in Heroku
+
+   - Comments:
+       - App successfully deployed to heroku - [4fc6f57](https://github.com/seanj06/P4-Sports-Expert/commit/4fc6f57ea26811b500bcba6f0907e25e41e3f7b7)
+
+User Story 2
+  - [USER STORY:Cloudinary #12](https://github.com/seanj06/P4-Sports-Expert/issues/12)
+
+  This user story had a Should have label
+
+   - Title:
+       - As a developer I can install cloudinary so that all my images can still be displayed on my site after being deployed
+
+   - Tasks:
+       - Task 1 - Set up cloudinary account to get api var
+       - Task 2 - Install cloudnary in workspace
+       - Task 3 - add config var to env.py file and heroku
+       - Task 4 - Add relevant variables to settings.py
+
+   - Comments:
+       - Cloudinary installed and all variables added in settings.py - [8fc3000](https://github.com/seanj06/P4-Sports-Expert/commit/8fc3000810860833ac97b7c881431df88f0a0d71)  
+
+#### **EPIC: Home page creation [#Milestone 3](https://github.com/seanj06/P4-Sports-Expert/milestone/8)**
+
+User Story 1
+ - [USER STORY:Site Navigation #11](https://github.com/seanj06/P4-Sports-Expert/issues/11)
+
+  This user story had A Should Have label
+
+   - Title:
+       - As a User I can navigate the site easily so that I can easily find what I am looking for
+
+   - Tasks:
+       - This user story had no tasks attached
+
+   - Comments:
+       - Carousel added to home page for user navigation - [07a7fa1](https://github.com/seanj06/P4-Sports-Expert/commit/07a7fa1f72f7e5391845a93d665873dffeae27a8)
+
+User Story 2
+  - [USER STORY:Create Templates #5](https://github.com/seanj06/P4-Sports-Expert/issues/5)    
+
+   This user story had A Must Have label
+
+   - Title:
+       - As a developer I can create templates so that users can see the website online    
+
+   - Tasks:
+       - Task 1 - Create templates folder
+       - Task 2 - Create base.html file to hold base template code
+       - Task 3 - Create base html template code
+       - Task 4 - Create news urls.py file and enter new path    
+
+   - Comments:
+       - Base.html file created and bootstrap content added - [3e84feb](https://github.com/seanj06/P4-Sports-Expert/commit/3e84febb7459482bfeb9db6df4641c0c9f7a82d1) 
+       - Url app file created and path added to home page - [5a10cf9](https://github.com/seanj06/P4-Sports-Expert/commit/5a10cf93513f45568466afe5bf1f7f62fc8c1799)
+
+User Story 3
+  - [USER STORY:Home page #14](https://github.com/seanj06/P4-Sports-Expert/issues/14)
+
+   This user story had a must have label
+
+   - Title:
+       - As a user I can visit the homepage so that I can log into my account and navigate to different parts of the site
+
+   - Tasks:
+       - Task 1 - Create view to homepage
+       - Task 2 - Create navbar
+       - Task 3 - Add sign in/sign up links to navbar  
+
+   - Comments:
+       - Homepage created with view - [5a10cf9](https://github.com/seanj06/P4-Sports-Expert/commit/5a10cf93513f45568466afe5bf1f7f62fc8c1799)
+       - Bootstrap navbar added with links - [3e84feb](https://github.com/seanj06/P4-Sports-Expert/commit/3e84febb7459482bfeb9db6df4641c0c9f7a82d1)
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
