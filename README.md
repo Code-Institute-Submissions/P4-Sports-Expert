@@ -32,4 +32,14 @@ Sports expert was designed to be a site for Sports lovers to share and read thei
 - For users to be able to comment on their own and other peoples blogposts while logged in
 - For users to be able to edit their profile including adding thier own profile picture while logged in.
 
+## **Agile Planning**
+
+This project was built using the Agile method throughout by creating EPIC Miletones which were broken down into smaller user stories with labels "must-have", "should-have", "could-have", and wont have. 
+
+Epics milestones were given Acceptance criterias and the must haves were completed first to complete the milestone. Any user stories that were not completed were moved back into the project backlog.
+
+The Kanban board was created using Github projects and can be located [here](https://github.com/users/seanj06/projects/5/views/1)  and can be viewed to see the completed and backlogged user stories.
+
+![Kanban Board](docs/readme-images/kanban-board.png)
+
 
