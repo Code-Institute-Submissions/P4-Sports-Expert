@@ -9,7 +9,7 @@
 {% block content %}
 
 
-<div class="mx-auto col-10 col-md-8 col-lg-6">
+<div class="mx-auto col-12 col-md-8 col-lg-6">
   <form class="login forms" method="POST" action="{% url 'account_login' %}">
     {% csrf_token %}
     {{ form|crispy }}

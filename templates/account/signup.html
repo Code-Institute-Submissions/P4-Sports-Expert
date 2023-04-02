@@ -6,7 +6,7 @@
 
 {% block content %}
 
-<div class="mx-auto col-10 col-md-8 col-lg-6 text-center">
+<div class="mx-auto col-12 col-md-8 col-lg-6 text-center">
   <form class="form-control forms" method="post" action="{% url 'account_signup' %}">
     {% csrf_token %}
     {{ form|crispy }}
