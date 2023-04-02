@@ -430,6 +430,202 @@ User Story 4
    - Comments:
        - Django form created and linked to model - [77f3686](https://github.com/seanj06/P4-Sports-Expert/commit/77f368639c4b1f4b79e9378bc8966a5f31f12b8b)
 
+#### **EPIC: Blog view page creation [#Milestone 6](https://github.com/seanj06/P4-Sports-Expert/milestone/9)**
+
+User Story 1
+ - [USER STORY:Add image to blog post #19](https://github.com/seanj06/P4-Sports-Expert/issues/19)
+
+  This user story had a Should Have label
+
+   - Title:
+       - As a user I can add an image to my blog post so that I can make my post stand out
+
+   - Tasks:
+       - This user story had no tasks attached to it
+
+   - Comments:
+       - Code added to let user add image to blog post - [c50ed39](https://github.com/seanj06/P4-Sports-Expert/commit/c50ed39cbd3c9b53fa6b06c332e59fe913daea80)    
+
+User Story 2
+ - [USER STORY: Django Forms #17](https://github.com/seanj06/P4-Sports-Expert/issues/17)
+
+  This user story had a Must Have label
+
+   - Title:
+       - As a developer I can create django forms so that user database input can be validated and handled correctly
+
+   - Tasks:
+       - Task 1 - Create forms.py file
+       - Task 2 - Create a form linking to database model
+       - Task 3 - Define which fields are needed from model
+
+   - Comments:
+       - Django form created for BlogPost model - [d4f3d2d](https://github.com/seanj06/P4-Sports-Expert/commit/d4f3d2d430b247432f4452299f3fa187031e6bfb)
+
+User Story 3
+ - [USER STORY: Add Models #4](https://github.com/seanj06/P4-Sports-Expert/issues/4)
+
+  This user story had a Must Have label
+
+   - Title:
+       - As a developer I can add database models so that the database knows how to handle user data
+
+   - Tasks:
+       - Task 1 - Import appropriate librarys at top of models.py file
+       - Task 2 - Create a class based model
+       - Task 3 - Add meta class to class based model
+       - Task 4 - MIgrate changes to database
+
+   - Comments:
+       - BlogPost model created and changes migrated to database - [e815114](https://github.com/seanj06/P4-Sports-Expert/commit/e815114a3ccd09361eaacd54f98bd86a7327199b)
+
+#### **EPIC: U/X [#Milestone 7](https://github.com/seanj06/P4-Sports-Expert/milestone/4)**
+
+User Story 1
+ - [USER STORY:Custom error pages #37](https://github.com/seanj06/P4-Sports-Expert/issues/37)
+
+  This user story had a Must Have label
+
+   - Title:
+       - As a developer I can create custom error pages so that they match the theme of the site
+
+   - Tasks:
+       - Task 1 - Create custom 404, 403 and 500 page templates
+       - Task 2 - Style templates
+
+   - Comments:
+       - Custom templates created - [539c8be](https://github.com/seanj06/P4-Sports-Expert/commit/539c8be88ecbab9b8a88e1792c9d67bd21ededde)
+       - Custom styling added to templates - [540dd70](https://github.com/seanj06/P4-Sports-Expert/commit/540dd703d590f834c08e28f7dcb290f725080bdb)
+
+User Story 2
+ - [USER STORY:Forms #33](https://github.com/seanj06/P4-Sports-Expert/issues/33)
+
+  This user story had a Must Have label
+
+   - Title:
+       - As a developer I can style the user forms so that they match the design of the rest of the site
+
+   - Tasks:
+       - Task 1 - Ensure sign up, log in ,log out edit blog and add blog pages design matches rest of site
+       - Task 2 - Ensure success messages dont push down content
+       - Task 3 - Ensure all success urls bring user to reverse page
+
+   - Comments:
+       - All forms styled to match site design - [2e6381f](https://github.com/seanj06/P4-Sports-Expert/commit/2e6381f1341bb9a685dbcdf6607186fe49201bde)
+       - Absolute position given to success messages so messages dont push down content - [b08a1ca](https://github.com/seanj06/P4-Sports-Expert/commit/b08a1cafb441b857770ef0b828c78cece10b6405)
+       - Code added in editprofile view to take user back to previous page - [9b52ed5](https://github.com/seanj06/P4-Sports-Expert/commit/9b52ed5d07222b266ac72c82100f8c6f7001788b)
+       - Code added in deletecomment view to take user back to previous page - [41ca8fc](https://github.com/seanj06/P4-Sports-Expert/commit/41ca8fc661c4cff8cc4c0fbac9176c56b433a830)
+
+User Story 3
+ - [USER STORY:Profile page #34](https://github.com/seanj06/P4-Sports-Expert/issues/34)
+
+  This user story had a Should Have label
+
+   - Title:
+       - As a developer I can style the user profile page so that all of the correct user information is displayed and the design matches the rest of the site
+
+   - Tasks:
+       - Task 1 - Ensure profile page design matches rest of website
+       - Task 2 - All user information is displayed correctly
+
+   - Comments:
+       - Profile page re styled to match rest of site - [426ff3f](https://github.com/seanj06/P4-Sports-Expert/commit/426ff3f6dbacf072ec60e064669f984071a7c19f)
+       - Code changed so user upload image displays instead of placeholder - [63008eb](https://github.com/seanj06/P4-Sports-Expert/commit/63008eb3e4ca4fca835cabe5f92d8c0fc7d28dfc)
+
+User Story 4
+ - [USER STORY:Blog Page #32](https://github.com/seanj06/P4-Sports-Expert/issues/32)
+
+  This user story had a Should Have label
+
+   -  Title:
+       - As a developer I can style the blog page so that the user gets a good u/x experience
+
+   - Tasks:
+       - Task 1 - Add code so only 6 blogs are shown per page
+       - Task 2 - Ensure blog cards have correct information shown
+       - Task 3 - Change placeholder image depending on category
+
+   - Comments:
+       - Pagination added to blog page - [17009b5](https://github.com/seanj06/P4-Sports-Expert/commit/17009b58d23dc2ed6417f3b6de8ab4c66cd9bfdf)
+       - Added Date created and category fields to blog card - [5532c09](https://github.com/seanj06/P4-Sports-Expert/commit/5532c09233cf2370e25d83ea820af3c95e89e7f3)
+       - Placeholder image changes depending on user picked category - [f0e5caf](https://github.com/seanj06/P4-Sports-Expert/commit/f0e5caf54d707d3dfb40b9fc44197edbafc02e38)
+
+User Story 5
+ - [USER STORY: Home Page styling #15](https://github.com/seanj06/P4-Sports-Expert/issues/15)
+
+  This user story had a Should Have label
+
+   - Title:
+       - As a developer I can style the home page so that it is visually appealing for new and frequent users
+
+   - Tasks:
+       - Task 1 -Style homepage using bootstrap
+       - Task 2 - Add custom fonts using google fonts
+       - Task 3 - Add introduction section
+       - Task 4 - Add active class to navbar
+
+   - Comments:
+       - Introduction section added to home page - [da21efe](https://github.com/seanj06/P4-Sports-Expert/commit/da21efe386567615d9f1db82882058d69f08d2e4)
+       - Active class added to navbar - [e6bd695](https://github.com/seanj06/P4-Sports-Expert/commit/e6bd69547f43dcd1c508931f99630f59b0dbba19)
+
+User Story 6
+ - [USER STORY:Footer #35](https://github.com/seanj06/P4-Sports-Expert/issues/35)
+
+  This user story had a Must Have label
+
+   - Title:
+       - As a developer I can add a footer to my website so that I can display social media links and creation information
+
+   - Tasks:
+       - Task 1 - Add footer to base.html
+       - Task 2 - Add font awesome social media icons
+       - Task 3 - Add creation information
+
+   - Comments:
+       - Footer added with font awesome links and creation information - [eefb81b](https://github.com/seanj06/P4-Sports-Expert/commit/eefb81b48fb504884b8f9493e8634512ad5ac608)
+       - Footer styled - [e8b77c7](https://github.com/seanj06/P4-Sports-Expert/commit/e8b77c7d1783d13ef19e7fcb74bff3ca7a1dd9f7)
+
+User Story 7
+ - [USER STORY:User Messages #26](https://github.com/seanj06/P4-Sports-Expert/issues/26)
+
+  This user story had a Should Have label
+
+   - Title:
+       - As a developer I can add custom user messages so that the user knows the action they performed has been successfull or failed
+
+   - Tasks:
+       - Task 1 - Import messages in files where needed
+       - Task 2 - Add message tags to settings.py
+       - Task 3 - Add messages to html files where needed
+       - Task 4 - Add. javascript timeout function
+
+   - Messages imported and message tags added in settings.py - [7b40c7d](https://github.com/seanj06/P4-Sports-Expert/commit/7b40c7d42f6e4c6e430841c4a6f42336d5be682d)
+   - Messages container added to base.html - [fcdd141](https://github.com/seanj06/P4-Sports-Expert/commit/fcdd14186a3d378be58bf943785ab9eb5a34cd3f)
+   - Javascript timeout function added to bottom of base.html - [0725c89](https://github.com/seanj06/P4-Sports-Expert/commit/0725c8992c90d2f4d91f996e98addb074617485c)
+   - Success messages added to All class based views - [09fa19b](https://github.com/seanj06/P4-Sports-Expert/commit/09fa19be637ac0f9f1aea8a2d9839eadc6296bdc)
+
+User Story 8
+ - [USER STORY:Style account creation pages #25](https://github.com/seanj06/P4-Sports-Expert/issues/25)
+
+  This user story had a Must Have label  
+
+   - Title:
+       - As a developer I can style the log in, log out and sign up pages so that the UI matches the rest of the website pages
+
+   - Tasks:
+       - Task 1 - Import allauth pages from commnd line and add them to templates folder
+       - Task 2 - Add custom styling to pages
+
+   - Comments:
+       - Sign up, Login and logout pages styled - [4b1c4f9](https://github.com/seanj06/P4-Sports-Expert/commit/4b1c4f9dd229d56c84ad95b8917b4564c8a878d1)  
+
+
+
+                      
+
+
+    
+
 
                                   
 
