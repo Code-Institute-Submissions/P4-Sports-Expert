@@ -13,18 +13,18 @@ As my fourth project for the [Code Institute](https://codeinstitute.net/) 5P cou
 
 ## **UX**
 
-## **The Strategy Plane**
+### **The Strategy Plane**
 
 Sports expert was designed to be a site for Sports lovers to share and read their own and other peoples opinions on multiple sports topics. The site was designed in a way that it is easy to navigate, and a homepage U.I that grabs new and returning users attention. Users can upload their own BlogPosts, comment on other users blogposts aswell as editing their own profile which is intended to create a proper website community.
 
-### **Target Users**
+#### **Target Users**
 
 - A user that is a sports fan
 - A user that likes to keep up to date with sports news
 - A user that wants to create their own blogpost on a sport topic
 - A user that wants to join in with the community and comment on other peoples blogposts or start a discussion.
 
-### **Site Goals**
+#### **Site Goals**
 
 - For users to be able to create an account, login and logout when they want.
 - For users to be able to view blogposts regardless if they have made and account and are signed in or out
@@ -32,7 +32,7 @@ Sports expert was designed to be a site for Sports lovers to share and read thei
 - For users to be able to comment on their own and other peoples blogposts while logged in
 - For users to be able to edit their profile including adding thier own profile picture while logged in.
 
-## **Agile Planning**
+### **Agile Planning**
 
 This project was built using the Agile method throughout by creating EPIC Miletones which were broken down into smaller user stories with labels "must-have", "should-have", "could-have", and wont have. 
 
@@ -42,13 +42,13 @@ The Kanban board was created using Github projects and can be located [here](htt
 
 ![Kanban Board](docs/readme-images/kanban-board.png)
 
-### **Epics**
+#### **Epics**
 
 Epics were broken down into 9 EPIC Milestones(including backlog)
 which include 37 user stories in total. Each Milestone was given acceptance criteria and the milestone was closed when all the criteria had been met / all user stories were completed.
 User stories were given tasks, and when each task and the given user stories were completed a comment was left with the commit number underneath the user story. When all tasks were complete the user story was closed.
 
-#### **EPIC: Django Installation and app setup [#Milestone 1](https://github.com/seanj06/P4-Sports-Expert/milestone/1?closed=1)**
+##### **EPIC: Django Installation and app setup [#Milestone 1](https://github.com/seanj06/P4-Sports-Expert/milestone/1?closed=1)**
 
 This Epic had 3 acceptance criterias
 
@@ -60,11 +60,11 @@ This Epic had 3 acceptance criterias
 
 This was the first milestone to be completed as it was needed to install django and the database.
 
-#### **EPIC: First Heroku Deployment [#Milestone 2](https://github.com/seanj06/P4-Sports-Expert/milestone/2?closed=1)**
+##### **EPIC: First Heroku Deployment [#Milestone 2](https://github.com/seanj06/P4-Sports-Expert/milestone/2?closed=1)**
 
 This Epic included 2 user stories which included installing cloudinary and the setting up the correct env.py variables to successfully deploy the prpject on heroku for the first time.
 
-#### **EPIC: Home page creation [#Milestone 3](https://github.com/seanj06/P4-Sports-Expert/milestone/8)**
+##### **EPIC: Home page creation [#Milestone 3](https://github.com/seanj06/P4-Sports-Expert/milestone/8)**
 
 This Epic had 4 acceptance criterias
 
@@ -78,7 +78,7 @@ This Epic had 4 acceptance criterias
 
 This epic centred around the site home page and made sure user athentication was set up correctly
 
-#### **EPIC: User profile [#Milestone 4](https://github.com/seanj06/P4-Sports-Expert/milestone/10)**
+##### **EPIC: User profile [#Milestone 4](https://github.com/seanj06/P4-Sports-Expert/milestone/10)**
 
 This Epic had 3 acceptance criterias
 
@@ -90,7 +90,7 @@ This Epic had 3 acceptance criterias
 
 This epic centered around the users profile section including users being able to access profile page from the home page and edit and see their own blog posts from their profile page.
 
-#### **EPIC: Crud Functionality [#Milestone 5](https://github.com/seanj06/P4-Sports-Expert/milestone/5?closed=1)**
+##### **EPIC: Crud Functionality [#Milestone 5](https://github.com/seanj06/P4-Sports-Expert/milestone/5?closed=1)**
 
 This epic had 4 user stories all based around CRUD functionality
 
@@ -102,7 +102,7 @@ This epic had 4 user stories all based around CRUD functionality
 
 - User able to delete a blog post
 
-#### **EPIC: Blog view page creation [#Milestone 6](https://github.com/seanj06/P4-Sports-Expert/milestone/9)**
+##### **EPIC: Blog view page creation [#Milestone 6](https://github.com/seanj06/P4-Sports-Expert/milestone/9)**
 
 This Epic had 3 acceptance criterias
 
@@ -114,7 +114,7 @@ This Epic had 3 acceptance criterias
 
 This milstone was centered around the creation of the blog home page. Note: The filter functionality of accpetance criteria 2 was not completed due to time constraints and the relevant user story was moved into the backlog.
 
-#### **EPIC: U/X [#Milestone 7](https://github.com/seanj06/P4-Sports-Expert/milestone/4)**
+##### **EPIC: U/X [#Milestone 7](https://github.com/seanj06/P4-Sports-Expert/milestone/4)**
 
 This Epic had 7 acceptance criterias
 
@@ -135,11 +135,11 @@ Blog post cards show a title, category, date created, image and a description sn
 
 This milestone was centered around U/X design with acceptance criterias broken down by different site pages
 
-#### **EPIC: User Functionality [#Milestone 8](https://github.com/seanj06/P4-Sports-Expert/milestone/3?closed=1)
+##### **EPIC: User Functionality [#Milestone 8](https://github.com/seanj06/P4-Sports-Expert/milestone/3?closed=1)
 
 This milestone included 3 user stories which centered around users being able to create an account and comment/ create blog posts.
 
-### **Backlog [#Milestone 9](https://github.com/seanj06/P4-Sports-Expert/milestone/6)**
+##### **Backlog [#Milestone 9](https://github.com/seanj06/P4-Sports-Expert/milestone/6)**
 
 There are 4 user stories in the backlog milestone due to not being complete because of time constraints. They are:
 
@@ -151,12 +151,12 @@ There are 4 user stories in the backlog milestone due to not being complete beca
 
 - User being able to reset password - [USER STORY:Reset Password #7](https://github.com/seanj06/P4-Sports-Expert/issues/7)
 
-### **User Stories**
+#### **User Stories**
 
 Below is a list of user stories completed In epic milestones.
 Comments were left below user stories with commit numbers as per taksks completed.
 
-#### **EPIC: Django Installation and app setup [#Milestone 1](https://github.com/seanj06/P4-Sports-Expert/milestone/1?closed=1)**
+##### **EPIC: Django Installation and app setup [#Milestone 1](https://github.com/seanj06/P4-Sports-Expert/milestone/1?closed=1)**
 
 User Story 1
  - [USER STORY:Create new django project and app #2](https://github.com/seanj06/P4-Sports-Expert/issues/2)
@@ -190,7 +190,7 @@ User story 2
    - Comments:
        - All packages installed - [64203e7](https://github.com/seanj06/P4-Sports-Expert/commit/b6338d35869a468eff9b5bcf4f7d6ad2b46fb3e0)  
 
-#### **EPIC: First Heroku Deployment [#Milestone 2](https://github.com/seanj06/P4-Sports-Expert/milestone/2?closed=1)**
+##### **EPIC: First Heroku Deployment [#Milestone 2](https://github.com/seanj06/P4-Sports-Expert/milestone/2?closed=1)**
 
 User Story 1
  - [USER STORY: First Heroku Deployment #1](https://github.com/seanj06/P4-Sports-Expert/issues/1)
@@ -229,7 +229,7 @@ User Story 2
    - Comments:
        - Cloudinary installed and all variables added in settings.py - [8fc3000](https://github.com/seanj06/P4-Sports-Expert/commit/8fc3000810860833ac97b7c881431df88f0a0d71)  
 
-#### **EPIC: Home page creation [#Milestone 3](https://github.com/seanj06/P4-Sports-Expert/milestone/8)**
+##### **EPIC: Home page creation [#Milestone 3](https://github.com/seanj06/P4-Sports-Expert/milestone/8)**
 
 User Story 1
  - [USER STORY:Site Navigation #11](https://github.com/seanj06/P4-Sports-Expert/issues/11)
@@ -281,7 +281,7 @@ User Story 3
        - Bootstrap navbar added with links - [3e84feb](https://github.com/seanj06/P4-Sports-Expert/commit/3e84febb7459482bfeb9db6df4641c0c9f7a82d1)
 
 
-#### **EPIC: User profile [#Milestone 4](https://github.com/seanj06/P4-Sports-Expert/milestone/10)**
+##### **EPIC: User profile [#Milestone 4](https://github.com/seanj06/P4-Sports-Expert/milestone/10)**
 
 User Story 1
  - [USER STORY:View blog posts #29](https://github.com/seanj06/P4-Sports-Expert/issues/29)
@@ -363,7 +363,7 @@ User Story 5
        - Profile app created - [ff680fe](https://github.com/seanj06/P4-Sports-Expert/commit/ff680fedf12222a840dab7cec5859d84b550d024)
        - Django signals added to automatically create profile on account creation - [3abe18b](https://github.com/seanj06/P4-Sports-Expert/commit/3abe18be79adaa7e1948652a90b5ec4b4c7c723a)
 
-#### **EPIC: Crud Functionality [#Milestone 5](https://github.com/seanj06/P4-Sports-Expert/milestone/5?closed=1)**     
+##### **EPIC: Crud Functionality [#Milestone 5](https://github.com/seanj06/P4-Sports-Expert/milestone/5?closed=1)**     
 
 User Story 1
  - [USER STORY:Read blog post #22](https://github.com/seanj06/P4-Sports-Expert/issues/22)
@@ -430,7 +430,7 @@ User Story 4
    - Comments:
        - Django form created and linked to model - [77f3686](https://github.com/seanj06/P4-Sports-Expert/commit/77f368639c4b1f4b79e9378bc8966a5f31f12b8b)
 
-#### **EPIC: Blog view page creation [#Milestone 6](https://github.com/seanj06/P4-Sports-Expert/milestone/9)**
+##### **EPIC: Blog view page creation [#Milestone 6](https://github.com/seanj06/P4-Sports-Expert/milestone/9)**
 
 User Story 1
  - [USER STORY:Add image to blog post #19](https://github.com/seanj06/P4-Sports-Expert/issues/19)
@@ -479,7 +479,7 @@ User Story 3
    - Comments:
        - BlogPost model created and changes migrated to database - [e815114](https://github.com/seanj06/P4-Sports-Expert/commit/e815114a3ccd09361eaacd54f98bd86a7327199b)
 
-#### **EPIC: U/X [#Milestone 7](https://github.com/seanj06/P4-Sports-Expert/milestone/4)**
+##### **EPIC: U/X [#Milestone 7](https://github.com/seanj06/P4-Sports-Expert/milestone/4)**
 
 User Story 1
  - [USER STORY:Custom error pages #37](https://github.com/seanj06/P4-Sports-Expert/issues/37)
@@ -619,7 +619,7 @@ User Story 8
    - Comments:
        - Sign up, Login and logout pages styled - [4b1c4f9](https://github.com/seanj06/P4-Sports-Expert/commit/4b1c4f9dd229d56c84ad95b8917b4564c8a878d1)  
 
-#### **EPIC: User Functionality [#Milestone 8](https://github.com/seanj06/P4-Sports-Expert/milestone/3?closed=1)**
+##### **EPIC: User Functionality [#Milestone 8](https://github.com/seanj06/P4-Sports-Expert/milestone/3?closed=1)**
 
 User Story 1
  - [USER STORY: Add comments to blogs #36](https://github.com/seanj06/P4-Sports-Expert/issues/36)
@@ -670,7 +670,7 @@ User Story 3
    - Comments:
        - Allauth installed, added to installed apps in settings.py and added login/logout redirect variables - [180640b](https://github.com/seanj06/P4-Sports-Expert/commit/180640b1c523c696066905ab82480eae11793885)    
 
-#### User Stories Not Connected To A Epic Milestone
+##### User Stories Not Connected To A Epic Milestone
 
 User Story 1
  - [USER STORY:Create Superuser #10](https://github.com/seanj06/P4-Sports-Expert/issues/10)
@@ -718,7 +718,7 @@ User Story 3
    - Comments:
        - Multiple apps created to keep code organisation
 
-#### Backlog Incompleted User Stories
+##### Backlog Incompleted User Stories
 
 User Story 1
  - [USER STORY:Filter blog posts by category #18](https://github.com/seanj06/P4-Sports-Expert/issues/18)
@@ -754,7 +754,51 @@ User Story 4
    - Title:
        - As a user I can reset my password so that i can retrieve my account if i forget my password
 
-   - This User story was part of the [Epic: CRUD Functionality](https://github.com/seanj06/P4-Sports-Expert/milestone/5) milestone but was moved to the backlog because of time constraints.   
+   - This User story was part of the [Epic: CRUD Functionality](https://github.com/seanj06/P4-Sports-Expert/milestone/5) milestone but was moved to the backlog because of time constraints.  
+
+### **Features**
+
+#### **Home Page**
+
+ - Navbar
+   - Navbar desktop
+      - The navbar Features a clickable site logo at the centre of the screen which directs users back to the home page from anywhere on the site. It also includes navigation links underneath with a blue underline showing users the active page.
+      ![Navbar-desktop](docs/features/navbar-desktop.png)
+      - The navigation links on the navbar change if the user is logged in, giving the user more navigation options such as adding a blog and profile pages. They are also shown a message telling them which account they are signed in as.
+      ![Navbar-desktop-logged-in](docs/features/navbar-logged-in-desktop.png)
+
+   - Navbar mobile
+      - On mobile the navbar collapses down to a hamburger menu with the clickable logo moving to the left.
+      ![Navbar-mobile](docs/features/navbar-mobile.png)
+      - As with the desktop navbar the mobile navbar also gives users more options when signed in aswell as a message telling them which account they are signed in as.
+      ![Navbar-mobile-logged-in](docs/features/navbar-mobile-logged-in.png)  
+
+ - Carousel
+   - Carousel signed out
+      - This section is directly below the navbar in the home page and is likely the first thing that will catch the users eye when they visit the site.
+      - When a user first visits the site and is logged out the auto sliding carousel will show the user 3 slides.
+      - 1. Blog page slide 
+      ![Carousel-blog](docs/features/carousel-blogs.png)
+      - 2. Log in slide
+      ![Carousel-login](docs/features/carousel-log-in.png)
+      - 3. Sign up slide
+      ![Carousel-signup](docs/features/carousel-sign-up.png)
+
+   - Carousel logged in
+      - Like the navbar, whether the user is logged in or not changes what slides are shown. The slides shown when a user is logged in are:
+      - 1. Add a blog slide
+      ![Carousel-addblog](docs/features/carousel-addblog.png)  
+      - 2. Profile slide
+      ![Carousel-profile](docs/features/carousel-profile.png) 
+      - 3. Blog slide
+      ![Logged-in-blog](docs/features/logged-in-blog-slide.png)
+
+      
+
+
+     
+
+
 
 
 
