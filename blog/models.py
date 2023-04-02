@@ -8,6 +8,7 @@ CATEGORY = (
     ('Football', 'Football'),
     ('GAA', 'GAA'),
     ('Rugby', 'Rugby'),
+    ('Other', 'Other'),
 )
 
 
