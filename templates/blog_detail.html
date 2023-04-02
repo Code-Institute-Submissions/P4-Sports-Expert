@@ -59,14 +59,14 @@
             </div>
         </div>
         <div class="row comment-row">
-            <div class="col-12 mx-auto comment-cont">
+            <div class="col-12 mx-auto comment-cont py-2">
                 <p>{{ comment.comment }}</p>
             </div>
         </div>
         <!--Checks if logged in user is the author of the comment-->
         {% if request.user == comment.user %}
         <div class="row comment-row text-center">
-            <div class="col-6 mx-auto comment-cont">
+            <div class="col-6 mx-auto comment-cont py-2">
                 <a href="{% url 'delete_comment' comment.pk %}" class="btn btn-danger">Delete</a>
                 <a href="{% url 'edit_comment' comment.pk%}" class="btn btn-warning">Edit</a>
             </div>
