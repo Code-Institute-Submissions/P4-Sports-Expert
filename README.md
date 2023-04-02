@@ -280,7 +280,158 @@ User Story 3
        - Homepage created with view - [5a10cf9](https://github.com/seanj06/P4-Sports-Expert/commit/5a10cf93513f45568466afe5bf1f7f62fc8c1799)
        - Bootstrap navbar added with links - [3e84feb](https://github.com/seanj06/P4-Sports-Expert/commit/3e84febb7459482bfeb9db6df4641c0c9f7a82d1)
 
-                    
+
+#### **EPIC: User profile [#Milestone 4](https://github.com/seanj06/P4-Sports-Expert/milestone/10)**
+
+User Story 1
+ - [USER STORY:View blog posts #29](https://github.com/seanj06/P4-Sports-Expert/issues/29)
+
+  This user story had a Should Have label
+
+   - Title:
+       - As a user I can view my blog posts from my profile so that I can keep track of all my blogs on one page
+
+   - Tasks:
+       - Task 1 - Link user profile to blog username
+       - Task 2 - Create Listview for user created blogs
+
+   - Comments:
+       - Blog view created and code added so that user can only see their own blogs from profile - [98fb690](https://github.com/seanj06/P4-Sports-Expert/commit/98fb6902158d10b197cfba266edc7d8b97ad9921)  
+
+User Story 2
+ - [USER STORY:Profile Form #31](https://github.com/seanj06/P4-Sports-Expert/issues/31)
+
+  This user story had Must Have label
+
+   - Title:
+       - As a user I can add my profile info by filling out a form so that I can save the info to my profile
+
+   - Tasks:
+       - Task 1 - Create forms.py file in profiles app
+       - Task 2 - Create form that is linked to Profile model
+       - Task 3 - Create view for form
+
+   - Comments:
+       - User profile automatically added with django signals
+       - User able to edit profile with form - [6e704c2](https://github.com/seanj06/P4-Sports-Expert/commit/6e704c2a804bc3b246262e5e331fc1d2f4d789bd)
+
+User Story 3
+ - [USER STORY:Upload profile image #28](https://github.com/seanj06/P4-Sports-Expert/issues/28)
+
+  This user story had a Should have label
+
+   - Title:
+       - As a user I can upload my own image to my profile so that I can customise my own profile
+
+   - Tasks:
+       - Task 1 - Add cloudinary field to user model
+       - ask 2 - Add image view to frontend template
+
+   - Comments:
+       - Profile user model created with profile image - [e15436](https://github.com/seanj06/P4-Sports-Expert/commit/ee15436a35a218a4488819419efdee4e7a461230)            
+              
+User Story 4
+ - [USER STORY:Delete/Edit blogs from profile page #30](https://github.com/seanj06/P4-Sports-Expert/issues/30)
+
+ This user story had A Could have label
+
+   - Title:
+       - As a user I can Delete or Edit my blog posts from my profile page so that I can manage my blogs from one page
+
+   - Tasks:
+       - Task 1 - Add deleteview to profile page
+       - Task 2 - Add editview to profile page
+
+   - Comments:
+       - View created from profile page for user to access own blogs, edit and delete - [98fb690](https://github.com/seanj06/P4-Sports-Expert/commit/98fb6902158d10b197cfba266edc7d8b97ad9921)
+
+User Story 5
+ - [USER STORY:Create a profile #27](https://github.com/seanj06/P4-Sports-Expert/issues/27) 
+
+  This user story had a Must Have label
+
+   - Title:
+       - As a user I can create a profile so that I can keep track of my blogs
+
+   - Tasks:
+       - Task 1 - Create Profile app
+       - Task 2 - Add user one to one model
+       - Task 3 - Create profile page template
+       - Task 4 - Create profile view
+
+   - Comments:
+       - Profile app created - [ff680fe](https://github.com/seanj06/P4-Sports-Expert/commit/ff680fedf12222a840dab7cec5859d84b550d024)
+       - Django signals added to automatically create profile on account creation - [3abe18b](https://github.com/seanj06/P4-Sports-Expert/commit/3abe18be79adaa7e1948652a90b5ec4b4c7c723a)
+
+#### **EPIC: Crud Functionality [#Milestone 5](https://github.com/seanj06/P4-Sports-Expert/milestone/5?closed=1)**     
+
+User Story 1
+ - [USER STORY:Read blog post #22](https://github.com/seanj06/P4-Sports-Expert/issues/22)
+
+  This user story had a Must Have label
+
+   - Title:
+       - As a user I can view my blog post so that i can check i am happy with it
+
+   - Tasks:
+       - Task 1 - Create a detail view page for user to view blog post
+       - Task 2 - Style detail view page
+
+   - Comments:
+       - Detail view page created - [c6c29b2](https://github.com/seanj06/P4-Sports-Expert/commit/c6c29b2335978cb67be0681a085291c5edd82b26)
+       - Minimum style added to detail page. Will expand in U/X milestone - [df0e93e](https://github.com/seanj06/P4-Sports-Expert/commit/df0e93e6e287348f0bee9322f6623c5cedff8140)
+
+User Story 2
+ - [USER STORY:Delete Blog Post #24](https://github.com/seanj06/P4-Sports-Expert/issues/24)
+
+  This user story had a Must Have label
+
+   - Title:
+       - As a user I can delete my blog post so that I can remove any posts i no longer want
+
+   - Tasks:
+       - Task 1 - Create delete button on detail view page
+       - Task 2 - Ensure only logged in users can access delete button
+       - Task 3 - Write code to ensure when delete button is pressed, data is removed from database
+
+   - Comments:
+       - Delete button created - [bbd7f84](https://github.com/seanj06/P4-Sports-Expert/commit/bbd7f8446630401079884be201e6f981b2eba69e)
+       - Code written to ensure only logged users who own the post can delete - [00ff7de](https://github.com/seanj06/P4-Sports-Expert/commit/00ff7dec021e75e53f9eb5ec1033e6be3af40088)
+
+User Story 3
+ - [USER STORY:Update blog post #23](https://github.com/seanj06/P4-Sports-Expert/issues/23)
+
+  This user story had a Must Have label
+
+   - Title:
+       - As a user I can update my blog post so that I can change anything i am not happy with
+
+   - Tasks:
+       - Task 1 - Create edit button on detail view page
+       - Task 2 - Ensure only logged in users can access edit button
+       - Task 3 - Create edit page
+
+   - Comments:
+       - Edit page created - [eac5000](https://github.com/seanj06/P4-Sports-Expert/commit/eac5000dffe191feb93aa60124712638eb9e7d0a)
+       - Edit button created - [0c9b230](https://github.com/seanj06/P4-Sports-Expert/commit/0c9b2304da1d228b85d389027b3e63f248c91f4e)
+       - Code added to make sure only logged in users can edit own posts - [b5bea5a](https://github.com/seanj06/P4-Sports-Expert/commit/b5bea5aa75074becedb4270a1db0bcb2841f1158)
+
+User Story 4
+ - [USER STORY:Create a blog post #21](https://github.com/seanj06/P4-Sports-Expert/issues/21) 
+
+  This user story had a Must Have label
+
+   - Title:
+       - As a user I can create a blog post so that others can see my blog posts online
+
+   - Tasks:
+       - Task 1 - Create a django form for users to create a blog post
+
+   - Comments:
+       - Django form created and linked to model - [77f3686](https://github.com/seanj06/P4-Sports-Expert/commit/77f368639c4b1f4b79e9378bc8966a5f31f12b8b)
+
+
+                                  
 
 
 
