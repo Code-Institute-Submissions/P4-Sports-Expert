@@ -619,6 +619,58 @@ User Story 8
    - Comments:
        - Sign up, Login and logout pages styled - [4b1c4f9](https://github.com/seanj06/P4-Sports-Expert/commit/4b1c4f9dd229d56c84ad95b8917b4564c8a878d1)  
 
+#### **EPIC: User Functionality [#Milestone 8](https://github.com/seanj06/P4-Sports-Expert/milestone/3?closed=1)**
+
+User Story 1
+ - [USER STORY: Add comments to blogs #36](https://github.com/seanj06/P4-Sports-Expert/issues/36)
+
+  This user story had a Should Have label
+
+   - Title:
+      - As a user I can comment on blogs so that i can interact with the site community
+
+   - Tasks:
+       - Task 1 - Create comment model
+       - Task 2 - Link comment model to user profile
+       - Task 3 - Link model to blog posts
+       - Task 4 - Render comments on template
+
+   - Comments:
+       - Comment model created - [7782aa7](https://github.com/seanj06/P4-Sports-Expert/commit/7782aa7a4186c366a56ed280ca8f94c3369a459a)
+       - View code added for user to comment on blog post and rendered to template - [a0314ee](https://github.com/seanj06/P4-Sports-Expert/commit/a0314ee4a9396dd76e96165598d44f08c0131944)
+
+User Story 2
+ - [USER STORY:Create an account #6](https://github.com/seanj06/P4-Sports-Expert/issues/6)
+
+  This user story had a Must Have label
+
+   - Title:
+      - As a User I can create an account so that I can create a blog post
+
+   - Tasks:
+       - Task 1 - Install allauth so user can create an account
+       - Task 2 - Create Make a post page that user can only access while logged in
+       - Task 3 - Set up code so users post is saved to database
+
+   - Allauth installed - [3bd8927](https://github.com/seanj06/P4-Sports-Expert/commit/3bd89275ee6778dd47083f3990bd8ca99a097816)   
+   - Add blog page created and code added to ensure only logged in users can access - [77f3686](https://github.com/seanj06/P4-Sports-Expert/commit/77f368639c4b1f4b79e9378bc8966a5f31f12b8b)
+
+User Story 3
+ - [USER STORY:Install allauth #13](https://github.com/seanj06/P4-Sports-Expert/issues/13)
+
+  This user story had a Must Have label
+
+   - Title:
+       - As a developer I can install allauth so that site users can create an account to log in
+
+   - Tasks:
+       - Task 1 - Install allauth in command line
+       - Task 2 - add allauth to installed apps
+
+   - Comments:
+       - Allauth installed, added to installed apps in settings.py and added login/logout redirect variables - [180640b](https://github.com/seanj06/P4-Sports-Expert/commit/180640b1c523c696066905ab82480eae11793885)                            
+
+
 
 
                       
