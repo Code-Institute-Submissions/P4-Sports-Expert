@@ -12,12 +12,12 @@
                 <h1>Blog By: {{ object.created_by }}</h1>
             </div>
             <div class="col-10 justify-content-center blog-text">
-                <h3> Posted On: {{ object.date_created}}</h3>
+                <h2> Posted On: {{ object.date_created}}</h3>
             </div>
         </div>
         <div class="row text-center hero-row">
             <div class="col-10 blog-text justify-content-center">
-                <h2>{{ object.title}}</h2>
+                <h3>{{ object.title}}</h2>
             </div>
         </div>
         <div class="row text-center">
@@ -80,7 +80,7 @@
         </div>
         {% if user.is_authenticated %}
         <div class="row text-center">
-            <h5>Add your comment below</h5>
+            <h5>Add your comment below</h4>
         </div>
         {% endif %}
         {% endfor %}
@@ -98,9 +98,10 @@
         <!--User message if user is not logged in-->
         {% else %}
         <div class="row text-center">
-            <h5>You must be logged in to comment on a post</h5>
-            <h6>Please <a href="{%url 'account_login' %}">Login</a> or <a href="{% url 'account_signup' %}">Signup</a>
-                if you havent already</h6>
+            <b class="mb-3">You must be logged in to comment on a post</b>
+            <b>Please <a href="{%url 'account_login' %}" class="login-text">Login</a> or
+                <a href="{% url 'account_signup' %}" class="login-text">Signup</a>
+                if you havent already</b>
         </div>
         {% endif %}
         <div class="row text-center">

@@ -5,7 +5,7 @@
 <div class="row justify-content-center">
     <!--Loops through blog object-->
     {% for blog in object_list %}
-    <div class="col-md-6 col-lg-4 mt-3 d-flex" id="blog-card">
+    <div class="col-md-6 col-lg-4 mt-3 d-flex blog-card">
         <div class="card flex-fill">
             <!--If user has not uploaded an image to the blog and the category is Football-->
             {% if "placeholder" in blog.blog_image.url and blog.category == "Football" %}
@@ -68,7 +68,7 @@
         </div>
     </div>
     <div class="current text-center mt-4">
-        <h3>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</h3>
+        <b>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</b>
     </div>
 </div>
 </div>

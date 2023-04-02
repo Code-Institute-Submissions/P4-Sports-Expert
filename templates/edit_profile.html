@@ -9,8 +9,8 @@
         {% csrf_token%}
         {{ form|crispy }}
         <div class="col-12 text-center">
-            <button type="submit" class="btn btn-primary">Confirm Edit</button>
-            <a href="{% url 'delete_profile' profile.pk %}" class="btn btn-danger">Delete Profile</a>
+            <button type="submit" class="btn btn-primary" aria-label="Confirm Edit">Confirm Edit</button>
+            <a href="{% url 'delete_profile' profile.pk %}" aria-label="Delete Profile" class="btn btn-danger">Delete Profile</a>
         </div>
     </form>
 </div>
