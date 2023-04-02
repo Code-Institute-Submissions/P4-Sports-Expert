@@ -416,14 +416,21 @@ body {
 }
 
 .comment-text {
-    font-size: 1rem;
+    font-size: 1.3rem;
+    font-family: 'Tilt Warp', cursive;
+    border-bottom: 1px solid black;
 }
 
 .comment-cont {
     background-color: white;
-    margin-top: 2rem;
+    margin-top: 5px;
     border-radius: 10px;
     padding: 5px;
+}
+
+.comment-cont > p {
+    font-family: 'Golos Text', sans-serif;
+    font-size: 1.2rem;
 }
 
 
@@ -473,13 +480,12 @@ body {
         padding: 0;
     }
 
-    .comment-content>b {
-        font-size: 0.8rem;
-        margin: auto 0.2rem;
+    .comment-text {
+        font-size: 1rem;
     }
 
     .comment-content>p {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
    /* Profile image */
@@ -487,6 +493,31 @@ body {
     .profile-img-cont {
         height: 300px;
         width: 300px;
+    }
+
+
+}
+
+/* Extra small screens */
+@media screen and (max-width: 360px) {
+    .comment-text {
+        font-size: 0.8rem;
+    }
+
+    .comment-cont>p {
+        font-size: 0.8rem;
+    }
+
+    .blog-text>h1 {
+        font-size: 1.4rem;
+    }
+
+    .blog-text>h3 {
+        font-size: 1.3rem;
+    }
+
+    .blog-text>h3 {
+        font-size: 1.3rem;
     }
 }
 

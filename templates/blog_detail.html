@@ -50,37 +50,40 @@
             <h2 class="hero-text-comm">Comments:</h2>
         </div>
         <!--Comments section-->
+        {% for comment in comments%}
         <div class="row comment-row text-center">
             <!--Loops through comments-->
-            {% for comment in comments%}
-            <div class="col-lg-8 mx-auto comment-cont">
-                <div class="comment-content">
-                    <b>{{ comment.user}}</b>
-                    <b>{{ comment.time }}</b>
-
-                    <!--Checks if logged in user is the author of the comment-->
-                    {% if request.user == comment.user %}
-                    <a href="{% url 'delete_comment' comment.pk %}" class="mx-3">Delete Comment</a>
-                    <a href="{% url 'edit_comment' comment.pk%}">Edit Comment</a>
-                    <div class="text-center mt-3">
-                        <p>{{ comment.comment }}</p>
-                    </div>
-                    <hr>
-                    {% endif %}
-                </div>
+            <div class="col-12 mx-auto comment-cont">
+                <b class="comment-text mx-2">{{ comment.user}}</b>
+                <b class="comment-text mx-2">{{ comment.time }}</b>
             </div>
-            <!--If there are no comments-->
-            {% empty %}
-            <div class="row text-center">
-                <h3 class="hero-text-comm">No Comments yet</h3>
-            </div>
-            {% if user.is_authenticated %}
-            <div class="row text-center">
-                <h5>Add your comment below</h5>
-            </div>
-            {% endif %}
-            {% endfor %}
         </div>
+        <div class="row comment-row">
+            <div class="col-12 mx-auto comment-cont">
+                <p>{{ comment.comment }}</p>
+            </div>
+        </div>
+        <!--Checks if logged in user is the author of the comment-->
+        {% if request.user == comment.user %}
+        <div class="row comment-row text-center">
+            <div class="col-6 mx-auto comment-cont">
+                <a href="{% url 'delete_comment' comment.pk %}" class="btn btn-danger">Delete</a>
+                <a href="{% url 'edit_comment' comment.pk%}" class="btn btn-warning">Edit</a>
+            </div>
+        </div>
+        {% endif %}
+        <hr>
+        <!--If there are no comments-->
+        {% empty %}
+        <div class="row text-center">
+            <h3 class="hero-text-comm">No Comments yet</h3>
+        </div>
+        {% if user.is_authenticated %}
+        <div class="row text-center">
+            <h5>Add your comment below</h5>
+        </div>
+        {% endif %}
+        {% endfor %}
         <!--Comment form if user is logged in-->
         {% if user.is_authenticated%}
         <div class="row comment-row">
