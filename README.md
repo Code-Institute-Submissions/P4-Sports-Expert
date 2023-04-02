@@ -668,7 +668,96 @@ User Story 3
        - Task 2 - add allauth to installed apps
 
    - Comments:
-       - Allauth installed, added to installed apps in settings.py and added login/logout redirect variables - [180640b](https://github.com/seanj06/P4-Sports-Expert/commit/180640b1c523c696066905ab82480eae11793885)                            
+       - Allauth installed, added to installed apps in settings.py and added login/logout redirect variables - [180640b](https://github.com/seanj06/P4-Sports-Expert/commit/180640b1c523c696066905ab82480eae11793885)    
+
+#### User Stories Not Connected To A Epic Milestone
+
+User Story 1
+ - [USER STORY:Create Superuser #10](https://github.com/seanj06/P4-Sports-Expert/issues/10)
+
+  This user story had a Must Have label
+
+   - Title:
+       - As a developer I can create a superuser so that i can manage my application from the admin panel
+
+   - Tasks:
+       - Task 1 - Create Superuser from command line
+       - Task 2 - Install Summernote from command line
+       - Task 3 - Run project with /admin added to url to make sure superuser can login
+
+   - Comments:
+       - Allauth installed and admin panel checked - [3bd8927](https://github.com/seanj06/P4-Sports-Expert/commit/3bd89275ee6778dd47083f3990bd8ca99a097816)
+       - Summernote installed and added to installed apps in settings.py - [f5bb7cd](https://github.com/seanj06/P4-Sports-Expert/commit/f5bb7cd6519192ac6c23c3090fba48489b1eb1d9)
+
+User Story 2
+ - [USER STORY: Create Views #9](https://github.com/seanj06/P4-Sports-Expert/issues/9)
+
+  This user story had a Must Have label
+
+   - Title:
+       - As a developer I can create views so that the function in the views can render and handle my templates appropriately for users to see
+   
+   - Tasks:
+       - Task 1 - Import class based model from models.py
+       - Task 2 - Create class based view
+
+   - Comments:
+       - View created for BlogPost model - [23e570f](https://github.com/seanj06/P4-Sports-Expert/commit/23e570f7d3f2b04dd9d2da570f5ce887bfd2e858)
+
+User Story 3
+ - [USER STORY: Create Multiple Apps #8](https://github.com/seanj06/P4-Sports-Expert/issues/8)
+
+  This user story had a Should Have label
+
+  - Title:
+       - As a developer I can create multiple apps for my project so that my code is kept well organised
+
+   - Tasks:
+       - There are no tasks attached to this user story
+
+   - Comments:
+       - Multiple apps created to keep code organisation
+
+#### Backlog Incompleted User Stories
+
+User Story 1
+ - [USER STORY:Filter blog posts by category #18](https://github.com/seanj06/P4-Sports-Expert/issues/18)
+
+  This user story had a Wont Have label
+
+   - Title:
+       - As a user I can filter blog posts so that I can easily find the blogs i am looking for
+
+   - This User story was part of the [Epic: Blog view Creation](https://github.com/seanj06/P4-Sports-Expert/milestone/9) milestone but was moved to the backlog because of time constraints.
+
+User Story 2
+ - [USER STORY: Search for blog posts by user #20](https://github.com/seanj06/P4-Sports-Expert/issues/20)
+
+ This user story had a Wont Have label
+
+   - Title:
+       - As a user I can search for user specific blog posts so that I can follow my favourite bloggers
+
+   - This User story was part of the [Epic: Blog view Creation](https://github.com/seanj06/P4-Sports-Expert/milestone/9) milestone but was moved to the backlog because of time constraints.      
+
+User Story 3
+ - [USER STORY:Search bar #16](https://github.com/seanj06/P4-Sports-Expert/issues/16)
+
+   - Title:
+       - As a developer I can implement a search bar into the home page so that users can search for posts by topic
+
+   - This User story was part of the [Epic: Home Page Creation](https://github.com/seanj06/P4-Sports-Expert/milestone/8) milestone but was moved to the backlog because of time constraints. 
+
+User Story 4
+ - [USER STORY:Reset Password #7](https://github.com/seanj06/P4-Sports-Expert/issues/7)
+
+   - Title:
+       - As a user I can reset my password so that i can retrieve my account if i forget my password
+
+   - This User story was part of the [Epic: CRUD Functionality](https://github.com/seanj06/P4-Sports-Expert/milestone/5) milestone but was moved to the backlog because of time constraints.   
+
+
+
 
 
 
