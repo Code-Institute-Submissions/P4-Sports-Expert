@@ -947,13 +947,36 @@ User Story 4
          ![myblogs-noblogs](docs/features/myblogs-noblog.png)
 
       - The edit profile button will bring users to a form page where they can edit and delete their profile.
+
+      - The form was built using django-crispy-forms
       ![Edit-profile](docs/features/edit-profile.png)   
 
-        - From this page the user can edit their name, about section and profile image. **Note**: There is a bug on the image section of the form where it doesnt show the user their current uploaded image. I will address this further in the bugs section of the readme.  
+        - From this page the user can edit their name, about section and profile image. **Note**: There is a bug on the image section of the form where it doesnt show the user their current uploaded image. I will address this further in the bugs section of the readme. 
+
+        - If the user presses the confirm edit button and the form is valid they are shown a success message stating "Profile edited successfully" and redirected back to their profile page.
+        ![profile-edit-message](docs/features/profile-edit-message.png) 
 
         - If the user presses the delete profile button they are brought to a page which shows them a message asking if they are sure they would like to delete the profile.
-        If they press delete they are logged out and redirected to the home page and if they press cancel they are redirected to their profile page.
         ![Delete-profile](docs/features/delete-profile.png)
+        
+          - If they press delete they are logged out and redirected to the home page with a success message stating "Profile deleted successfully"
+          ![delete-profile-message](docs/features/profile-delete-message.png)
+        
+
+#### **Add A Blog Page**
+
+ - The Add A blog page is accessible from either the navbar or the carousel if the user is logged in.
+
+  - Users are able to Add a blog post by adding a description, a title, their own upload image, the blogpost text body and selecting the category. **Note**: There is a bug on the image section of the form where it doesnt show the user their current uploaded image. I will address this further in the bugs section of the readme.  
+  ![add-blog](docs/features/add-blog.png)
+
+  - The form was built using django-crispy-forms
+
+  - When the user presses the submit button if the form is valid they are shown a message stating "Blog post created" and are redirected to the blog home page.
+  ![blog-post-message](docs/features/blog-post-message.png)
+
+  - If the form is invalid the user is shown a message telling them which field is invalid or required.
+  ![invalid-form](docs/features/invalid-form.png)
 
       
 
