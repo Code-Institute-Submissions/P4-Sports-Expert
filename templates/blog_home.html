@@ -19,6 +19,10 @@
             {% elif "placeholder" in blog.blog_image.url and blog.category == "Rugby"%}
             <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1678833501/pexels-photo-6373836_tqigji.jpg"
                 alt="placeholder-image" class="card-img-top user-image">
+            <!--If user has not uploaded an image to the blog and the category is Other-->
+            {% elif "placeholder" in blog.blog_image.url and blog.category == "Other"%}
+            <img src="https://res.cloudinary.com/dsdurzeu2/image/upload/v1680523827/static/css/other-balls_gy47nz.jpg"
+                alt="placeholder-image" class="card-img-top user-image">    
             <!--If user has uploaded their own image-->    
             {% else %}
             <img src="{{ blog.blog_image.url }}" alt="user-upload-image" class="card-img-top user-image">

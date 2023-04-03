@@ -823,9 +823,68 @@ User Story 4
    - The footer also contains a Copyright message at the bottom of the page with the site author name and year of development.
 
    ![Footer](docs/features/footer-desktop.png) 
-   
+
+#### **Blog Home Page**
+
+ - **Bootstrap cards**
+
+   - The blog home page features bootstrap cards with information on blog posts including an image, the blogpost author, the blogpost title, the blogpost description the date the blogpost was posted and the category.
+
+      - The image on the card changes depending on circumstance.
+      
+      - If the user uploads no image and chooses "Football" as category:
+        ![Blog-Home-football](docs/features/blog-home-football.png)
+      
+      - If the user uploads no image and chooses "Rugby" as category:
+      ![Blog-home-rugby](docs/features/blog-home-rugby.png)
+
+      - If the user uploads no image and chooses "GAA" as category:
+      ![Blog-home-gaa](docs/features/blog-home-gaa.png)
+
+      - If the user uploads no image and chooses "Other" as category:
+      ![Blog-home-other](docs/features/blog-home-other.png)
+
+      - If the user chooses to upload their own image it is displayed as normal on the card:
+      ![Blog-home-user-upload](docs/features/blog-home-user-upload.png)
+
+ - **User Authentication**
+     
+     - Users are able to access the blog home page regardless of whether they are signed in or not.
+
+      - The buttons on the cards will change depending on if the user is the author or not. If the user is the author they will be shown 3 options To either navigate to the blog, delete the blog or edit the blog
+      ![Blog-home-author](docs/features/blog-home-gaa.png) 
+
+      - If the user is not the author they will only be shown 1 button, to navigate onto the blog detail page
+      ![Blog-home-not-author](docs/features/blog-home-not-author.png)
+
+ - **Responsiveness**
+
+      - The blog home page is fully responsive to all screen sizes and will change how many cards are shown in a row depending on screen width.
+
+         - For large screen sizes cards are shown in rows of 3 wide.
+         ![Blog-home-large-screen](docs/features/blog-home-large-screen.png) 
+
+         - For medium screen sizes cards are shown in rows of 2 wide
+         ![Blog-home-medium-screen](docs/features/blog-home-medium-screen.png) 
+
+         - For small screen sizes cards are shown in rows of 1 wide
+         ![Blog-home-small-screen](docs/features/blog-home-small-screen.png)
+
+ - **Pagination**
+
+      - The blog cards are paginated by 6 cards per page.
+
+      - The bottom of the home page shows the user 4 buttons, one to navigate to the first page, one for the previous page, one for the next page and one for the last page.
+
+      - There is also. page counter which shows the user which page they are currenty on aswell as the total number of pages
+
+      ![Blog-home-pagination](docs/features/blog-home-pagination.png)            
+
+
 
    
+
+
 
 
 
