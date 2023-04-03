@@ -914,6 +914,26 @@ User Story 4
        - If user is not logged in and there are comments
        ![Comments-comment-logged-out](docs/features/comment-comment-logged-in-comments.png) 
 
+    - If the user posts a comment they are shown a success message stating "Your Comment has been added" and redirected back to the same page after reload
+    ![Comment-added](docs/features/comment-added.png)
+
+    - If the user is the author of any comments on the page they are shown 2 buttons. Edit and delete.
+    ![comment-edit-delete](docs/features/comment-edit-delete.png)
+
+       - If the user presses the edit button they are directed to the edit page with a form to edit their comment.
+       ![Comment-edit-page](docs/features/comment-edit-page.png)  
+
+           - When the user presses the submit button they are redirected back to the blog-detail page and shown a success message stating "Your comment has been edited"
+           ![Edit-comment-message](docs/features/comment-edit-message.png)
+
+       - If the user presses the delete button they are brought to a page asking them if they are sure they want to delete the comment.
+       ![Delete-comment-page](docs/features/delete-comment-page.png)
+
+           - If the user presses cancel they are redirected back to the blog detail page.
+
+           - If the user presses delete their comment is deleted and they are shown a success message stating "Your comment has been deleted" and redirected back to the blog detail page.
+           ![Delete-comment-message](docs/features/comment-delete-message.png)     
+
 #### **Profile Page**
 
  - The profile page is only accessible by users that have made an account and logged in.
