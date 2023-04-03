@@ -914,6 +914,52 @@ User Story 4
        - If user is not logged in and there are comments
        ![Comments-comment-logged-out](docs/features/comment-comment-logged-in-comments.png) 
 
+#### **Profile Page**
+
+ - The profile page is only accessible by users that have made an account and logged in.
+
+ - Django signals was used so a profile is automatically made for a user as soon as they sign up for an account.
+
+  - **Profile image**
+
+     - Users are able to upload their own profile image to their profile.
+     ![Profile-uploaded-image](docs/features/profile-uploaded-image.png)
+
+     - If no profile image is uploaded a placeholder image is displayed
+     ![Profile-placeholder](docs/features/profile-placeholder-image.png)
+
+ - **Profile About**
+
+     - The about section shows the users profile information such as their username, full name, about, the date their profile was created and the date it was last edited
+     ![Profile-about](docs/features/profile-about.png)
+
+ - The bottom of the profile page has 3 buttons for the user to choose from.
+      ![profile-buttons](docs/features/profile-buttons.png)
+
+      - The home button will direct users back to the home page.
+
+      - The Myblogs button will bring users to a page, similiar to the blog home page that shows them all of their created blog posts where they can view, edit and delete them. Or if the user has no created blogs, a message that tells them they dont have any blogs and a button that directs them to the addblog page.
+
+         - User has blogposts
+         ![myblogs](docs/features/my-blogs.png)
+
+         - User has no blogposts
+         ![myblogs-noblogs](docs/features/myblogs-noblog.png)
+
+      - The edit profile button will bring users to a form page where they can edit and delete their profile.
+      ![Edit-profile](docs/features/edit-profile.png)   
+
+        - From this page the user can edit their name, about section and profile image. **Note**: There is a bug on the image section of the form where it doesnt show the user their current uploaded image. I will address this further in the bugs section of the readme.  
+
+        - If the user presses the delete profile button they are brought to a page which shows them a message asking if they are sure they would like to delete the profile.
+        If they press delete they are logged out and redirected to the home page and if they press cancel they are redirected to their profile page.
+        ![Delete-profile](docs/features/delete-profile.png)
+
+      
+
+  
+   
+
 
 
 
