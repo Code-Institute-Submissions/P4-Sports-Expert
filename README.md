@@ -881,8 +881,41 @@ User Story 4
       ![Blog-home-pagination](docs/features/blog-home-pagination.png)            
 
 
+#### **Blog Detail Page**
 
-   
+ - The blog detail page is navigated to by the user clicking the "Blog" button on the blog home page.
+
+ - The blog detail page includes 3 sections. The "Header" section the blog body section and the comment section with a home button on the bottom of the page to navigate users back to the home page.
+
+
+ - **Header section**
+
+    - The header section shows the Blogpost details such as the Author, The date posted, the title and either the user uploaded image or the placeholder image. Like the blog home page if the user has not uploaded an image the placeholder image will change depending on category chosen.
+    ![Blog-detail-header](docs/features/blog-detail-header.png)
+
+ - **Body section**
+
+    - The body section includes the body text of the blogpost. The body text includes paragraph linebreaks for easy user readability.
+    ![Blog-detail-body](docs/features/blog-detail-body.png)
+
+ - **Comment Section**
+
+    - The comment section is placed directly below the body section and allows users to make comments on the blog post if they are logged in. The content of the comment section changes depending on circumstance  
+
+       - If user is logged in and there are no comments
+       ![Comments-no-comments-logged-in](docs/features/comments-no-comments-logged-in.png) 
+
+       - If user is not logged in and there are no comments
+       ![Comments-no-comments-logged-out](docs/features/comments-no-comments-not-logged.png)
+
+       - If user is logged in and there are comments
+       ![Comments-comment-logged-in](docs/features/comment-comment-logged-in.png)
+
+       - If user is not logged in and there are comments
+       ![Comments-comment-logged-out](docs/features/comment-comment-logged-in-comments.png) 
+
+
+
 
 
 
