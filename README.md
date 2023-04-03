@@ -761,39 +761,73 @@ User Story 4
 #### **Home Page**
 
  - Navbar
+   
+   - The navbar is an element included in the base.html file so is shown to the user on every page of the site
+   
    - Navbar desktop
+      
       - The navbar Features a clickable site logo at the centre of the screen which directs users back to the home page from anywhere on the site. It also includes navigation links underneath with a blue underline showing users the active page.
       ![Navbar-desktop](docs/features/navbar-desktop.png)
+      
       - The navigation links on the navbar change if the user is logged in, giving the user more navigation options such as adding a blog and profile pages. They are also shown a message telling them which account they are signed in as.
       ![Navbar-desktop-logged-in](docs/features/navbar-logged-in-desktop.png)
+      
 
    - Navbar mobile
+      
       - On mobile the navbar collapses down to a hamburger menu with the clickable logo moving to the left.
       ![Navbar-mobile](docs/features/navbar-mobile.png)
+     
       - As with the desktop navbar the mobile navbar also gives users more options when signed in aswell as a message telling them which account they are signed in as.
       ![Navbar-mobile-logged-in](docs/features/navbar-mobile-logged-in.png)  
 
- - Carousel
+ - Bootstrap Carousel
+   - This carousel section, built using bootstrap is directly below the navbar in the home page and is likely the first thing that will catch the users eye when they visit the site. 
    - Carousel signed out
-      - This section is directly below the navbar in the home page and is likely the first thing that will catch the users eye when they visit the site.
       - When a user first visits the site and is logged out the auto sliding carousel will show the user 3 slides.
+     
       - 1. Blog page slide 
       ![Carousel-blog](docs/features/carousel-blogs.png)
+      
       - 2. Log in slide
       ![Carousel-login](docs/features/carousel-log-in.png)
+      
       - 3. Sign up slide
       ![Carousel-signup](docs/features/carousel-sign-up.png)
 
    - Carousel logged in
       - Like the navbar, whether the user is logged in or not changes what slides are shown. The slides shown when a user is logged in are:
+      
       - 1. Add a blog slide
       ![Carousel-addblog](docs/features/carousel-addblog.png)  
+      
       - 2. Profile slide
       ![Carousel-profile](docs/features/carousel-profile.png) 
+      
       - 3. Blog slide
       ![Logged-in-blog](docs/features/logged-in-blog-slide.png)
 
-      
+ - Site info section
+   - This section gives the user a welcome message aswell as a brief overview of the sites purpose with the phrase "Where like minded sports fanatics can share, compare and discuss all things sports
+   Whether its GAA, Football or Rugby you can find it all here."  
+   ![Info-section-desktop](docs/features/info-section-desktop.png)  
+
+   - The section is placed on the home page just under the navbar to give users info on the purpose of the site as soon as they enter.
+
+ - Footer  
+    
+   - Like the navbar the footer is also a part of the base.html file so is shown to the user on every page of the site.
+
+   - The footer includes a social media links section with 4 fontawesome clickable icons. Facebook, Twitter, Instagram and Github. All links Open on a new page.
+
+   - The footer also contains a Copyright message at the bottom of the page with the site author name and year of development.
+
+   ![Footer](docs/features/footer-desktop.png) 
+   
+
+   
+
+
 
 
      
