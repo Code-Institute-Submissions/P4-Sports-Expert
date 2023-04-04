@@ -769,18 +769,22 @@ User Story 4
    - Navbar desktop
       
       - The navbar Features a clickable site logo at the centre of the screen which directs users back to the home page from anywhere on the site. It also includes navigation links underneath with a blue underline showing users the active page.
+      
       ![Navbar-desktop](docs/features/navbar-desktop.png)
       
       - The navigation links on the navbar change if the user is logged in, giving the user more navigation options such as adding a blog and profile pages. They are also shown a message telling them which account they are signed in as.
+      
       ![Navbar-desktop-logged-in](docs/features/navbar-logged-in-desktop.png)
       
 
    - Navbar mobile
       
       - On mobile the navbar collapses down to a hamburger menu with the clickable logo moving to the left.
+      
       ![Navbar-mobile](docs/features/navbar-mobile.png)
      
       - As with the desktop navbar the mobile navbar also gives users more options when signed in aswell as a message telling them which account they are signed in as.
+      
       ![Navbar-mobile-logged-in](docs/features/navbar-mobile-logged-in.png)  
 
  #### **Bootstrap Carousel**
@@ -789,30 +793,37 @@ User Story 4
       - When a user first visits the site and is logged out the auto sliding carousel will show the user 3 slides.
      
       - 1.Blog page slide 
+      
       ![Carousel-blog](docs/features/carousel-blogs.png)
       
       - 2.Log in slide
+      
       ![Carousel-login](docs/features/carousel-log-in.png)
       
       - 3.Sign up slide
+      
       ![Carousel-signup](docs/features/carousel-sign-up.png)
 
    - Carousel logged in
       - Like the navbar, whether the user is logged in or not changes what slides are shown. The slides shown when a user is logged in are:
       
       - 1.Add a blog slide
+      
       ![Carousel-addblog](docs/features/carousel-addblog.png)  
       
       - 2.Profile slide
+      
       ![Carousel-profile](docs/features/carousel-profile.png) 
       
       - 3.Blog slide
+      
       ![Logged-in-blog](docs/features/logged-in-blog-slide.png)
 
  #### **Site info section**
 
    - This section gives the user a welcome message aswell as a brief overview of the sites purpose with the phrase "Where like minded sports fanatics can share, compare and discuss all things sports
    Whether its GAA, Football or Rugby you can find it all here."  
+   
    ![Info-section-desktop](docs/features/info-section-desktop.png)  
 
    - The section is placed on the home page just under the navbar to give users info on the purpose of the site as soon as they enter.
@@ -836,42 +847,52 @@ User Story 4
   - The image on the card changes depending on circumstance.
       
   - If the user uploads no image and chooses "Football" as category:
-      ![Blog-Home-football](docs/features/blog-home-football.png)
+    
+    ![Blog-Home-football](docs/features/blog-home-football.png)
       
   - If the user uploads no image and chooses "Rugby" as category:
-      ![Blog-home-rugby](docs/features/blog-home-rugby.png)
+    
+    ![Blog-home-rugby](docs/features/blog-home-rugby.png)
 
    - If the user uploads no image and chooses "GAA" as category:
-      ![Blog-home-gaa](docs/features/blog-home-gaa.png)
+    
+    ![Blog-home-gaa](docs/features/blog-home-gaa.png)
 
    - If the user uploads no image and chooses "Other" as category:
-      ![Blog-home-other](docs/features/blog-home-other.png)
+    
+    ![Blog-home-other](docs/features/blog-home-other.png)
 
    - If the user chooses to upload their own image it is displayed as normal on the card:
-      ![Blog-home-user-upload](docs/features/blog-home-user-upload.png)
+    
+    ![Blog-home-user-upload](docs/features/blog-home-user-upload.png)
 
 #### **User Authentication**
      
  - Users are able to access the blog home page regardless of whether they are signed in or not.
 
  - The buttons on the cards will change depending on if the user is the author or not. If the user is the author they will be shown 3 options To either navigate to the blog, delete the blog or edit the blog
-      ![Blog-home-author](docs/features/blog-home-gaa.png) 
+    
+    ![Blog-home-author](docs/features/blog-home-gaa.png) 
 
  - If the user is not the author they will only be shown 1 button, to navigate onto the blog detail page
-      ![Blog-home-not-author](docs/features/blog-home-not-author.png)
+    
+    ![Blog-home-not-author](docs/features/blog-home-not-author.png)
 
 #### **Responsiveness**
 
   - The blog home page is fully responsive to all screen sizes and will change how many cards are shown in a row depending on screen width.
 
     - For large screen sizes cards are shown in rows of 3 wide.
-         ![Blog-home-large-screen](docs/features/blog-home-large-screen.png) 
+        
+        ![Blog-home-large-screen](docs/features/blog-home-large-screen.png) 
 
     - For medium screen sizes cards are shown in rows of 2 wide
-         ![Blog-home-medium-screen](docs/features/blog-home-medium-screen.png) 
+        
+        ![Blog-home-medium-screen](docs/features/blog-home-medium-screen.png) 
 
     - For small screen sizes cards are shown in rows of 1 wide
-         ![Blog-home-small-screen](docs/features/blog-home-small-screen.png)
+        
+        ![Blog-home-small-screen](docs/features/blog-home-small-screen.png)
 
 #### **Pagination**
 
@@ -894,11 +915,13 @@ User Story 4
 #### **Header section**
 
  - The header section shows the Blogpost details such as the Author, The date posted, the title and either the user uploaded image or the placeholder image. Like the blog home page if the user has not uploaded an image the placeholder image will change depending on category chosen.
+    
     ![Blog-detail-header](docs/features/blog-detail-header.png)
 
 #### **Body section**
 
   - The body section includes the body text of the blogpost. The body text includes paragraph linebreaks for easy user readability.
+    
     ![Blog-detail-body](docs/features/blog-detail-body.png)
 
 #### **Comment Section**
@@ -906,36 +929,46 @@ User Story 4
   - The comment section is placed directly below the body section and allows users to make comments on the blog post if they are logged in. The content of the comment section changes depending on circumstance  
 
     - If user is logged in and there are no comments
+       
        ![Comments-no-comments-logged-in](docs/features/comments-no-comments-logged-in.png) 
 
     - If user is not logged in and there are no comments
+       
        ![Comments-no-comments-logged-out](docs/features/comments-no-comments-not-logged.png)
 
     - If user is logged in and there are comments
+       
        ![Comments-comment-logged-in](docs/features/comment-comment-logged-in.png)
 
     - If user is not logged in and there are comments
+       
        ![Comments-comment-logged-out](docs/features/comment-comment-logged-in-comments.png) 
 
   - If the user posts a comment they are shown a success message stating "Your Comment has been added" and redirected back to the same page after reload
-    ![Comment-added](docs/features/comment-added.png)
+  
+  ![Comment-added](docs/features/comment-added.png)
 
   - If the user is the author of any comments on the page they are shown 2 buttons. Edit and delete.
-    ![comment-edit-delete](docs/features/comment-edit-delete.png)
+
+   ![comment-edit-delete](docs/features/comment-edit-delete.png)
 
     - If the user presses the edit button they are directed to the edit page with a form to edit their comment.
-       ![Comment-edit-page](docs/features/comment-edit-page.png)  
+    
+    ![Comment-edit-page](docs/features/comment-edit-page.png)  
 
         - When the user presses the submit button they are redirected back to the blog-detail page and shown a success message stating "Your comment has been edited"
-           ![Edit-comment-message](docs/features/comment-edit-message.png)
+        
+        ![Edit-comment-message](docs/features/comment-edit-message.png)
 
     - If the user presses the delete button they are brought to a page asking them if they are sure they want to delete the comment.
-       ![Delete-comment-page](docs/features/delete-comment-page.png)
+    
+    ![Delete-comment-page](docs/features/delete-comment-page.png)
 
         - If the user presses cancel they are redirected back to the blog detail page.
 
         - If the user presses delete their comment is deleted and they are shown a success message stating "Your comment has been deleted" and redirected back to the blog detail page.
-           ![Delete-comment-message](docs/features/comment-delete-message.png)     
+        
+        ![Delete-comment-message](docs/features/comment-delete-message.png)     
 
 ### **Profile Page**
 
@@ -946,43 +979,53 @@ User Story 4
 #### **Profile image**
 
   - Users are able to upload their own profile image to their profile.
-     ![Profile-uploaded-image](docs/features/profile-uploaded-image.png)
+  
+  ![Profile-uploaded-image](docs/features/profile-uploaded-image.png)
 
   - If no profile image is uploaded a placeholder image is displayed
-     ![Profile-placeholder](docs/features/profile-placeholder-image.png)
+  
+  ![Profile-placeholder](docs/features/profile-placeholder-image.png)
 
 #### **Profile About**
 
  - The about section shows the users profile information such as their username, full name, about, the date their profile was created and the date it was last edited
-     ![Profile-about](docs/features/profile-about.png)
+
+![Profile-about](docs/features/profile-about.png)
 
  - The bottom of the profile page has 3 buttons for the user to choose from.
-      ![profile-buttons](docs/features/profile-buttons.png)
+  
+  ![profile-buttons](docs/features/profile-buttons.png)
 
     - The home button will direct users back to the home page.
 
     - The Myblogs button will bring users to a page, similiar to the blog home page that shows them all of their created blog posts where they can view, edit and delete them. Or if the user has no created blogs, a message that tells them they dont have any blogs and a button that directs them to the addblog page.
 
      - User has blogposts
-         ![myblogs](docs/features/my-blogs.png)
+         
+     ![myblogs](docs/features/my-blogs.png)
 
      - User has no blogposts
-         ![myblogs-noblogs](docs/features/myblogs-noblog.png)
+         
+     ![myblogs-noblogs](docs/features/myblogs-noblog.png)
 
      - The edit profile button will bring users to a form page where they can edit and delete their profile.
 
      - The form was built using django-crispy-forms
+      
       ![Edit-profile](docs/features/edit-profile.png)   
 
         - From this page the user can edit their name, about section and profile image. **Note**: There is a bug on the image section of the form where it doesnt show the user their current uploaded image. I will address this further in the bugs section of the readme. 
 
         - If the user presses the confirm edit button and the form is valid they are shown a success message stating "Profile edited successfully" and redirected back to their profile page.
+        
         ![profile-edit-message](docs/features/profile-edit-message.png) 
 
         - If the user presses the delete profile button they are brought to a page which shows them a message asking if they are sure they would like to delete the profile.
+        
         ![Delete-profile](docs/features/delete-profile.png)
         
           - If they press delete they are logged out and redirected to the home page with a success message stating "Profile deleted successfully"
+          
           ![delete-profile-message](docs/features/profile-delete-message.png)
         
 
@@ -991,15 +1034,125 @@ User Story 4
  - The Add A blog page is accessible from either the navbar or the carousel if the user is logged in.
 
   - Users are able to Add a blog post by adding a description, a title, their own upload image, the blogpost text body and selecting the category. **Note**: There is a bug on the image section of the form where it doesnt show the user their current uploaded image. I will address this further in the bugs section of the readme.  
+  
   ![add-blog](docs/features/add-blog.png)
 
   - The form was built using django-crispy-forms
 
   - When the user presses the submit button if the form is valid they are shown a message stating "Blog post created" and are redirected to the blog home page.
+  
   ![blog-post-message](docs/features/blog-post-message.png)
 
   - If the form is invalid the user is shown a message telling them which field is invalid or required.
+  
   ![invalid-form](docs/features/invalid-form.png)
+
+
+### **User Authentication Pages**
+
+ - All user authentication on the website is built using the allauth package.
+
+ - The sign up, sign in and sign out templates were imported and given custom styling
+
+#### **Sign Up Page**
+
+ - The sign up page is accessible to the user from both the navbar and the carousel on the home page provided they are not signed in.
+
+ - Sign up navbar
+ 
+ ![Sign-up-navbar](docs/features/sign-up%20navbar.png)
+
+ - Sign up carousel
+ 
+ ![Sign-up-carousel](docs/features/sign-up%20carousel.png)
+
+ - The sign up page includes 4 input fields for the user. Username(required), email, password(required) and password again(required)
+ 
+ ![Sign-up-page](docs/features/sign-up-page.png)
+
+ - If one of the fields are invalid the user will be unable to submit the form and will receive a message telling them which part of the form is invalid.
+ 
+ ![Sign-up-form-invalid](docs/features/sign-up-form-invalid.png)
+
+ - If the form is valid and the user presses the sign up button they will be logged in, redirected to the home page and receive a message stating "Successfully signed in as (chosen username)"
+ 
+ ![Sign-up-signed-in](docs/features/sign-up-sign-in.png)
+
+#### **Log In Page**
+
+ - The log in page is accessible to the user from both the navbar and the carousel on the home page provided they are not signed in.
+
+ - Log in navbar
+ 
+ ![Log-in-navbar](docs/features/log-in-navbar.png)
+
+ - Log in carousel
+ 
+ ![Log-in-carousel](docs/features/log-in-carousel.png)
+
+ - The log in page includes input fields for the user to enter their username, password and a remember me checkbox.
+
+ - If the form is invalid the user receives a message telling them which part of the form is invalid.
+ 
+ ![Log-in-form-invalid](docs/features/log-in-form-invalid.png)
+
+ - If the user enters a username or password that the database doesnt recognise they are shown a message telling them that either the username or password are incorrect
+ 
+ ![log-in-incorrect](docs/features/log-in-incorrect.png)
+
+ - If the form is valid and the user enters a correct username and password they are redirected to the home page and receive a message stating "Successfully signed in as (chosen username)"
+ 
+ ![Sign-up-signed-in](docs/features/sign-up-sign-in.png)
+
+#### **Log Out page**
+
+ - The logout page is accessible to the user from the navbar provided they are signed in.
+
+ ![logout](docs/features/sign-out-navbar.png)
+
+ - The logout page includes a container with a message asking the user if they are sure they wish to sign out and a sign out button.
+
+ ![Logout-page](docs/features/sign-out-page.png)
+
+ - If the user presses the sign out button they are redirected back to the home page with a message stating "You have signed out.
+
+ ![Sign-out-message](docs/features/sign-out-message.png)
+
+### **Custom Error Pages**
+
+#### **404 Page Not Found**
+
+ - This page is shown to the user if they try to access a url that doesnt exist.
+
+ - The page shows the user a message stating "This page does not exist. Press the home button to return to the homepage" and a home button.
+
+ ![404-page](docs/features/404-page.png)
+
+#### **403 Action Forbidden**
+
+ - This page is shown to the user is they try access a page or perform an action they they are not authorized to do. Such as edit or delete a blogpost that they are not the author of.
+
+ - The page shows the user a message stating "You are not authorised to perform this action. Press the home button to return to the main menu." and a home button.
+
+ ![403-page](docs/features/403-page.png)
+
+#### **500 Internal server error**
+
+ - This page is shown to the user if an internal server error occurs.
+
+ - The page shows the user a message stating "Oops something went wrong. Press the home button to return to the homepage" and a home button.
+
+ ![500-page](docs/features/500-page.png)
+
+
+
+
+
+
+
+
+
+
 
       
 
