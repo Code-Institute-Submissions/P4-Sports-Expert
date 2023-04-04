@@ -766,11 +766,13 @@ User Story 4
 
    - This User story was part of the [Epic: CRUD Functionality](https://github.com/seanj06/P4-Sports-Expert/milestone/5) milestone but was moved to the backlog because of time constraints.  
 
-## **Features**
+## **The Structure Plane**
 
-### **Home Page**
+### **Features**
 
- #### **Navbar**
+#### **Home Page**
+
+**Navbar**
    
    - The navbar is an element included in the base.html file so is shown to the user on every page of the site
    
@@ -795,7 +797,8 @@ User Story 4
       
       ![Navbar-mobile-logged-in](docs/features/navbar-mobile-logged-in.png)  
 
- #### **Bootstrap Carousel**
+**Bootstrap Carousel**
+   
    - This carousel section, built using bootstrap is directly below the navbar in the home page and is likely the first thing that will catch the users eye when they visit the site. 
    - Carousel signed out
       - When a user first visits the site and is logged out the auto sliding carousel will show the user 3 slides.
@@ -827,7 +830,8 @@ User Story 4
       
       ![Logged-in-blog](docs/features/logged-in-blog-slide.png)
 
- #### **Site info section**
+
+**Site info section**
 
    - This section gives the user a welcome message aswell as a brief overview of the sites purpose with the phrase "Where like minded sports fanatics can share, compare and discuss all things sports
    Whether its GAA, Football or Rugby you can find it all here."  
@@ -836,7 +840,7 @@ User Story 4
 
    - The section is placed on the home page just under the navbar to give users info on the purpose of the site as soon as they enter.
 
- #### **Footer**  
+**Footer**  
     
    - Like the navbar the footer is also a part of the base.html file so is shown to the user on every page of the site.
 
@@ -846,9 +850,9 @@ User Story 4
 
    ![Footer](docs/features/footer-desktop.png) 
 
-### **Blog Home Page**
+#### **Blog Home Page**
 
-#### **Bootstrap cards**
+**Bootstrap cards**
 
 - The blog home page features bootstrap cards with information on blog posts including an image, the blogpost author, the blogpost title, the blogpost description the date the blogpost was posted and the category.
 
@@ -874,7 +878,7 @@ User Story 4
     
     ![Blog-home-user-upload](docs/features/blog-home-user-upload.png)
 
-#### **User Authentication**
+**User Authentication**
      
  - Users are able to access the blog home page regardless of whether they are signed in or not.
 
@@ -886,7 +890,7 @@ User Story 4
     
     ![Blog-home-not-author](docs/features/blog-home-not-author.png)
 
-#### **Responsiveness**
+**Responsiveness**
 
   - The blog home page is fully responsive to all screen sizes and will change how many cards are shown in a row depending on screen width.
 
@@ -902,7 +906,7 @@ User Story 4
         
         ![Blog-home-small-screen](docs/features/blog-home-small-screen.png)
 
-#### **Pagination**
+**Pagination**
 
   - The blog cards are paginated by 6 cards per page.
 
@@ -913,26 +917,26 @@ User Story 4
   ![Blog-home-pagination](docs/features/blog-home-pagination.png)            
 
 
-### **Blog Detail Page**
+#### **Blog Detail Page**
 
  - The blog detail page is navigated to by the user clicking the "Blog" button on the blog home page.
 
  - The blog detail page includes 3 sections. The "Header" section the blog body section and the comment section with a home button on the bottom of the page to navigate users back to the home page.
 
 
-#### **Header section**
+**Header section**
 
  - The header section shows the Blogpost details such as the Author, The date posted, the title and either the user uploaded image or the placeholder image. Like the blog home page if the user has not uploaded an image the placeholder image will change depending on category chosen.
     
     ![Blog-detail-header](docs/features/blog-detail-header.png)
 
-#### **Body section**
+**Body section**
 
   - The body section includes the body text of the blogpost. The body text includes paragraph linebreaks for easy user readability.
     
     ![Blog-detail-body](docs/features/blog-detail-body.png)
 
-#### **Comment Section**
+**Comment Section**
 
   - The comment section is placed directly below the body section and allows users to make comments on the blog post if they are logged in. The content of the comment section changes depending on circumstance  
 
@@ -978,13 +982,13 @@ User Story 4
         
         ![Delete-comment-message](docs/features/comment-delete-message.png)     
 
-### **Profile Page**
+#### **Profile Page**
 
  - The profile page is only accessible by users that have made an account and logged in.
 
  - Django signals was used so a profile is automatically made for a user as soon as they sign up for an account.
 
-#### **Profile image**
+**Profile image**
 
   - Users are able to upload their own profile image to their profile.
   
@@ -994,7 +998,7 @@ User Story 4
   
   ![Profile-placeholder](docs/features/profile-placeholder-image.png)
 
-#### **Profile About**
+**Profile About**
 
  - The about section shows the users profile information such as their username, full name, about, the date their profile was created and the date it was last edited
 
@@ -1037,7 +1041,7 @@ User Story 4
           ![delete-profile-message](docs/features/profile-delete-message.png)
         
 
-### **Add A Blog Page**
+#### **Add A Blog Page**
 
  - The Add A blog page is accessible from either the navbar or the carousel if the user is logged in.
 
@@ -1056,13 +1060,13 @@ User Story 4
   ![invalid-form](docs/features/invalid-form.png)
 
 
-### **User Authentication Pages**
+#### **User Authentication Pages**
 
  - All user authentication on the website is built using the allauth package.
 
  - The sign up, sign in and sign out templates were imported and given custom styling
 
-#### **Sign Up Page**
+**Sign Up Page**
 
  - The sign up page is accessible to the user from both the navbar and the carousel on the home page provided they are not signed in.
 
@@ -1086,7 +1090,7 @@ User Story 4
  
  ![Sign-up-signed-in](docs/features/sign-up-sign-in.png)
 
-#### **Log In Page**
+**Log In Page**
 
  - The log in page is accessible to the user from both the navbar and the carousel on the home page provided they are not signed in.
 
@@ -1112,7 +1116,7 @@ User Story 4
  
  ![Sign-up-signed-in](docs/features/sign-up-sign-in.png)
 
-#### **Log Out page**
+**Log Out page**
 
  - The logout page is accessible to the user from the navbar provided they are signed in.
 
@@ -1126,9 +1130,9 @@ User Story 4
 
  ![Sign-out-message](docs/features/sign-out-message.png)
 
-### **Custom Error Pages**
+#### **Custom Error Pages**
 
-#### **404 Page Not Found**
+**404 Page Not Found**
 
  - This page is shown to the user if they try to access a url that doesnt exist.
 
@@ -1136,7 +1140,7 @@ User Story 4
 
  ![404-page](docs/features/404-page.png)
 
-#### **403 Action Forbidden**
+**403 Action Forbidden**
 
  - This page is shown to the user is they try access a page or perform an action they they are not authorized to do. Such as edit or delete a blogpost that they are not the author of.
 
@@ -1144,7 +1148,7 @@ User Story 4
 
  ![403-page](docs/features/403-page.png)
 
-#### **500 Internal server error**
+**500 Internal server error**
 
  - This page is shown to the user if an internal server error occurs.
 
@@ -1153,7 +1157,29 @@ User Story 4
  ![500-page](docs/features/500-page.png)
 
 
+#### **Future Features**
 
+ - There were 4 user stories incomplete due to time constraints so they would be the first future features added to the website. They were:
+
+   - [USER STORY:Filter blog posts by category #18](https://github.com/seanj06/P4-Sports-Expert/issues/18)
+   The ability for users to filter blogposts by category on a dropdown menu. I think this feature would be important as the site grows and there are multiple pages of bloposts.
+
+   - [USER STORY: Search for blog posts by user #20](https://github.com/seanj06/P4-Sports-Expert/issues/20)
+   The ability for users to search multiple blog posts by author. I think this feature would be important as the site grows so users can search for blogposts by their favourite author.
+
+   - [USER STORY:Search bar #16](https://github.com/seanj06/P4-Sports-Expert/issues/16)
+   A search bar on the homepage so users can search for either blogposts, categorys, title keywords or authors from the homepage. I think this feature would be importantas the site grows for users to easily find blogposts they are looking for.
+
+   - [USER STORY:Reset Password #7](https://github.com/seanj06/P4-Sports-Expert/issues/7)
+   The ability for users to be able to reset their password if they lose it. This is currently beyond my skillset but would be an important part of any user authentication system.
+
+ - Other future features I would like to add include:
+
+   - Users to be able to upvote and downvote comments. 
+
+   - Users to be able to favourite blogposts and then access them from their profile.
+
+   - Users to be able to click on and view other user profiles from blogpost authors and comments.
 
 
 
