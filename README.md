@@ -7,24 +7,26 @@ comment on blog posts. They can also edit their profile and upload their own pro
 
 Developed by Sean Johnston for code institute Project Portfolio project 4.
 
+![Am-I-Responsive](docs/readme-images/amiresponsive.png)
+
 ## **Project Goals**
 
 As my fourth project for the [Code Institute](https://codeinstitute.net/) 5P course the goal of the project is to demostrate all of the skills I have learned in the course so far including languages such as HTML, CSS, Javascript and Python. Frameworks such as Django and Boostrap and version control technologies such as Git and Github.
 
 ## **UX**
 
-### **The Strategy Plane**
+## **The Strategy Plane**
 
 Sports expert was designed to be a site for Sports lovers to share and read their own and other peoples opinions on multiple sports topics. The site was designed in a way that it is easy to navigate, and a homepage U.I that grabs new and returning users attention. Users can upload their own BlogPosts, comment on other users blogposts aswell as editing their own profile which is intended to create a proper website community.
 
-#### **Target Users**
+### **Target Users**
 
 - A user that is a sports fan
 - A user that likes to keep up to date with sports news
 - A user that wants to create their own blogpost on a sport topic
 - A user that wants to join in with the community and comment on other peoples blogposts or start a discussion.
 
-#### **Site Goals**
+### **Site Goals**
 
 - For users to be able to create an account, login and logout when they want.
 - For users to be able to view blogposts regardless if they have made and account and are signed in or out
@@ -42,13 +44,13 @@ The Kanban board was created using Github projects and can be located [here](htt
 
 ![Kanban Board](docs/readme-images/kanban-board.png)
 
-#### **Epics**
+### **Epics**
 
 Epics were broken down into 9 EPIC Milestones(including backlog)
 which include 37 user stories in total. Each Milestone was given acceptance criteria and the milestone was closed when all the criteria had been met / all user stories were completed.
 User stories were given tasks, and when each task and the given user stories were completed a comment was left with the commit number underneath the user story. When all tasks were complete the user story was closed.
 
-##### **EPIC: Django Installation and app setup [#Milestone 1](https://github.com/seanj06/P4-Sports-Expert/milestone/1?closed=1)**
+#### **EPIC: Django Installation and app setup [#Milestone 1](https://github.com/seanj06/P4-Sports-Expert/milestone/1?closed=1)**
 
 This Epic had 3 acceptance criterias
 
@@ -60,11 +62,11 @@ This Epic had 3 acceptance criterias
 
 This was the first milestone to be completed as it was needed to install django and the database.
 
-##### **EPIC: First Heroku Deployment [#Milestone 2](https://github.com/seanj06/P4-Sports-Expert/milestone/2?closed=1)**
+#### **EPIC: First Heroku Deployment [#Milestone 2](https://github.com/seanj06/P4-Sports-Expert/milestone/2?closed=1)**
 
 This Epic included 2 user stories which included installing cloudinary and the setting up the correct env.py variables to successfully deploy the prpject on heroku for the first time.
 
-##### **EPIC: Home page creation [#Milestone 3](https://github.com/seanj06/P4-Sports-Expert/milestone/8)**
+#### **EPIC: Home page creation [#Milestone 3](https://github.com/seanj06/P4-Sports-Expert/milestone/8)**
 
 This Epic had 4 acceptance criterias
 
@@ -78,7 +80,7 @@ This Epic had 4 acceptance criterias
 
 This epic centred around the site home page and made sure user athentication was set up correctly
 
-##### **EPIC: User profile [#Milestone 4](https://github.com/seanj06/P4-Sports-Expert/milestone/10)**
+#### **EPIC: User profile [#Milestone 4](https://github.com/seanj06/P4-Sports-Expert/milestone/10)**
 
 This Epic had 3 acceptance criterias
 
@@ -90,7 +92,7 @@ This Epic had 3 acceptance criterias
 
 This epic centered around the users profile section including users being able to access profile page from the home page and edit and see their own blog posts from their profile page.
 
-##### **EPIC: Crud Functionality [#Milestone 5](https://github.com/seanj06/P4-Sports-Expert/milestone/5?closed=1)**
+#### **EPIC: Crud Functionality [#Milestone 5](https://github.com/seanj06/P4-Sports-Expert/milestone/5?closed=1)**
 
 This epic had 4 user stories all based around CRUD functionality
 
@@ -102,7 +104,7 @@ This epic had 4 user stories all based around CRUD functionality
 
 - User able to delete a blog post
 
-##### **EPIC: Blog view page creation [#Milestone 6](https://github.com/seanj06/P4-Sports-Expert/milestone/9)**
+#### **EPIC: Blog view page creation [#Milestone 6](https://github.com/seanj06/P4-Sports-Expert/milestone/9)**
 
 This Epic had 3 acceptance criterias
 
@@ -114,7 +116,7 @@ This Epic had 3 acceptance criterias
 
 This milstone was centered around the creation of the blog home page. Note: The filter functionality of accpetance criteria 2 was not completed due to time constraints and the relevant user story was moved into the backlog.
 
-##### **EPIC: U/X [#Milestone 7](https://github.com/seanj06/P4-Sports-Expert/milestone/4)**
+#### **EPIC: U/X [#Milestone 7](https://github.com/seanj06/P4-Sports-Expert/milestone/4)**
 
 This Epic had 7 acceptance criterias
 
@@ -135,11 +137,11 @@ Blog post cards show a title, category, date created, image and a description sn
 
 This milestone was centered around U/X design with acceptance criterias broken down by different site pages
 
-##### **EPIC: User Functionality [#Milestone 8](https://github.com/seanj06/P4-Sports-Expert/milestone/3?closed=1)
+#### **EPIC: User Functionality [#Milestone 8](https://github.com/seanj06/P4-Sports-Expert/milestone/3?closed=1)
 
 This milestone included 3 user stories which centered around users being able to create an account and comment/ create blog posts.
 
-##### **Backlog [#Milestone 9](https://github.com/seanj06/P4-Sports-Expert/milestone/6)**
+#### **Backlog [#Milestone 9](https://github.com/seanj06/P4-Sports-Expert/milestone/6)**
 
 There are 4 user stories in the backlog milestone due to not being complete because of time constraints. They are:
 
@@ -151,12 +153,12 @@ There are 4 user stories in the backlog milestone due to not being complete beca
 
 - User being able to reset password - [USER STORY:Reset Password #7](https://github.com/seanj06/P4-Sports-Expert/issues/7)
 
-#### **User Stories**
+### **User Stories**
 
 Below is a list of user stories completed In epic milestones.
 Comments were left below user stories with commit numbers as per taksks completed.
 
-##### **EPIC: Django Installation and app setup [#Milestone 1](https://github.com/seanj06/P4-Sports-Expert/milestone/1?closed=1)**
+#### **EPIC: Django Installation and app setup [#Milestone 1](https://github.com/seanj06/P4-Sports-Expert/milestone/1?closed=1)**
 
 User Story 1
  - [USER STORY:Create new django project and app #2](https://github.com/seanj06/P4-Sports-Expert/issues/2)
@@ -190,7 +192,7 @@ User story 2
    - Comments:
        - All packages installed - [64203e7](https://github.com/seanj06/P4-Sports-Expert/commit/b6338d35869a468eff9b5bcf4f7d6ad2b46fb3e0)  
 
-##### **EPIC: First Heroku Deployment [#Milestone 2](https://github.com/seanj06/P4-Sports-Expert/milestone/2?closed=1)**
+#### **EPIC: First Heroku Deployment [#Milestone 2](https://github.com/seanj06/P4-Sports-Expert/milestone/2?closed=1)**
 
 User Story 1
  - [USER STORY: First Heroku Deployment #1](https://github.com/seanj06/P4-Sports-Expert/issues/1)
@@ -229,7 +231,7 @@ User Story 2
    - Comments:
        - Cloudinary installed and all variables added in settings.py - [8fc3000](https://github.com/seanj06/P4-Sports-Expert/commit/8fc3000810860833ac97b7c881431df88f0a0d71)  
 
-##### **EPIC: Home page creation [#Milestone 3](https://github.com/seanj06/P4-Sports-Expert/milestone/8)**
+#### **EPIC: Home page creation [#Milestone 3](https://github.com/seanj06/P4-Sports-Expert/milestone/8)**
 
 User Story 1
  - [USER STORY:Site Navigation #11](https://github.com/seanj06/P4-Sports-Expert/issues/11)
@@ -281,7 +283,7 @@ User Story 3
        - Bootstrap navbar added with links - [3e84feb](https://github.com/seanj06/P4-Sports-Expert/commit/3e84febb7459482bfeb9db6df4641c0c9f7a82d1)
 
 
-##### **EPIC: User profile [#Milestone 4](https://github.com/seanj06/P4-Sports-Expert/milestone/10)**
+#### **EPIC: User profile [#Milestone 4](https://github.com/seanj06/P4-Sports-Expert/milestone/10)**
 
 User Story 1
  - [USER STORY:View blog posts #29](https://github.com/seanj06/P4-Sports-Expert/issues/29)
@@ -363,7 +365,7 @@ User Story 5
        - Profile app created - [ff680fe](https://github.com/seanj06/P4-Sports-Expert/commit/ff680fedf12222a840dab7cec5859d84b550d024)
        - Django signals added to automatically create profile on account creation - [3abe18b](https://github.com/seanj06/P4-Sports-Expert/commit/3abe18be79adaa7e1948652a90b5ec4b4c7c723a)
 
-##### **EPIC: Crud Functionality [#Milestone 5](https://github.com/seanj06/P4-Sports-Expert/milestone/5?closed=1)**     
+#### **EPIC: Crud Functionality [#Milestone 5](https://github.com/seanj06/P4-Sports-Expert/milestone/5?closed=1)**     
 
 User Story 1
  - [USER STORY:Read blog post #22](https://github.com/seanj06/P4-Sports-Expert/issues/22)
@@ -430,7 +432,7 @@ User Story 4
    - Comments:
        - Django form created and linked to model - [77f3686](https://github.com/seanj06/P4-Sports-Expert/commit/77f368639c4b1f4b79e9378bc8966a5f31f12b8b)
 
-##### **EPIC: Blog view page creation [#Milestone 6](https://github.com/seanj06/P4-Sports-Expert/milestone/9)**
+#### **EPIC: Blog view page creation [#Milestone 6](https://github.com/seanj06/P4-Sports-Expert/milestone/9)**
 
 User Story 1
  - [USER STORY:Add image to blog post #19](https://github.com/seanj06/P4-Sports-Expert/issues/19)
@@ -479,7 +481,7 @@ User Story 3
    - Comments:
        - BlogPost model created and changes migrated to database - [e815114](https://github.com/seanj06/P4-Sports-Expert/commit/e815114a3ccd09361eaacd54f98bd86a7327199b)
 
-##### **EPIC: U/X [#Milestone 7](https://github.com/seanj06/P4-Sports-Expert/milestone/4)**
+#### **EPIC: U/X [#Milestone 7](https://github.com/seanj06/P4-Sports-Expert/milestone/4)**
 
 User Story 1
  - [USER STORY:Custom error pages #37](https://github.com/seanj06/P4-Sports-Expert/issues/37)
@@ -619,7 +621,7 @@ User Story 8
    - Comments:
        - Sign up, Login and logout pages styled - [4b1c4f9](https://github.com/seanj06/P4-Sports-Expert/commit/4b1c4f9dd229d56c84ad95b8917b4564c8a878d1)  
 
-##### **EPIC: User Functionality [#Milestone 8](https://github.com/seanj06/P4-Sports-Expert/milestone/3?closed=1)**
+#### **EPIC: User Functionality [#Milestone 8](https://github.com/seanj06/P4-Sports-Expert/milestone/3?closed=1)**
 
 User Story 1
  - [USER STORY: Add comments to blogs #36](https://github.com/seanj06/P4-Sports-Expert/issues/36)
@@ -670,7 +672,7 @@ User Story 3
    - Comments:
        - Allauth installed, added to installed apps in settings.py and added login/logout redirect variables - [180640b](https://github.com/seanj06/P4-Sports-Expert/commit/180640b1c523c696066905ab82480eae11793885)    
 
-##### User Stories Not Connected To A Epic Milestone
+#### User Stories Not Connected To A Epic Milestone
 
 User Story 1
  - [USER STORY:Create Superuser #10](https://github.com/seanj06/P4-Sports-Expert/issues/10)
@@ -718,7 +720,7 @@ User Story 3
    - Comments:
        - Multiple apps created to keep code organisation
 
-##### Backlog Incompleted User Stories
+#### Backlog Incompleted User Stories
 
 User Story 1
  - [USER STORY:Filter blog posts by category #18](https://github.com/seanj06/P4-Sports-Expert/issues/18)
@@ -756,11 +758,11 @@ User Story 4
 
    - This User story was part of the [Epic: CRUD Functionality](https://github.com/seanj06/P4-Sports-Expert/milestone/5) milestone but was moved to the backlog because of time constraints.  
 
-### **Features**
+## **Features**
 
-#### **Home Page**
+### **Home Page**
 
- - Navbar
+ #### **Navbar**
    
    - The navbar is an element included in the base.html file so is shown to the user on every page of the site
    
@@ -781,40 +783,41 @@ User Story 4
       - As with the desktop navbar the mobile navbar also gives users more options when signed in aswell as a message telling them which account they are signed in as.
       ![Navbar-mobile-logged-in](docs/features/navbar-mobile-logged-in.png)  
 
- - Bootstrap Carousel
+ #### **Bootstrap Carousel**
    - This carousel section, built using bootstrap is directly below the navbar in the home page and is likely the first thing that will catch the users eye when they visit the site. 
    - Carousel signed out
       - When a user first visits the site and is logged out the auto sliding carousel will show the user 3 slides.
      
-      - 1. Blog page slide 
+      - 1.Blog page slide 
       ![Carousel-blog](docs/features/carousel-blogs.png)
       
-      - 2. Log in slide
+      - 2.Log in slide
       ![Carousel-login](docs/features/carousel-log-in.png)
       
-      - 3. Sign up slide
+      - 3.Sign up slide
       ![Carousel-signup](docs/features/carousel-sign-up.png)
 
    - Carousel logged in
       - Like the navbar, whether the user is logged in or not changes what slides are shown. The slides shown when a user is logged in are:
       
-      - 1. Add a blog slide
+      - 1.Add a blog slide
       ![Carousel-addblog](docs/features/carousel-addblog.png)  
       
-      - 2. Profile slide
+      - 2.Profile slide
       ![Carousel-profile](docs/features/carousel-profile.png) 
       
-      - 3. Blog slide
+      - 3.Blog slide
       ![Logged-in-blog](docs/features/logged-in-blog-slide.png)
 
- - Site info section
+ #### **Site info section**
+
    - This section gives the user a welcome message aswell as a brief overview of the sites purpose with the phrase "Where like minded sports fanatics can share, compare and discuss all things sports
    Whether its GAA, Football or Rugby you can find it all here."  
    ![Info-section-desktop](docs/features/info-section-desktop.png)  
 
    - The section is placed on the home page just under the navbar to give users info on the purpose of the site as soon as they enter.
 
- - Footer  
+ #### **Footer**  
     
    - Like the navbar the footer is also a part of the base.html file so is shown to the user on every page of the site.
 
@@ -824,151 +827,151 @@ User Story 4
 
    ![Footer](docs/features/footer-desktop.png) 
 
-#### **Blog Home Page**
+### **Blog Home Page**
 
- - **Bootstrap cards**
+#### **Bootstrap cards**
 
-   - The blog home page features bootstrap cards with information on blog posts including an image, the blogpost author, the blogpost title, the blogpost description the date the blogpost was posted and the category.
+- The blog home page features bootstrap cards with information on blog posts including an image, the blogpost author, the blogpost title, the blogpost description the date the blogpost was posted and the category.
 
-      - The image on the card changes depending on circumstance.
+  - The image on the card changes depending on circumstance.
       
-      - If the user uploads no image and chooses "Football" as category:
-        ![Blog-Home-football](docs/features/blog-home-football.png)
+  - If the user uploads no image and chooses "Football" as category:
+      ![Blog-Home-football](docs/features/blog-home-football.png)
       
-      - If the user uploads no image and chooses "Rugby" as category:
+  - If the user uploads no image and chooses "Rugby" as category:
       ![Blog-home-rugby](docs/features/blog-home-rugby.png)
 
-      - If the user uploads no image and chooses "GAA" as category:
+   - If the user uploads no image and chooses "GAA" as category:
       ![Blog-home-gaa](docs/features/blog-home-gaa.png)
 
-      - If the user uploads no image and chooses "Other" as category:
+   - If the user uploads no image and chooses "Other" as category:
       ![Blog-home-other](docs/features/blog-home-other.png)
 
-      - If the user chooses to upload their own image it is displayed as normal on the card:
+   - If the user chooses to upload their own image it is displayed as normal on the card:
       ![Blog-home-user-upload](docs/features/blog-home-user-upload.png)
 
- - **User Authentication**
+#### **User Authentication**
      
-     - Users are able to access the blog home page regardless of whether they are signed in or not.
+ - Users are able to access the blog home page regardless of whether they are signed in or not.
 
-      - The buttons on the cards will change depending on if the user is the author or not. If the user is the author they will be shown 3 options To either navigate to the blog, delete the blog or edit the blog
+ - The buttons on the cards will change depending on if the user is the author or not. If the user is the author they will be shown 3 options To either navigate to the blog, delete the blog or edit the blog
       ![Blog-home-author](docs/features/blog-home-gaa.png) 
 
-      - If the user is not the author they will only be shown 1 button, to navigate onto the blog detail page
+ - If the user is not the author they will only be shown 1 button, to navigate onto the blog detail page
       ![Blog-home-not-author](docs/features/blog-home-not-author.png)
 
- - **Responsiveness**
+#### **Responsiveness**
 
-      - The blog home page is fully responsive to all screen sizes and will change how many cards are shown in a row depending on screen width.
+  - The blog home page is fully responsive to all screen sizes and will change how many cards are shown in a row depending on screen width.
 
-         - For large screen sizes cards are shown in rows of 3 wide.
+    - For large screen sizes cards are shown in rows of 3 wide.
          ![Blog-home-large-screen](docs/features/blog-home-large-screen.png) 
 
-         - For medium screen sizes cards are shown in rows of 2 wide
+    - For medium screen sizes cards are shown in rows of 2 wide
          ![Blog-home-medium-screen](docs/features/blog-home-medium-screen.png) 
 
-         - For small screen sizes cards are shown in rows of 1 wide
+    - For small screen sizes cards are shown in rows of 1 wide
          ![Blog-home-small-screen](docs/features/blog-home-small-screen.png)
 
- - **Pagination**
+#### **Pagination**
 
-      - The blog cards are paginated by 6 cards per page.
+  - The blog cards are paginated by 6 cards per page.
 
-      - The bottom of the home page shows the user 4 buttons, one to navigate to the first page, one for the previous page, one for the next page and one for the last page.
+  - The bottom of the home page shows the user 4 buttons, one to navigate to the first page, one for the previous page, one for the next page and one for the last page.
 
-      - There is also. page counter which shows the user which page they are currenty on aswell as the total number of pages
+  - There is also. page counter which shows the user which page they are currenty on aswell as the total number of pages
 
-      ![Blog-home-pagination](docs/features/blog-home-pagination.png)            
+  ![Blog-home-pagination](docs/features/blog-home-pagination.png)            
 
 
-#### **Blog Detail Page**
+### **Blog Detail Page**
 
  - The blog detail page is navigated to by the user clicking the "Blog" button on the blog home page.
 
  - The blog detail page includes 3 sections. The "Header" section the blog body section and the comment section with a home button on the bottom of the page to navigate users back to the home page.
 
 
- - **Header section**
+#### **Header section**
 
-    - The header section shows the Blogpost details such as the Author, The date posted, the title and either the user uploaded image or the placeholder image. Like the blog home page if the user has not uploaded an image the placeholder image will change depending on category chosen.
+ - The header section shows the Blogpost details such as the Author, The date posted, the title and either the user uploaded image or the placeholder image. Like the blog home page if the user has not uploaded an image the placeholder image will change depending on category chosen.
     ![Blog-detail-header](docs/features/blog-detail-header.png)
 
- - **Body section**
+#### **Body section**
 
-    - The body section includes the body text of the blogpost. The body text includes paragraph linebreaks for easy user readability.
+  - The body section includes the body text of the blogpost. The body text includes paragraph linebreaks for easy user readability.
     ![Blog-detail-body](docs/features/blog-detail-body.png)
 
- - **Comment Section**
+#### **Comment Section**
 
-    - The comment section is placed directly below the body section and allows users to make comments on the blog post if they are logged in. The content of the comment section changes depending on circumstance  
+  - The comment section is placed directly below the body section and allows users to make comments on the blog post if they are logged in. The content of the comment section changes depending on circumstance  
 
-       - If user is logged in and there are no comments
+    - If user is logged in and there are no comments
        ![Comments-no-comments-logged-in](docs/features/comments-no-comments-logged-in.png) 
 
-       - If user is not logged in and there are no comments
+    - If user is not logged in and there are no comments
        ![Comments-no-comments-logged-out](docs/features/comments-no-comments-not-logged.png)
 
-       - If user is logged in and there are comments
+    - If user is logged in and there are comments
        ![Comments-comment-logged-in](docs/features/comment-comment-logged-in.png)
 
-       - If user is not logged in and there are comments
+    - If user is not logged in and there are comments
        ![Comments-comment-logged-out](docs/features/comment-comment-logged-in-comments.png) 
 
-    - If the user posts a comment they are shown a success message stating "Your Comment has been added" and redirected back to the same page after reload
+  - If the user posts a comment they are shown a success message stating "Your Comment has been added" and redirected back to the same page after reload
     ![Comment-added](docs/features/comment-added.png)
 
-    - If the user is the author of any comments on the page they are shown 2 buttons. Edit and delete.
+  - If the user is the author of any comments on the page they are shown 2 buttons. Edit and delete.
     ![comment-edit-delete](docs/features/comment-edit-delete.png)
 
-       - If the user presses the edit button they are directed to the edit page with a form to edit their comment.
+    - If the user presses the edit button they are directed to the edit page with a form to edit their comment.
        ![Comment-edit-page](docs/features/comment-edit-page.png)  
 
-           - When the user presses the submit button they are redirected back to the blog-detail page and shown a success message stating "Your comment has been edited"
+        - When the user presses the submit button they are redirected back to the blog-detail page and shown a success message stating "Your comment has been edited"
            ![Edit-comment-message](docs/features/comment-edit-message.png)
 
-       - If the user presses the delete button they are brought to a page asking them if they are sure they want to delete the comment.
+    - If the user presses the delete button they are brought to a page asking them if they are sure they want to delete the comment.
        ![Delete-comment-page](docs/features/delete-comment-page.png)
 
-           - If the user presses cancel they are redirected back to the blog detail page.
+        - If the user presses cancel they are redirected back to the blog detail page.
 
-           - If the user presses delete their comment is deleted and they are shown a success message stating "Your comment has been deleted" and redirected back to the blog detail page.
+        - If the user presses delete their comment is deleted and they are shown a success message stating "Your comment has been deleted" and redirected back to the blog detail page.
            ![Delete-comment-message](docs/features/comment-delete-message.png)     
 
-#### **Profile Page**
+### **Profile Page**
 
  - The profile page is only accessible by users that have made an account and logged in.
 
  - Django signals was used so a profile is automatically made for a user as soon as they sign up for an account.
 
-  - **Profile image**
+#### **Profile image**
 
-     - Users are able to upload their own profile image to their profile.
+  - Users are able to upload their own profile image to their profile.
      ![Profile-uploaded-image](docs/features/profile-uploaded-image.png)
 
-     - If no profile image is uploaded a placeholder image is displayed
+  - If no profile image is uploaded a placeholder image is displayed
      ![Profile-placeholder](docs/features/profile-placeholder-image.png)
 
- - **Profile About**
+#### **Profile About**
 
-     - The about section shows the users profile information such as their username, full name, about, the date their profile was created and the date it was last edited
+ - The about section shows the users profile information such as their username, full name, about, the date their profile was created and the date it was last edited
      ![Profile-about](docs/features/profile-about.png)
 
  - The bottom of the profile page has 3 buttons for the user to choose from.
       ![profile-buttons](docs/features/profile-buttons.png)
 
-      - The home button will direct users back to the home page.
+    - The home button will direct users back to the home page.
 
-      - The Myblogs button will bring users to a page, similiar to the blog home page that shows them all of their created blog posts where they can view, edit and delete them. Or if the user has no created blogs, a message that tells them they dont have any blogs and a button that directs them to the addblog page.
+    - The Myblogs button will bring users to a page, similiar to the blog home page that shows them all of their created blog posts where they can view, edit and delete them. Or if the user has no created blogs, a message that tells them they dont have any blogs and a button that directs them to the addblog page.
 
-         - User has blogposts
+     - User has blogposts
          ![myblogs](docs/features/my-blogs.png)
 
-         - User has no blogposts
+     - User has no blogposts
          ![myblogs-noblogs](docs/features/myblogs-noblog.png)
 
-      - The edit profile button will bring users to a form page where they can edit and delete their profile.
+     - The edit profile button will bring users to a form page where they can edit and delete their profile.
 
-      - The form was built using django-crispy-forms
+     - The form was built using django-crispy-forms
       ![Edit-profile](docs/features/edit-profile.png)   
 
         - From this page the user can edit their name, about section and profile image. **Note**: There is a bug on the image section of the form where it doesnt show the user their current uploaded image. I will address this further in the bugs section of the readme. 
@@ -983,7 +986,7 @@ User Story 4
           ![delete-profile-message](docs/features/profile-delete-message.png)
         
 
-#### **Add A Blog Page**
+### **Add A Blog Page**
 
  - The Add A blog page is accessible from either the navbar or the carousel if the user is logged in.
 
