@@ -184,7 +184,7 @@ body {
 
 #body-row>p {
     font-family: 'Golos Text', sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bolder;
 }
 
@@ -394,6 +394,7 @@ body {
 .comment-cont > p {
     font-family: 'Golos Text', sans-serif;
     font-size: 1.2rem;
+    overflow: hidden;
 }
 
 
