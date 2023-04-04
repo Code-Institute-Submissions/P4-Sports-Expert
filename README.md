@@ -964,23 +964,23 @@ User Story 4
 
    ![comment-edit-delete](docs/features/comment-edit-delete.png)
 
-    - If the user presses the edit button they are directed to the edit page with a form to edit their comment.
+  - If the user presses the edit button they are directed to the edit page with a form to edit their comment.
     
     ![Comment-edit-page](docs/features/comment-edit-page.png)  
 
-        - When the user presses the submit button they are redirected back to the blog-detail page and shown a success message stating "Your comment has been edited"
+     - When the user presses the submit button they are redirected back to the blog-detail page and shown a success message stating "Your comment has been edited"
         
-        ![Edit-comment-message](docs/features/comment-edit-message.png)
+     ![Edit-comment-message](docs/features/comment-edit-message.png)
 
     - If the user presses the delete button they are brought to a page asking them if they are sure they want to delete the comment.
     
     ![Delete-comment-page](docs/features/delete-comment-page.png)
 
-        - If the user presses cancel they are redirected back to the blog detail page.
+      - If the user presses cancel they are redirected back to the blog detail page.
 
-        - If the user presses delete their comment is deleted and they are shown a success message stating "Your comment has been deleted" and redirected back to the blog detail page.
+      - If the user presses delete their comment is deleted and they are shown a success message stating "Your comment has been deleted" and redirected back to the blog detail page.
         
-        ![Delete-comment-message](docs/features/comment-delete-message.png)     
+      ![Delete-comment-message](docs/features/comment-delete-message.png)     
 
 #### **Profile Page**
 
@@ -1180,6 +1180,50 @@ User Story 4
    - Users to be able to favourite blogposts and then access them from their profile.
 
    - Users to be able to click on and view other user profiles from blogpost authors and comments.
+
+## **The Surface Plane**
+
+### **Design**
+
+#### **Colour Scheme**
+
+ - The main colour scheme chosen for the site was simple. 4 shades of primary colours ranging from black contrasting down to gray, a lighter shade of gray and then white. I felt this kept the site looking professional and made backgroound colours non conflicting and not too distracting.
+
+![Coolers](docs/readme-images/coolers.png)
+
+#### **Typography**
+
+ - The 2 main fonts used on the website were "Tilt-warp" and "Golos-text cursive". Both fonts were imported from google fonts.
+
+#### **Imagery**
+
+ - All placeholder images and carousel images were taken from [Pexels.com](https://www.pexels.com/)
+
+### **Technologies Used**
+
+#### **Languages used**
+
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+-   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+#### **Frameworks used**
+
+- [Django](https://www.djangoproject.com/) was used for the main development of this project
+- [Bootstrap](https://blog.getbootstrap.com/) was used for the styling and main layout of the project.
+
+#### **Other Technologies used**
+
+ - [ElephantSQL](https://www.elephantsql.com/) was used to run the postgres database for this project.
+ - [Cloudinary](https://cloudinary.com/) was used to store all static files and images for this project.
+ - [Heroku](https://www.heroku.com/) was used to deploy the project.
+ - [GitHub:](https://github.com/) was used for for storing project code.
+  - [Git](https://git-scm.com/) was used for version control of the project.
+  - [GitPod](https://www.gitpod.io/) was the ide used to develop the project.
+  
+
+
 
 
 
