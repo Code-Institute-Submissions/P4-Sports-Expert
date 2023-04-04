@@ -34,7 +34,15 @@ Sports expert was designed to be a site for Sports lovers to share and read thei
 - For users to be able to comment on their own and other peoples blogposts while logged in
 - For users to be able to edit their profile including adding thier own profile picture while logged in.
 
-### **Agile Planning**
+## **The Scope Plane**
+
+ - CRUD Ability for authenticated users on Blogposts, Comments and User Profiles
+ - Restricted site features for authenticated and non authenticated users such as adding Blogposts and viewing profile page.
+ - Full responsiveness for all screen sizes including hamburger navigation menu for mobile screens and different blogpost card layout
+ for different screen sizes.
+ - Eye catching caarousel on top of home page to catch new site users attention as soon as they enter the site.
+
+## **Agile Planning**
 
 This project was built using the Agile method throughout by creating EPIC Miletones which were broken down into smaller user stories with labels "must-have", "should-have", "could-have", and wont have. 
 
