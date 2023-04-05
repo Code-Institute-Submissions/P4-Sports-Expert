@@ -140,6 +140,44 @@ Blog post cards show a title, category, date created, image and a description sn
 
  - The footer features 4 social media link icons for Facebook, Twitter, Instagram and Github. It also features a message about site author and year of development.
 
+### **User Story Testing**
+
+Overall there were 33 completed user stories and 4 uncompleted user stories throughout the projects development they will all be tested below to ensure criteria has been met for each story.
+
+#### 1.[USER STORY: First Heroku Deployment #1](https://github.com/seanj06/P4-Sports-Expert/issues/1)
+
+ - As a developer I can deploy my project on Heroku so that it can be seen and used by other users
+
+   - The project was successfully deployed on Heroku and is currently able to be seen and used by all users.
+
+#### 2.[USER STORY:Create new django project and app #2](https://github.com/seanj06/P4-Sports-Expert/issues/2)
+
+ - As a developer I can create a new Django project correctly so that my project can be built in the correct way
+
+   - A new django project was created at the beginning of development.
+
+#### 3.[USER STORY:Django package installation #3](https://github.com/seanj06/P4-Sports-Expert/issues/3)
+
+ - As a developer I can install the needed librarys and packages so that my project is set up correctly
+
+   - All relevant django packages including the postgres database and cloudinary storage were installed at the beginning of development.
+
+#### 4.[USER STORY: Add Models #4](https://github.com/seanj06/P4-Sports-Expert/issues/4)
+
+ - As a developer I can add database models so that the database knows how to handle user data
+
+   - Multiple database models were added throughout development including BlogPost model, Comments Model and Profile Model.
+
+#### 5.[USER STORY:Create Templates #5](https://github.com/seanj06/P4-Sports-Expert/issues/5)
+
+ - As a developer I can create templates so that users can see the website online
+
+   - Multiple templates werw added throughout the development of the project to render all pages of the site.
+
+
+
+
+
 
 
 
