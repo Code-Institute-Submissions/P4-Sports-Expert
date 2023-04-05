@@ -46,6 +46,7 @@ class TestBlogPostModel(TestCase):
             'Football': 'Football',
             'GAA': 'GAA',
             'Rugby': 'Rugby',
+            'Other': 'Other',
         })
 
     def test_absolute_url(self):
