@@ -44,5 +44,27 @@ The blog app was the first app I tested through unit testing so has by far the m
    ![Test-profile-models](docs/unit%20testing/test-profiles-models.png)
 
  - The profile views file had 5 tests
-   ![Test-profile-views](docs/unit%20testing/test-profiles-views.png)   
+   ![Test-profile-views](docs/unit%20testing/test-profiles-views.png) 
+
+## **Manual Testing**
+
+### **Epic Milestone Testing**
+
+#### **EPIC: Django Installation and app setup [#Milestone 1](https://github.com/seanj06/P4-Sports-Expert/milestone/1?closed=1)**
+
+**Acceptance criteria 1** : Django insalled to gitpod workspace and new project created
+
+  - Django was installed at the beginning of the project development
+
+**Acceptance criteria 2** : Install postresql database
+
+  - Postgres sql database was also installed at the start of the project development from the terminal.
+
+**Acceptance criteria 3**: Create new app inside project
+
+ - The "home" app was the first app created at start of development as the base app for the homepage view
+
+
+
+
 
