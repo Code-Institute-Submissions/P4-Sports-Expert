@@ -1199,28 +1199,52 @@ User Story 4
 
  - All placeholder images and carousel images were taken from [Pexels.com](https://www.pexels.com/)
 
-### **Technologies Used**
+## **Technologies Used**
 
-#### **Languages used**
+### **Languages used**
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 -   [Javascript](https://en.wikipedia.org/wiki/JavaScript)
 -   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
-#### **Frameworks used**
+### **Frameworks used**
 
 - [Django](https://www.djangoproject.com/) was used for the main development of this project
 - [Bootstrap](https://blog.getbootstrap.com/) was used for the styling and main layout of the project.
 
-#### **Other Technologies used**
+### **Other Technologies used**
 
  - [ElephantSQL](https://www.elephantsql.com/) was used to run the postgres database for this project.
  - [Cloudinary](https://cloudinary.com/) was used to store all static files and images for this project.
  - [Heroku](https://www.heroku.com/) was used to deploy the project.
  - [GitHub:](https://github.com/) was used for for storing project code.
-  - [Git](https://git-scm.com/) was used for version control of the project.
-  - [GitPod](https://www.gitpod.io/) was the ide used to develop the project.
+ - [Git](https://git-scm.com/) was used for version control of the project.
+ - [GitPod](https://www.gitpod.io/) was the ide used to develop the project.
+
+### **Libraries Used**
+
+**Most of the library definitions below taken from [pypi.org](https://pypi.org/)**
+
+ - [asgiref](https://pypi.org/project/asgiref/) - ASGI is a standard for Python asynchronous web apps and servers to communicate with each other, and positioned as an asynchronous successor to WSGI.
+ - [cloudinary](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjXlMr22ZL-AhWH0u0KHTm2BIYYABAAGgJkZw&ohost=www.google.com&cid=CAESbeD2xfKGTfrAZNX1dKdwfAFGbYEjxaZ4WowTACOdPUY3Uvg3IOAzyI-iz9-dqdPAvTKMf9CU3FoaFikpVncVcFTll0loH_KkdLY_LWBZSRfkiIb66DXZydVxXyqakWYNzfedeSzB8pyLx8E160g&sig=AOD64_3225_Dn14hz5LDPgzqgd0eLR-7lA&q&adurl&ved=2ahUKEwixjMT22ZL-AhV0SEEAHYD-BD0Q0Qx6BAgKEAE) - A cloud based storage system for hosting images and static files.
+ - [coverage](https://pypi.org/project/django-coverage/) - A test coverage reporting tool that shows how much of your code is covered by tests.
+ - [crispy-bootstrap5](https://pypi.org/project/crispy-bootstrap5/) - Crispy forms template pack for bootstrap5.
+ - [dj-database-url](https://pypi.org/project/dj-database-url/) - A Django utility to utilise the DATABASE_URL environment variable to configure the Django application. Used with PostgreSQL.
+ - [dj3-cloudinary-storage](https://pypi.org/project/dj3-cloudinary-storage/) - A Django package that facilitates integration with Cloudinary by implementing Django Storage API.
+ - [Django](https://pypi.org/project/Django/) - A high level python framework
+ - [django-allauth](https://django-allauth.readthedocs.io/en/latest/) - A Django authentication and account management system
+ - [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) - A Django package that controls the rendering and control of django forms.
+ - [gunicorn](https://gunicorn.org/) - A Python WSGI HTTP Server for UNIX.
+ - [oauthlib](https://oauthlib.readthedocs.io/en/latest/) - A generic, spec-compliant, thorough implementation of the OAuth request-signing logic for Python 3.6+.
+ - [psycopg2](https://pypi.org/project/psycopg2/) - A database adapter for the python language.
+ -  [PyJWT](https://pyjwt.readthedocs.io/en/stable/) - A Python library which allows encoding and decoding of JSON Web Tokens (JWT).
+ -  [python3-openid](https://pypi.org/project/python3-openid/) - A set of Python packages to support use of the OpenID decentralized identity system in your application.
+ - [pytz](https://pypi.org/project/pytz/) - This library allows accurate and cross platform timezone calculations
+ - [requests-oauthlib](https://pypi.org/project/requests-oauthlib/) - 
+This project provides first-class OAuth library support for Requests.
+- [sqlparse](https://pypi.org/project/sqlparse/) - sqlparse is a non-validating SQL parser for Python. It provides support for parsing, splitting and formatting SQL statements.
+
   
 
 
