@@ -172,7 +172,83 @@ Overall there were 33 completed user stories and 4 uncompleted user stories thro
 
  - As a developer I can create templates so that users can see the website online
 
-   - Multiple templates werw added throughout the development of the project to render all pages of the site.
+   - Multiple templates were added throughout the development of the project to render all pages of the site.
+
+#### 6.[USER STORY:Create an account #6](https://github.com/seanj06/P4-Sports-Expert/issues/6)
+
+ - As a User I can create an account so that I can create a blog post
+
+   - When users enter the site they can sign up for an account through either the navbar link or the carousel link which both brings the user to the sign up page. Once they have made an account they will be able to navigate to the add a blog page where they can add their own blogpost.
+
+#### 7.[USER STORY: Create Multiple Apps #8](https://github.com/seanj06/P4-Sports-Expert/issues/8)
+
+ - As a developer I can create multiple apps for my project so that my code is kept well organised
+
+   - Multiple apps were created during project development including the home app, the blog app and the profiles app.
+
+#### 8.[USER STORY: Create Views #9](https://github.com/seanj06/P4-Sports-Expert/issues/9)
+
+ - As a developer I can create views so that the function in the views can render and handle my templates appropriately for users to see
+
+   - Views were created for all apps to handle the logic of the project.
+
+#### 9.[USER STORY:Create Superuser #10](https://github.com/seanj06/P4-Sports-Expert/issues/10)
+
+ - As a developer I can create a superuser so that I can manage my application from the admin panel
+
+   - The superuser was created from the terminal at the start of development.
+
+#### 10.[USER STORY:Site Navigation #11](https://github.com/seanj06/P4-Sports-Expert/issues/11)
+
+ - As a User I can navigate the site easily so that I can easily find what I am looking for
+
+   - The nav bar is visible on all site pages at the top of the screen for users to navigate the site easily. The hero logo also brings the user back to the home page if clicked. The carousel on the home page also gives users multiple navigation options.
+
+#### 11.[USER STORY:Cloudinary #12](https://github.com/seanj06/P4-Sports-Expert/issues/12)
+
+ - As a developer I can install cloudinary so that all my images can still be displayed on my site after being deployed
+
+   - Cloudinary was installed in development prior to being deployed to heroku and tested to mske sure all user uploaed images were showing correctly.
+
+#### 12.[USER STORY:Install allauth #13](https://github.com/seanj06/P4-Sports-Expert/issues/13)
+
+ - As a developer I can install allauth so that site users can create an account to log in
+
+   - Allauth was installed at the start of development
+
+#### 13.[USER STORY:Home page #14](https://github.com/seanj06/P4-Sports-Expert/issues/14)
+
+ - As a user I can visit the homepage so that I can log into my account and navigate to different parts of the site
+
+   - The homepage is the first page users are brought to when entering the site, from there they can navigate to multiple pages from either the navabr or the carousel.
+
+#### 14.[USER STORY: Home Page styling #15](https://github.com/seanj06/P4-Sports-Expert/issues/15)
+
+ - As a developer I can style the home page so that it is visually appealing for new and frequent users
+
+   - The home page was style to catch new and returning users attention as soon as they enter the site.
+
+#### 15.[USER STORY: Django Forms #17](https://github.com/seanj06/P4-Sports-Expert/issues/17)
+
+ - As a developer I can create django forms so that user database input can be validated and handled correctly
+
+   - Django forms were used on all apps for user forms and styled and handled using crispy-forms and bootstrap.
+
+#### 16.[USER STORY:Add image to blog post #19](https://github.com/seanj06/P4-Sports-Expert/issues/19)
+
+ - As a user I can add an image to my blog post so that I can make my post stand out
+
+   - Users are able to upload their own image to their blogposts. If they choose to not upload an image the placeholder image will change depending on category chosen.
+
+#### 17.[USER STORY:Create a blog post #21](https://github.com/seanj06/P4-Sports-Expert/issues/21)
+
+ - As a user I can create a blog post so that others can see my blog posts online
+
+   - Users are able to make their own blogposts provided they have made an account and are signed in.
+
+
+
+
 
 
 
