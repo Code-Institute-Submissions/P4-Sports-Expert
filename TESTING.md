@@ -246,6 +246,129 @@ Overall there were 33 completed user stories and 4 uncompleted user stories thro
 
    - Users are able to make their own blogposts provided they have made an account and are signed in.
 
+#### 18.[USER STORY:Read blog post #22](https://github.com/seanj06/P4-Sports-Expert/issues/22)
+
+ - As a user I can view my blog post so that I can check I am happy with it
+
+   - Users are able to view there blog posts from either the blog home page or the myblogs page via their profile.
+
+#### 19.[USER STORY:Update blog post #23](https://github.com/seanj06/P4-Sports-Expert/issues/23)
+
+ - As a user I can update my blog post so that I can change anything I am not happy with
+
+   - Users are able to update their blog posts from either the blog home page or the myblogs page via their profile.
+
+#### 20.[USER STORY:Delete Blog Post #24](https://github.com/seanj06/P4-Sports-Expert/issues/24)
+
+ - As a user I can delete my blog post so that I can remove any posts I no longer want
+
+   - Users are able to delete their blog posts from either the blog home page or the myblogs page via their profile.
+
+#### 21.[USER STORY:Style account creation pages #25](https://github.com/seanj06/P4-Sports-Expert/issues/25)
+
+ - As a developer I can style the log in, log out and sign up pages so that the UI matches the rest of the website pages
+
+   - The log in, log out and sign up pages were all include the navbar and footer inherited from the base html file and the fonts and colours used match the rest of the site.
+
+#### 22.[USER STORY:User Messages #26](https://github.com/seanj06/P4-Sports-Expert/issues/26)
+
+ - As a developer I can add custom user messages so that the user knows the action they performed has been successfull or failed.
+
+   - Custom success messages are added to all user actions to show the user the action was successfull.
+
+#### 23.[USER STORY:Create a profile #27](https://github.com/seanj06/P4-Sports-Expert/issues/27)
+
+ - As a user I can create a profile so that I can keep track of my blogs
+
+   - When a user signs up for an account a profile is automatically made for them using django signals. The user is then able to edit the profile from the profile page once logged in.
+
+#### 24.[USER STORY:Upload profile image #28](https://github.com/seanj06/P4-Sports-Expert/issues/28)
+
+ - As a user I can upload my own image to my profile so that I can customise my own profile
+
+   - Users are able to upload their own profile image through the edit profile page.
+
+#### 25.[USER STORY:View blog posts #29](https://github.com/seanj06/P4-Sports-Expert/issues/29)
+
+ - As a user I can view my blog posts from my profile so that I can keep track of all my blogs on one page
+
+   - Users are able to view all of their blogposts by clicking on the myblogs button on the profile page.
+
+#### 26.[USER STORY:Delete/Edit blogs from profile page #30](https://github.com/seanj06/P4-Sports-Expert/issues/30)
+
+ - As a user I can Delete or Edit my blog posts from my profile page so that I can manage my blogs from one page
+
+   - Users are able to edit and delete their blogposts from via the profile page by clcicking on the myblogs button and they clicking on either the edit or delete button on the blogpost they wish to edit or delete.
+
+#### 27.[USER STORY:Profile Form #31](https://github.com/seanj06/P4-Sports-Expert/issues/31)
+
+ - As a user I can add my profile info by filling out a form so that I can save the info to my profile
+
+   - Users are able to add information to their profile including their full name and about themselves from the edit profile page.
+
+#### 28.[USER STORY:Blog Page #32](https://github.com/seanj06/P4-Sports-Expert/issues/32)
+
+ - As a developer I can style the blog page so that the user gets a good u/x experience
+
+   - The blog page is styled to match the rest of the site and includes fully responsive bootstrap cards.
+
+#### 29.[USER STORY:Forms #33](https://github.com/seanj06/P4-Sports-Expert/issues/33)
+
+ - As a developer I can style the user forms so that they match the design of the rest of the site
+
+   - The user forms were styled and handled using crispy-forms and the colours and fonts were styled to match the rest of the site.
+
+#### 30.[USER STORY:Profile page #34](https://github.com/seanj06/P4-Sports-Expert/issues/34)
+
+ - As a developer I can style the user profile page so that all of the correct user information is displayed and the design matches the rest of the site
+
+   - The profile page was styled so that the colours and fonts match the rest of the site. All information that the user enters on the edit profile page is displayed on the profile page.
+
+#### 31.[USER STORY:Footer #35](https://github.com/seanj06/P4-Sports-Expert/issues/35)
+
+ - As a developer I can add a footer to my website so that I can display social media links and creation information
+
+   - The footer is a part of the base.html file so it is shown on every page on the site. The footer includes the developer name, year of development and 4 clickable social media icons.
+
+#### 32.[USER STORY: Add comments to blogs #36](https://github.com/seanj06/P4-Sports-Expert/issues/36)
+
+ - As a user I can comment on blogs so that I can interact with the site community
+
+   - Provided the user has signed up for an account and are signed in they are able to comment on all blog posts.
+
+#### 33.[USER STORY:Custom error pages #37](https://github.com/seanj06/P4-Sports-Expert/issues/37)
+
+ - As a developer I can create custom error pages so that they match the theme of the site
+
+   - The 404,403 and 500 error pages were all given custom styling to match the rest of the site.
+
+**The following 4 user stories were not completed due to time constraints but were all included in the future features section of the readme.**
+
+#### [USER STORY:Reset Password #7](https://github.com/seanj06/P4-Sports-Expert/issues/7)
+
+ - As a user I can reset my password so that i can retrieve my account if i forget my password
+
+#### [USER STORY:Search bar #16](https://github.com/seanj06/P4-Sports-Expert/issues/16)
+
+ - As a developer I can implement a search bar into the home page so that users can search for posts by topic
+
+#### [USER STORY:Filter blog posts by category #18](https://github.com/seanj06/P4-Sports-Expert/issues/18)
+
+ - As a user I can filter blog posts so that I can easily find the blogs I am looking for
+
+#### [USER STORY: Search for blog posts by user #20](https://github.com/seanj06/P4-Sports-Expert/issues/20)
+
+ - As a user I can search for user specific blog posts so that I can follow my favourite bloggers
+
+
+
+
+
+
+
+
+
+
 
 
 
