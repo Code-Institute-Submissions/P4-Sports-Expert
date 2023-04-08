@@ -515,6 +515,21 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate Pytho
 ![home-test-views](docs/code-validation/home-test-views.png)
 </details>
 
+### **Javascript JShint Validation**
+
+There was only 1 Javascript function in the code to run through the jshint validator. It returned 1 error "1 undefined variable bootstrap"
+I tried a few different solutions to fix this error but couldnt find any that worked and concluded this was because of the built in bootstrap code that the function calls.
+
+![jshint](docs/code-validation/javascript-jshint.png)
+
+### **CSS Jigsaw validation**
+
+There was only 1 CSS static file in the code to be run through the jigsaw validator. It returned no errors
+
+![jigsaw](docs/code-validation/css-validation.png)
+
+
+
 
 
 
