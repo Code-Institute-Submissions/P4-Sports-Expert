@@ -371,6 +371,142 @@ Overall there were 33 completed user stories and 4 uncompleted user stories thro
 
  - The function was then tested by changing the milliseconds time to 8000 and a timer was used to time the seconds the message stayed on screen, then finally the milliseconds were changed back to the original 3000 and a timer was also used to time the message on screen. Result was as expected and all manual tests passed.
 
+## **Validation**
+
+### **Python Code Validation**
+
+The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate Python code used throughout the project. 
+
+#### **SportsBlog folder**
+
+<details><summary>asgi.py No errors</summary>
+
+![asgi](docs/code-validation/asgi.png)
+</details>
+
+<details><summary>urls.py No errors</summary>
+
+![urls](docs/code-validation/urls.png)
+</details>
+
+<details><summary>wsgi.py No errors</summary>
+
+![wsgi](docs/code-validation/wsgi.png)
+</details>
+
+<details><summary>settings.py Returned 4 errors. All to do with password validators being too long. Since this is code that is pre built django code I did not want to try re structure them.</summary>
+
+![settings](docs/code-validation/settings.png)
+</details>
+
+#### **Blog App**
+
+<details><summary>admin.py No errors</summary>
+
+![blog-admin](docs/code-validation/blog-admin.png)
+</details>
+
+<details><summary>apps.py No errors</summary>
+
+![blog-app](docs/code-validation/blog-app.png)
+</details>
+
+<details><summary>forms.py No errors</summary>
+
+![blog-forms](docs/code-validation/blog-forms.png)
+</details>
+
+<details><summary>models.py No errors</summary>
+
+![blog-models](docs/code-validation/blog-models.png)
+</details>
+
+<details><summary>urls.py No errors</summary>
+
+![blog-urls](docs/code-validation/blog-urls.png)
+</details>
+
+<details><summary>views.py No errors</summary>
+
+![blog-views](docs/code-validation/blog-views.png)
+</details>
+
+<details><summary>test-forms.py No errors</summary>
+
+![blog-test-forms](docs/code-validation/blog-test-forms.png)
+</details>
+
+<details><summary>test-models.py No errors</summary>
+
+![blog-test-models](docs/code-validation/blog-test-models.png)
+</details>
+
+<details><summary>test-views.py No errors</summary>
+
+![blog-test-views](docs/code-validation/blog-test-views.png)
+</details>
+
+#### **Profiles app**
+
+<details><summary>admin.py No errors</summary>
+
+![profile-admin](docs/code-validation/profile-admin.png)
+</details>
+
+<details><summary>apps.py No errors</summary>
+
+![profile-apps](docs/code-validation/profile-app.png)
+</details>
+
+<details><summary>forms.py No errors</summary>
+
+![profile-forms](docs/code-validation/profile-forms.png)
+</details>
+
+<details><summary>models.py No errors</summary>
+
+![profile-models](docs/code-validation/profile-models.png)
+</details>
+
+<details><summary>signals.py No errors</summary>
+
+![profile-signals](docs/code-validation/profile-signals.png)
+</details>
+
+<details><summary>urls.py No errors</summary>
+
+![profile-urls](docs/code-validation/profile-urls.png)
+</details>
+
+<details><summary>views.py No errors</summary>
+
+![profile-views](docs/code-validation/profile-views.png)
+</details>
+
+<details><summary>test_models.py No errors</summary>
+
+![profile-test-models](docs/code-validation/profile-test-models.png)
+</details>
+
+<details><summary>test_views.py No errors</summary>
+
+![profile-test-views](docs/code-validation/profile-test-views.png)
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
