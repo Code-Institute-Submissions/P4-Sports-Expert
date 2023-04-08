@@ -360,6 +360,18 @@ Overall there were 33 completed user stories and 4 uncompleted user stories thro
 
  - As a user I can search for user specific blog posts so that I can follow my favourite bloggers
 
+### Javascript Testing
+
+ - There is only one javascript function present in the development code so I manually tested the function rather than automated testing.
+
+ - The function is the timeout function to control how long success messages stay on screen before they dissappear
+ ![Timeout-funcion](docs/unit%20testing/timeout-function.png)
+
+ - This function was manually tested by first commenting out the function altogether and making sure the message stayed on screen without it. The result was as expected.
+
+ - The function was then tested by changing the milliseconds time to 8000 and a timer was used to time the seconds the message stayed on screen, then finally the milliseconds were changed back to the original 3000 and a timer was also used to time the message on screen. Result was as expected and all manual tests passed.
+
+
 
 
 
