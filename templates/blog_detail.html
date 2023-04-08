@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<main class="container-fluid">
+<section class="container-fluid">
     <!--Blog post container-->
     <div class="mx-auto col-12 col-md-10 col-lg-8" id="blog-form">
         <div class="row text-center hero-row">
@@ -12,12 +12,12 @@
                 <h1>Blog By: {{ object.created_by }}</h1>
             </div>
             <div class="col-10 justify-content-center blog-text">
-                <h2> Posted On: {{ object.date_created}}</h3>
+                <h2> Posted On: {{ object.date_created}}</h2>
             </div>
         </div>
         <div class="row text-center hero-row">
             <div class="col-10 blog-text justify-content-center">
-                <h3>{{ object.title}}</h2>
+                <h3>{{ object.title}}</h3>
             </div>
         </div>
         <div class="row text-center">
@@ -84,7 +84,7 @@
         </div>
         {% if user.is_authenticated %}
         <div class="row text-center">
-            <h5>Add your comment below</h4>
+            <h4>Add your comment below</h4>
         </div>
         {% endif %}
         {% endfor %}
@@ -114,7 +114,7 @@
             </div>
         </div>
     </div>
-</main>
+</section>
 
 
 
