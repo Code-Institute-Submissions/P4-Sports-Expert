@@ -493,6 +493,33 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate Pytho
 ![profile-test-views](docs/code-validation/profile-test-views.png)
 </details>
 
+#### **Home App**
+
+<details><summary>apps.py No errors</summary>
+
+![home-apps](docs/code-validation/home-admin.png)
+</details>
+
+<details><summary>urls.py No errors</summary>
+
+![home-urls](docs/code-validation/home-urls.png)
+</details>
+
+<details><summary>views.py No errors</summary>
+
+![home-views](docs/code-validation/home-views.png)
+</details>
+
+<details><summary>test_views.py No errors</summary>
+
+![home-test-views](docs/code-validation/home-test-views.png)
+</details>
+
+
+
+
+
+
 
 
 
