@@ -528,6 +528,72 @@ There was only 1 CSS static file in the code to be run through the jigsaw valida
 
 ![jigsaw](docs/code-validation/css-validation.png)
 
+### **HTML W3 validation**
+
+Because of the django templating language html files could not be testing file by file through the W3 validator, rather they had to be tested by page source code. I tested the html by right clicking on the page, navigating to view page source and manually entering the html into the validator.
+Through all of the page testing only 1 error was found which is related to the django templating language.
+
+<details><summary>Page source by site address. No errors</summary>
+
+![site-address](docs/html-validation/html-val-address.png)
+</details>
+
+<details><summary>Home Page. No errors</summary>
+
+![home-page](docs/html-validation/html-blog-home.png)
+</details>
+
+<details><summary>Sign Up Page. No errors</summary>
+
+![sign-up](docs/html-validation/html-sign-up.png)
+</details>
+
+<details><summary>Sign Out Page. No errors</summary>
+
+![sign-out](docs/html-validation/html-sign-out.png)
+</details>
+
+<details><summary>Profile Page. No errors</summary>
+
+![profile](docs/html-validation/html-profile.png)
+</details>
+
+<details><summary>Login Page. No errors</summary>
+
+![login](docs/html-validation/html-login.png)
+</details>
+
+<details><summary>Edit Profile Page. No errors</summary>
+
+![edit-profile](docs/html-validation/html-edit-profile.png)
+</details>
+
+<details><summary>Login Blog Page. No errors</summary>
+
+![edit-blog](docs/html-validation/html-edit-blog.png)
+</details>
+
+<details><summary>Blog Home Page. No errors</summary>
+
+![blog-home](docs/html-validation/html-blog-home.png)
+</details>
+
+<details><summary>Add a blog Page. No errors</summary>
+
+![add-a-blog](docs/html-validation/html-add-a-blog.png)
+</details>
+
+<details><summary>Login Page. 1 error</summary>
+
+![blog detail](docs/html-validation/html-blog-detail.png)
+The error showing "No p element in scope but a p end tag seen." is generated html from the django templating language so cannot be fixed.
+![blog-error](docs/html-validation/blog-detail-error.png)
+</details>
+
+
+
+
+
 
 
 
