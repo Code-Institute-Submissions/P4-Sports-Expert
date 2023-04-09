@@ -590,6 +590,221 @@ The error showing "No p element in scope but a p end tag seen." is generated htm
 ![blog-error](docs/html-validation/blog-detail-error.png)
 </details>
 
+### **Lighthouse Testing**
+
+Lighthouse testing was done done through the chrome devtools by right clicking on the site page, navigation to inspect, then navigating to lighthouse report.
+I gathered reports for both desktop and mobile devices.
+
+#### **Home page**
+
+<details><summary>Home Page Desktop</summary>
+
+![lh-home-page-desktop](docs/lighthouse%20validation/home-page-desktop.png)
+</details>
+
+<details><summary>Home Page Mobile</summary>
+
+![lh-home-page-mobile](docs/lighthouse%20validation/home-page-mobile.png)
+</details>
+
+#### **Blog Home Page**
+
+<details><summary>Blog Home Page Desktop</summary>
+
+![lh-blog-home-page-desktop](docs/lighthouse%20validation/bloghome-page-desktop.png)
+</details>
+
+<details><summary>Blog Home Page Mobile</summary>
+
+![lh-blog-home-page-mobile](docs/lighthouse%20validation/bloghome-page-mobile.png)
+</details>
+
+#### **Blog Detail page**
+
+<details><summary>Blog Detail Page Desktop</summary>
+
+![lh-blog-detail-page-desktop](docs/lighthouse%20validation/blog-detail-logged-in-desktop.png)
+</details>
+
+<details><summary>Blog Detail Page Mobile</summary>
+
+![lh-blog-detail-page-mobile](docs/lighthouse%20validation/blog-detail-logged-in-mobile.png)
+</details>
+
+#### **Add A Blog Page**
+
+<details><summary>Add A Blog Page Desktop</summary>
+
+![lh-add-ablog-page-desktop](docs/lighthouse%20validation/add-blog-desktop.png)
+</details>
+
+<details><summary>Add A Blog Page Mobile</summary>
+
+![lh-add-ablog-page-mobile](docs/lighthouse%20validation/add-blog-mobile.png)
+</details>
+
+#### **Edit Blog Page**
+
+<details><summary>Edit Blog Page Desktop</summary>
+
+![lh-edit-blog-page-desktop](docs/lighthouse%20validation/edit-blog-desktop.png)
+</details>
+
+<details><summary>Edit Blog Page Mobile</summary>
+
+![lh-edit-blog-page-mobile](docs/lighthouse%20validation/edit-blog-mobile.png)
+</details>
+
+#### **Delete Blog Page**
+
+<details><summary>Delete Blog Page Desktop</summary>
+
+![lh-delete-blog-page-desktop](docs/lighthouse%20validation/delete-blog-desktop.png)
+</details>
+
+<details><summary>Delete Blog Page Mobile</summary>
+
+![lh-delete-blog-page-mobile](docs/lighthouse%20validation/delete-blog-mobile.png)
+</details>
+
+#### **Profile Page**
+
+<details><summary>Profile Page Desktop</summary>
+
+![lh-profile-page-desktop](docs/lighthouse%20validation/profile-desktop.png)
+</details>
+
+<details><summary>Profile Page Mobile</summary>
+
+![lh-profile-page-mobile](docs/lighthouse%20validation/profile-mobile.png)
+</details>
+
+#### **Edit Profile Page**
+
+<details><summary>Edit Profile Page Desktop</summary>
+
+![lh-edit-profile-page-desktop](docs/lighthouse%20validation/edit-profile-desktop.png)
+</details>
+
+<details><summary>Edit Profile Page Mobile</summary>
+
+![lh-edit-profile-page-mobile](docs/lighthouse%20validation/edit-profile-mobile.png)
+</details>
+
+#### **Delete Profile Page**
+
+<details><summary>Delete Profile Page Desktop</summary>
+
+![lh-delete-profile-page-desktop](docs/lighthouse%20validation/delete-profile-desktop.png)
+</details>
+
+<details><summary>Delete Profile Page Mobile</summary>
+
+![lh-delete-profile-page-mobile](docs/lighthouse%20validation/delete-profile-mobile.png)
+</details>
+
+#### **My Blogs Page**
+
+<details><summary>My Blogs Page Desktop</summary>
+
+![lh-myblogs-page-desktop](docs/lighthouse%20validation/my-blogs-desktop.png)
+</details>
+
+<details><summary>My Blogs Page Mobile</summary>
+
+![lh-myblogs-page-mobile](docs/lighthouse%20validation/my-blogs-mobile.png)
+</details>
+
+#### **My Blogs Page(With no blogs)**
+
+<details><summary>No Blogs Page Desktop</summary>
+
+![lh-noblogs-page-desktop](docs/lighthouse%20validation/my-blogs-no-blogs-desktop.png)
+</details>
+
+<details><summary>No Blogs Page Mobile</summary>
+
+![lh-noblogs-page-mobile](docs/lighthouse%20validation/my-blogs-no-blogs-mobile.png)
+</details>
+
+#### **Sign In Page**
+
+<details><summary>Sign in Page Desktop</summary>
+
+![lh-signin-page-desktop](docs/lighthouse%20validation/signin-page-desktop.png)
+</details>
+
+<details><summary>Sign in Page Mobile</summary>
+
+![lh-signin-page-mobile](docs/lighthouse%20validation/signin-page-mobile.png)
+</details>
+
+#### **Sign Out Page**
+
+<details><summary>Sign Out Page Desktop</summary>
+
+![lh-signout-page-desktop](docs/lighthouse%20validation/signout-page-desktop.png)
+</details>
+
+<details><summary>Sign Out Page Mobile</summary>
+
+![lh-signout-page-mobile](docs/lighthouse%20validation/signout-page-mobile.png)
+</details>
+
+#### **Sign Up Page**
+
+<details><summary>Sign Up Page Desktop</summary>
+
+![lh-signup-page-desktop](docs/lighthouse%20validation/signup-page-desktop.png)
+</details>
+
+<details><summary>Sign Up Page Mobile</summary>
+
+![lh-signup-page-mobile](docs/lighthouse%20validation/signup-page-mobile.png)
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
