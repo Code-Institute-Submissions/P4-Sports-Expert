@@ -767,11 +767,21 @@ I gathered reports for both desktop and mobile devices.
 
 On most of the pages tested the best practices score is 92 out of 100. The reason for this is "Cookie" errors related to cloudinary in the issues panel as seen in the image below.
 
-![cookie-error](docs/lighthouse%20validation/lightouse-cloudinary-error.png)
+ - ![cookie-error](docs/lighthouse%20validation/lightouse-cloudinary-error.png)
 
 On all of the pages that include forms with user cloudinary uploads the accessibility is 97 out of 100. This is because of an unreachable a link tag that is missing a label for screen readers.
-![error-1](docs/lighthouse%20validation/edit-mobile-access-error-1.png)
-![error-2](docs/lighthouse%20validation/edit-mobile-access-error-2.png)
+ - ![error-1](docs/lighthouse%20validation/edit-mobile-access-error-1.png)
+ - ![error-2](docs/lighthouse%20validation/edit-mobile-access-error-2.png)
+
+On most pages performance score is down a few percent. On inspection this is again because of errors in the issues panel stating "eliminatw render blocking resources". It seems to be bootstrap causing this issue.
+
+ - [performance-1](docs/lighthouse%20validation/lighthouse-performance.png)
+
+## **Bugs**
+
+### **Solved Bugs**
+
+
 
 
 
