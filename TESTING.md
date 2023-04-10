@@ -825,6 +825,17 @@ I tested 10 devices at random on chrome devtools for responsiveness ranging from
 | Ipad Pro | Pass |
 | Nest Hub Max | Pass |
 
+## **Browser Testing**
+
+The site was tested using 4 different browsers. Things looked out for when testing on different browsers included: All styles loading correctly, all pages loading correctly, all images showing correctly, all forms validating correctly and all navigation working correctly.
+
+| **Browser** | **Result Pass/Fail** |
+|-------------|----------------------|
+| **Chrome** | **Pass** |
+| **Safari** | **Pass** |
+| **Firefox** | **Pass** |
+| **Microsoft Edge** | **Pass** |
+
 
 
 
