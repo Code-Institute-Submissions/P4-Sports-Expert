@@ -30,8 +30,16 @@ A wide range of testing was carried out during development including, Automated 
 
 ## **Automated testing**
 
-100% Of the code was covered throughout the automated testing process.
-![coverage-report](docs/unit%20testing/coverage%20report.png)
+99% Of the code was covered throughout the automated testing process.
+I will manually test the remaining 1%
+![cov-report1](docs/unit%20testing/cov-report-1.png)
+![cov-report2](docs/unit%20testing/cov-report-2.png)
+![cov-report3](docs/unit%20testing/cov-report-3.png)
+
+The missing statement in the unit tests is the Delete method in the DeleteProfile Class in the profiles app which deletes the user, redirects them to the home page and gives them a success message.
+This method will be manually tested in the Manual Testing Section.
+![delete-profile-cov](docs/unit%20testing/cov-deleteprofile.png)
+
 
 ### **Home App**
 
