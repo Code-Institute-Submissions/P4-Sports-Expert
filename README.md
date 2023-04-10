@@ -1245,6 +1245,33 @@ User Story 4
 This project provides first-class OAuth library support for Requests.
 - [sqlparse](https://pypi.org/project/sqlparse/) - sqlparse is a non-validating SQL parser for Python. It provides support for parsing, splitting and formatting SQL statements.
 
+## **Testing**
+
+All testing that was done for the project can be Found In [TESTING.md](TESTING.md)
+
+## **Deployment**
+
+### **Heroku Deployment**
+
+The site was deployed to Heroku following these steps:
+
+1. Go to [Heroku](https://www.heroku.com/) from your browser.
+2. CLick on the "new" button from the dashboard and select "create new app".
+3. Name you app and click "create app"
+4. Navigate to "settings"
+5. Navigate to "config vars" and enter the following:
+     - SECRET_KEY: The Secret Key for your project(should be in your env.py file)
+     - DATABASE_URL: The URL from your ElephantSQL dashboard
+     - CLOUNDINARY_URL: The URL from your Cloudinary dashboard
+     - PORT: 8000
+6. Navigate to "Deploy"
+7. From the options given, select Github
+8. Find your repo by searching for it and connect to it.
+9. Choose branch to deploy
+10. Watch the build log and ensure the app is built successfully.
+11. Your app should now be available to view from the link provided underneath the build log.
+     
+
   
 
 
