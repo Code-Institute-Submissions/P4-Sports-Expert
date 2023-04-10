@@ -808,6 +808,23 @@ The reason for this is because I have set up django signals for a user profile t
 
 Since nearly every model in my database is connected in someway I have concluded the only way to fix this bug would be to wipe all databases clear of all data which is not really feasable at this point in development.
 
+## **Responsiveness**
+
+I tested 10 devices at random on chrome devtools for responsiveness ranging from large to small screens. Things I was looking out for while testing includes, font sizes, font overflow, ratios, image sizes, image overflow and container overflow.
+
+| **Device** | **Result Pass/Fail** |
+|------------|----------------------|
+| Galaxy Note 2 | Pass |
+| Nexus 5 | Pass |
+| Iphone 4 | Pass |
+| Iphone XR | Pass |
+| Nexus 7 | Pass |
+| Pixel 2 XL | Pass |
+| Kindle Fire HDX | Pass |
+| Ipad Mini | Pass |
+| Ipad Pro | Pass |
+| Nest Hub Max | Pass |
+
 
 
 
