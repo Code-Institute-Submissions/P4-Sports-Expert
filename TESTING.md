@@ -775,11 +775,22 @@ On all of the pages that include forms with user cloudinary uploads the accessib
 
 On most pages performance score is down a few percent. On inspection this is again because of errors in the issues panel stating "eliminatw render blocking resources". It seems to be bootstrap causing this issue.
 
- - [performance-1](docs/lighthouse%20validation/lighthouse-performance.png)
+ - ![performance-1](docs/lighthouse%20validation/lighthouse-performance.png)
 
 ## **Bugs**
 
 ### **Solved Bugs**
+
+| **Bug** | **Bug Description** | **Fix** |
+|---------|---------------------|---------|
+| Card sizes | Blog cards differing in sizes due to text length of user inputs | Adding flex fill to the card parent class which stretches all cards to the size of the biggess card fixed this issue |
+| User Upload images | User upload images were not updating after form submission and staying as the placeholders | Adding enctype of multipart/form data to the user form fixed this bug.
+| Blog images on smaller width screens | On smaller width screens images on the blog cards were distorting due to the height styles given by the bootstrap card class | Adding a media query for a fixed height on the blog images on medium to small screens fixed this bug.
+| Comment text overflowing | On smaller screens if the user typed one big word their comment would overflow out of the container. | To fix this I added a text-wrap css style to make sure the text overflowed onto the next line.
+| Users able to delete other users items | Late into development I spotted a bug which was that users could delete other users items such as blogposts, comments and profiles by changing the url i.d. | To fix this bug I added a UserPassesTest Mixin to every edit and delete view and ensured users were shown a 403 page if they tried to access other users items.
+| User upload image changing shape | Late into development I also noticed that if a user uploaded an abscure size image to their profile it changed the shape of the circular parent container. | To fix this bug I changed the dimesions of the parent container and gave max width and height to the profile upload image.
+
+
 
 
 
