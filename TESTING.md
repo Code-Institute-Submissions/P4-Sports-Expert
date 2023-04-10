@@ -1,7 +1,32 @@
 # **Sports Expert Testing**
 
 ## **Overview**
-A wide range of testing was carried out during development including, Automated testing, manual testong, user story testing, code validation and bug testing.
+A wide range of testing was carried out during development including, Automated testing, manual testing, user story testing, code validation and bug testing.
+
+## **Contents**
+
+1. [Overview](#overview)
+2. [Automated Testing](#automated-testing)
+   - [Home App](#home-app)
+   - [Blog App](#blog-app)
+   - [Profiles App](#profiles-app)
+3. [Manual Testing](#manual-testing)  
+   - [Epic Milestone Acceptance Criteria Testing](#epic-milestone-acceptance-criteria-testing) 
+   - [User Story Testing](#user-story-testing)
+   - [Javascript Testing](#javascript-testing)
+4. [Validation](#validation)
+   - [Python Code Validation](#python-code-validation)
+   - [Javascript JShint Validation](#javascript-jshint-validation)
+   - [CSS Jigsaw validation](#css-jigsaw-validation)
+   - [HTML W3 validation](#html-w3-validation)
+   - [Lighthouse Testing](#lighthouse-testing)
+5. [Bugs](#bugs)   
+   - [Solved Bugs](#solved-bugs)
+   - [Unsolved Bugs](#unsolved-bugs)
+6. [Responsiveness](#responsiveness)   
+7. [Browser Testing](#browser-testing)
+
+
 
 ## **Automated testing**
 
@@ -50,7 +75,7 @@ The blog app was the first app I tested through unit testing so has by far the m
 
 ### **Epic Milestone  Acceptance Criteria Testing**
 
-There were 3 milestones that did no have acceptance criteria. The user stories in these milestones will be tested in the user story section.
+There were 3 milestones that did not have acceptance criteria. The user stories in these milestones will be tested in the user story section.
 
 #### **EPIC: Django Installation and app setup [#Milestone 1](https://github.com/seanj06/P4-Sports-Expert/milestone/1?closed=1)**
 
@@ -130,7 +155,7 @@ Blog post cards show a title, category, date created, image and a description sn
 
 **Acceptance criteria 5**: Profile page follows similar design pattern to other pages. Profile page should show user information aswell as a button to user blogs, date profile created, a button to edit profile, info on when profile last edited. 
 
- - The profile page has a similar colour scheme and design pattern to the rest of the site. The profile page shows the username, full name is user has entered one, user profile picture if they have uploaded one, date the user joined, date the profile was last edited, a button to edit profile and a button to navigate to myblogs page.
+ - The profile page has a similar colour scheme and design pattern to the rest of the site. The profile page shows the username, full name if user has entered one, user profile picture if they have uploaded one, date the user joined, date the profile was last edited, a button to edit profile and a button to navigate to myblogs page.
 
 **Acceptance criteria 6**: Active page to be added to navbar.
 
@@ -208,7 +233,7 @@ Overall there were 33 completed user stories and 4 uncompleted user stories thro
 
  - As a developer I can install cloudinary so that all my images can still be displayed on my site after being deployed
 
-   - Cloudinary was installed in development prior to being deployed to heroku and tested to mske sure all user uploaed images were showing correctly.
+   - Cloudinary was installed in development prior to being deployed to heroku and tested to make sure all user uploaed images were showing correctly.
 
 #### 12.[USER STORY:Install allauth #13](https://github.com/seanj06/P4-Sports-Expert/issues/13)
 
@@ -773,7 +798,7 @@ On all of the pages that include forms with user cloudinary uploads the accessib
  - ![error-1](docs/lighthouse%20validation/edit-mobile-access-error-1.png)
  - ![error-2](docs/lighthouse%20validation/edit-mobile-access-error-2.png)
 
-On most pages performance score is down a few percent. On inspection this is again because of errors in the issues panel stating "eliminatw render blocking resources". It seems to be bootstrap causing this issue.
+On most pages performance score is down a few percent. On inspection this is again because of errors in the issues panel stating "eliminate render blocking resources". It seems to be bootstrap causing this issue.
 
  - ![performance-1](docs/lighthouse%20validation/lighthouse-performance.png)
 
