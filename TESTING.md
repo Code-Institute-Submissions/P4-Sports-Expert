@@ -10,7 +10,8 @@ A wide range of testing was carried out during development including, Automated 
    - [Home App](#home-app)
    - [Blog App](#blog-app)
    - [Profiles App](#profiles-app)
-3. [Manual Testing](#manual-testing)  
+3. [Manual Testing](#manual-testing) 
+   - [Automated Testing Statements](#automated-testing-statements) 
    - [Epic Milestone Acceptance Criteria Testing](#epic-milestone-acceptance-criteria-testing) 
    - [User Story Testing](#user-story-testing)
    - [Javascript Testing](#javascript-testing)
@@ -83,6 +84,21 @@ The blog app was the first app I tested through unit testing so has by far the m
 
 
 ## **Manual Testing**
+
+### **Automated Testing Statements**
+
+As specified in the automated testing section there was 1 missing statement that needed to be manually tested for full coverage. That was the delete method from the DeleteProfile Class in the profiles app.
+![delete-profile-cov](docs/unit%20testing/cov-deleteprofile.png)
+
+To test this method there were a few steps I took
+
+1. Created a fake user on the site and logged in.
+2. Navigated to the delete profile page from the profile section.
+3. Ensured that the correct url was showing to match the user.
+4. After pressing the delete button ensure that I was redirected back to the home page and was shown a success message stating "Profile was deleted successfully."
+5. Tried to log back in as the user to ensure the user and profile no longer existed in the database.
+
+All tests Passed
 
 ### **Epic Milestone  Acceptance Criteria Testing**
 
