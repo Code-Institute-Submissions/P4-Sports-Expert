@@ -71,6 +71,9 @@ The blog app was the first app I tested through unit testing so has by far the m
  - The profile views file had 5 tests
    ![Test-profile-views](docs/unit%20testing/test-profiles-views.png) 
 
+[Top of page &uarr;](#contents)
+
+
 ## **Manual Testing**
 
 ### **Epic Milestone  Acceptance Criteria Testing**
@@ -164,6 +167,8 @@ Blog post cards show a title, category, date created, image and a description sn
 **Acceptance criteria 7**: Footer to be added to base.html with social link icons and name of author and year of creation
 
  - The footer features 4 social media link icons for Facebook, Twitter, Instagram and Github. It also features a message about site author and year of development.
+
+ [Top of page &uarr;](#contents)
 
 ### **User Story Testing**
 
@@ -385,6 +390,8 @@ Overall there were 33 completed user stories and 4 uncompleted user stories thro
 
  - As a user I can search for user specific blog posts so that I can follow my favourite bloggers
 
+ [Top of page &uarr;](#contents)
+
 ### Javascript Testing
 
  - There is only one javascript function present in the development code so I manually tested the function rather than automated testing.
@@ -395,6 +402,8 @@ Overall there were 33 completed user stories and 4 uncompleted user stories thro
  - This function was manually tested by first commenting out the function altogether and making sure the message stayed on screen without it. The result was as expected.
 
  - The function was then tested by changing the milliseconds time to 8000 and a timer was used to time the seconds the message stayed on screen, then finally the milliseconds were changed back to the original 3000 and a timer was also used to time the message on screen. Result was as expected and all manual tests passed.
+
+ [Top of page &uarr;](#contents)
 
 ## **Validation**
 
@@ -540,6 +549,8 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate Pytho
 ![home-test-views](docs/code-validation/home-test-views.png)
 </details>
 
+[Top of page &uarr;](#contents)
+
 ### **Javascript JShint Validation**
 
 There was only 1 Javascript function in the code to run through the jshint validator. It returned 1 error "1 undefined variable bootstrap"
@@ -614,6 +625,8 @@ Through all of the page testing only 1 error was found which is related to the d
 The error showing "No p element in scope but a p end tag seen." is generated html from the django templating language so cannot be fixed.
 ![blog-error](docs/html-validation/blog-detail-error.png)
 </details>
+
+[Top of page &uarr;](#contents)
 
 ### **Lighthouse Testing**
 
@@ -802,6 +815,8 @@ On most pages performance score is down a few percent. On inspection this is aga
 
  - ![performance-1](docs/lighthouse%20validation/lighthouse-performance.png)
 
+ [Top of page &uarr;](#contents)
+
 ## **Bugs**
 
 ### **Solved Bugs**
@@ -833,6 +848,8 @@ The reason for this is because I have set up django signals for a user profile t
 
 Since nearly every model in my database is connected in someway I have concluded the only way to fix this bug would be to wipe all databases clear of all data which is not really feasable at this point in development.
 
+[Top of page &uarr;](#contents)
+
 ## **Responsiveness**
 
 I tested 10 devices at random on chrome devtools for responsiveness ranging from large to small screens. Things I was looking out for while testing includes, font sizes, font overflow, ratios, image sizes, image overflow and container overflow.
@@ -860,6 +877,8 @@ The site was tested using 4 different browsers. Things looked out for when testi
 | **Safari** | **Pass** |
 | **Firefox** | **Pass** |
 | **Microsoft Edge** | **Pass** |
+
+[Top of page &uarr;](#contents)
 
 
 
