@@ -9,11 +9,51 @@ Developed by Sean Johnston for code institute Project Portfolio project 4.
 
 ![Am-I-Responsive](docs/readme-images/amiresponsive.png)
 
+## **Contents**
+
+1. [Overview](#overview)
+2. [Project Goals](#project-goals)
+3. [U/X](#ux)
+   - [The Strategy Plane](#the-strategy-plane)
+      - [Target Users](#target-users)
+      - [Site Goals](#site-goals)
+   - [The Scope Plane](#the-scope-plane) 
+   - [Agile Planning](#agile-planning)  
+      - [Epics](#epics)
+      - [User Stories](#user-stories)
+4. [The Structure Plane](#the-structure-plane)  
+    - [Features](#features)  
+      - [Home Page](#home-page)
+      - [Blog Home Page](#blog-home-page)
+      - [Blog Detail Page](#blog-detail-page)
+      - [Profile Page](#profile-page)
+      - [Add A Blog Page](#add-a-blog-page)
+      - [User Authentication Pages](#user-authentication-pages)
+      - [Custom Error Pages](#custom-error-pages)
+    - [Future Features](#future-features)  
+5. [The Surface Plane](#the-surface-plane) 
+    - [Design](#design)   
+      - [Colour Scheme](#colour-scheme)
+      - [Typography](#typography)
+      - [Imagery](#imagery)
+6. [Technologies Used](#technologies-used)  
+    - [Languages used](#languages-used)
+    - [Frameworks used](#frameworks-used)
+    - [Other Technologies used](#other-technologies-used)
+    - [Libraries Used](#libraries-used)
+7. [Testing](#testing)
+8. [Deployment](#deployment)    
+    - [Heroku Deployment](#heroku-deployment)
+    - [Forking The Repository](#forking-the-repository)
+    - [Clone The Repository](#clone-the-repository)
+
+
+
 ## **Project Goals**
 
 As my fourth project for the [Code Institute](https://codeinstitute.net/) 5P course the goal of the project is to demostrate all of the skills I have learned in the course so far including languages such as HTML, CSS, Javascript and Python. Frameworks such as Django and Boostrap and version control technologies such as Git and Github.
 
-## **UX**
+## **U/X**
 
 ## **The Strategy Plane**
 
@@ -1157,7 +1197,7 @@ User Story 4
  ![500-page](docs/features/500-page.png)
 
 
-#### **Future Features**
+### **Future Features**
 
  - There were 4 user stories incomplete due to time constraints so they would be the first future features added to the website. They were:
 
