@@ -21,21 +21,21 @@ Developed by Sean Johnston for code institute Project Portfolio project 4.
    - [Agile Planning](#agile-planning)  
       - [Epics](#epics)
       - [User Stories](#user-stories)
-4. [The Structure Plane](#the-structure-plane)  
-    - [Features](#features)  
-      - [Home Page](#home-page)
-      - [Blog Home Page](#blog-home-page)
-      - [Blog Detail Page](#blog-detail-page)
-      - [Profile Page](#profile-page)
-      - [Add A Blog Page](#add-a-blog-page)
-      - [User Authentication Pages](#user-authentication-pages)
-      - [Custom Error Pages](#custom-error-pages)
-    - [Future Features](#future-features)  
-5. [The Surface Plane](#the-surface-plane) 
-    - [Design](#design)   
-      - [Colour Scheme](#colour-scheme)
-      - [Typography](#typography)
-      - [Imagery](#imagery)
+   - [The Structure Plane](#the-structure-plane)  
+      - [Features](#features)  
+         - [Home Page](#home-page)
+         - [Blog Home Page](#blog-home-page)
+         - [Blog Detail Page](#blog-detail-page)
+         - [Profile Page](#profile-page)
+         - [Add A Blog Page](#add-a-blog-page)
+         - [User Authentication Pages](#user-authentication-pages)
+         - [Custom Error Pages](#custom-error-pages)
+      - [Future Features](#future-features)  
+   - [The Surface Plane](#the-surface-plane) 
+      - [Design](#design)   
+          - [Colour Scheme](#colour-scheme)
+          - [Typography](#typography)
+          - [Imagery](#imagery)
 6. [Technologies Used](#technologies-used)  
     - [Languages used](#languages-used)
     - [Frameworks used](#frameworks-used)
@@ -1220,6 +1220,16 @@ User Story 4
    - Users to be able to favourite blogposts and then access them from their profile.
 
    - Users to be able to click on and view other user profiles from blogpost authors and comments.
+
+## **The Skeleton Plane
+
+### **Database Schema**
+
+Below is a diagram of the database models and how the the fields link to each other.
+The diagram was made on [Lucidchart.com](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjjsv7X6aH-AhWwgFAGHd1lAykYABAAGgJkZw&ohost=www.google.com&cid=CAESbeD2ytxlwO3uCaazbKtzvqvppsNhe1heNFTWYr8Ja6pedxYm-qSu7Xj1K7h_fvv0_kTMzvjh05ERH1FwWEYshvM15Wfp03Zp21oiJIbm3ZTZd1b_1fJ9ENrGwYymQf5KRrpGNn5jUNGXbXujOM0&sig=AOD64_1k9ic9lgJt8Tto3XfmyTbZo-CLLg&q&adurl&ved=2ahUKEwjco_jX6aH-AhUCAsAKHch6ASkQ0Qx6BAgGEAE)
+
+![database-schema](docs/readme-images/database-schema.png)
+
 
 ## **The Surface Plane**
 
