@@ -31,6 +31,9 @@ Developed by Sean Johnston for code institute Project Portfolio project 4.
          - [User Authentication Pages](#user-authentication-pages)
          - [Custom Error Pages](#custom-error-pages)
       - [Future Features](#future-features)  
+   - [The Skeleton Plane](#the-skeleton-plane)  
+      - [Database Schema](#database-schema) 
+      - [Wireframes](#wireframes)
    - [The Surface Plane](#the-surface-plane) 
       - [Design](#design)   
           - [Colour Scheme](#colour-scheme)
@@ -1221,7 +1224,7 @@ User Story 4
 
    - Users to be able to click on and view other user profiles from blogpost authors and comments.
 
-## **The Skeleton Plane
+## **The Skeleton Plane**
 
 ### **Database Schema**
 
@@ -1229,6 +1232,47 @@ Below is a diagram of the database models and how the the fields link to each ot
 The diagram was made on [Lucidchart.com](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjjsv7X6aH-AhWwgFAGHd1lAykYABAAGgJkZw&ohost=www.google.com&cid=CAESbeD2ytxlwO3uCaazbKtzvqvppsNhe1heNFTWYr8Ja6pedxYm-qSu7Xj1K7h_fvv0_kTMzvjh05ERH1FwWEYshvM15Wfp03Zp21oiJIbm3ZTZd1b_1fJ9ENrGwYymQf5KRrpGNn5jUNGXbXujOM0&sig=AOD64_1k9ic9lgJt8Tto3XfmyTbZo-CLLg&q&adurl&ved=2ahUKEwjco_jX6aH-AhUCAsAKHch6ASkQ0Qx6BAgGEAE)
 
 ![database-schema](docs/readme-images/database-schema.png)
+
+### **Wireframes**
+
+Wireframes were made at the start of development with [balsamiq](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwih18Xz7KT-AhUK0O0KHa10Ac4YABAAGgJkZw&ohost=www.google.com&cid=CAESbeD2RPESw4sarkzssyVuJ3_18noPRmNSFJOT2cF3stlWcQOFp6gPdcDCXuoyPrUKWZxNLLshZQIEAJo_zFZQQUX0f9Lu_XsA3g1AvKtc7qZuF628J-8r4AqElCFmrMznj-ckVA181bCrKg7__Gk&sig=AOD64_3_LMgzuzJFmOC4EuNM6hTDxVkC7A&q&adurl&ved=2ahUKEwjavL7z7KT-AhWgR0EAHYA1CbgQ0Qx6BAgHEAE) and show roughly the structure of the site for the most part even though slight design changes were made in development.
+
+As the Blog Home page is the only page that changes layout as the screen size gets smaller I chose to only do wireframes for multiple screen sizes for that particular page. The wireframes for that page include the navbar changing to a hamburger button for medium and small size screens.
+
+#### **Home Page**
+
+![wireframe-home-page](docs/wireframes/wireframe-home-desktop.png)
+
+#### **Blog Home Page**
+
+**Desktop**
+
+![wireframe-blog-home-desktop](docs/wireframes/wireframe-blog-home-desktop.png)
+
+**Ipad(Medium screens)**
+
+![wireframes-blog-home-ipad](docs/wireframes/wireframe-blog-home-ipad.png)
+
+**Iphone(Small screens) With Navbar Expanded**
+
+![wireframes-blog-home-iphone-navbar-expand](docs/wireframes/wireframe-blog-home-mobile-navbar-expand.png)
+
+**Iphone(Small screens) With Navbar Condensed**
+
+![wireframes-blog-home-iphone-navbar-condensed](docs/wireframes/wireframe-blog-home-not-expand-mobile.png)
+
+#### **Blog Detail page**
+
+![blog-detail-wireframe](docs/wireframes/wireframe-blog-detail-desktop.png)
+
+#### **Profile Page**
+
+![wireframe-profile](docs/wireframes/wireframe-profile-desktop.png)
+
+#### **Form pages**
+
+![wireframe-form](docs/wireframes/wireframe-form.png)
+
 
 
 ## **The Surface Plane**
