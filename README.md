@@ -1390,6 +1390,36 @@ All testing that was done for the project can be Found In [TESTING.md](TESTING.m
 6. Type "git clone" into the terminal followed by the HTTPS url you copied to your clipboard.
 7. Press enter, your cloned repository should be created in the directory you specified.
 
+## **Credits**
+
+### **Project Set Up and Github Template**
+
+- The [Code Institute-Org/gitpod-full-template](https://github.com/Code-Institute-Org/gitpod-full-template) was the github template used to set up the project.
+- The [Code Institute](https://learn.codeinstitute.net/) Blog walkthrough steps were followed for the initial set up and package installation for the project.
+
+### **Media And Content**
+
+- All placeholder images on the site were taken from [Pexels.com](https://www.pexels.com/)
+- Some snippets of blogpost content were taken from [The Sporting Blog](https://thesporting.blog/)
+- Social media icons were taken from [Font Awesome](https://fontawesome.com/)
+- Text fonts were taken from [Google Fonts](https://fonts.google.com/)
+- Navbar Layout and Carousel were built using [Bootstrap](https://getbootstrap.com/)
+
+### **Code And Issues**
+
+- Help getting started on the project was helped by watching [Codemy.com](https://www.youtube.com/@Codemycom) [Create A Simple Blog With Python and Django](https://www.youtube.com/watch?v=B40bteAMM_M) videos.
+- The timeout function for messages was taken from [Code Institute](https://learn.codeinstitute.net/) Blog walkthrough.
+- [Stack Overflow](https://stackoverflow.com/) was used for troubleshootiing multiple issues including:
+   - [Redirect to same page after POST method using class based views](https://stackoverflow.com/questions/39560175/redirect-to-same-page-after-post-method-using-class-based-views)
+   - [In a Django form, how do I make a field readonly (or disabled) so that it cannot be edited?](https://stackoverflow.com/questions/324477/in-a-django-form-how-do-i-make-a-field-readonly-or-disabled-so-that-it-cannot)
+   - [Django create profile for user signal](https://stackoverflow.com/questions/61580144/django-create-profile-for-user-signal)
+   - [RuntimeWarning: DateTimeField received a naive datetime](https://stackoverflow.com/questions/18622007/runtimewarning-datetimefield-received-a-naive-datetime)
+   - [success_message in DeleteView not shown](https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown)
+   - [Django UserPassesTestMixin confusion/questions?](https://stackoverflow.com/questions/65241141/django-userpassestestmixin-confusion-questions)
+   - [Django user posts to be filtered from all posts and displayed in user profile](https://stackoverflow.com/questions/44693599/django-user-posts-to-be-filtered-from-all-posts-and-displayed-in-user-profile)
+
+
+
      
 
   
