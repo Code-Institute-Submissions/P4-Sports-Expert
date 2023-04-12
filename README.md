@@ -9,6 +9,8 @@ Developed by Sean Johnston for code institute Project Portfolio project 4.
 
 ![Am-I-Responsive](docs/readme-images/amiresponsive.png)
 
+Link to the live site : [Sports Expert](https://sports-blog.herokuapp.com/)
+
 ## **Contents**
 
 1. [Overview](#overview)
@@ -1078,9 +1080,9 @@ User Story 4
   
   ![profile-buttons](docs/features/profile-buttons.png)
 
-    - The home button will direct users back to the home page.
+  - The home button will direct users back to the home page.
 
-    - The Myblogs button will bring users to a page, similiar to the blog home page that shows them all of their created blog posts where they can view, edit and delete them. Or if the user has no created blogs, a message that tells them they dont have any blogs and a button that directs them to the addblog page.
+  - The Myblogs button will bring users to a page, similiar to the blog home page that shows them all of their created blog posts where they can view, edit and delete them. Or if the user has no created blogs, a message that tells them they dont have any blogs and a button that directs them to the addblog page.
 
      - User has blogposts
          
@@ -1096,7 +1098,7 @@ User Story 4
       
       ![Edit-profile](docs/features/edit-profile.png)   
 
-        - From this page the user can edit their name, about section and profile image. **Note**: There is a bug on the image section of the form where it doesnt show the user their current uploaded image. I will address this further in the bugs section of the readme. 
+     - From this page the user can edit their name, about section and profile image. **Note**: There is a bug on the image section of the form where it doesnt show the user their current uploaded image. I will address this further in the bugs section of the readme. 
 
         - If the user presses the confirm edit button and the form is valid they are shown a success message stating "Profile edited successfully" and redirected back to their profile page.
         
