@@ -2,8 +2,8 @@
 
 ## **Overview**
 
-Sports expert is a sports blog website where users can make blog posts about a specific sport, view blog posts by other users and
-comment on blog posts. They can also edit their profile and upload their own profile picture aswell as adding information about themselves.
+Sports Expert is a sports blog website where users can make blog posts about a specific sport, view blog posts by other users and
+comment on blog posts. They can also edit their profile and upload their own profile picture aswell as add information about themselves.
 
 Developed by Sean Johnston for code institute Project Portfolio project 4.
 
@@ -63,7 +63,7 @@ Link to the live site : [Sports Expert](https://sports-blog.herokuapp.com/)
 
 ## **Project Goals**
 
-As my fourth project for the [Code Institute](https://codeinstitute.net/) 5P course the goal of the project is to demostrate all of the skills I have learned in the course so far including languages such as HTML, CSS, Javascript and Python. Frameworks such as Django and Boostrap and version control technologies such as Git and Github.
+As my fourth project for the [Code Institute](https://codeinstitute.net/) 5P course, the goal of the project is to demonstrate all of the skills I have learned in the course so far including languages such as HTML, CSS, Javascript and Python. Frameworks such as Django and Bootstrap and version control technologies such as Git and Github.
 
 [Top of page &uarr;](#contents)
 
@@ -71,7 +71,7 @@ As my fourth project for the [Code Institute](https://codeinstitute.net/) 5P cou
 
 ## **The Strategy Plane**
 
-Sports expert was designed to be a site for Sports lovers to share and read their own and other peoples opinions on multiple sports topics. The site was designed in a way that it is easy to navigate, and a homepage U.I that grabs new and returning users attention. Users can upload their own BlogPosts, comment on other users blogposts aswell as editing their own profile which is intended to create a proper website community.
+Sports Expert was designed to be a site for Sports lovers to share and read their own and other peoples opinions on multiple sports topics. The site was designed in a way that it is easy to navigate, and a homepage U.I that grabs new and returning users attention. Users can upload their own BlogPosts, comment on other users blogposts aswell as edit their own profile which is intended to create a proper website community.
 
 ### **Target Users**
 
@@ -83,7 +83,7 @@ Sports expert was designed to be a site for Sports lovers to share and read thei
 ### **Site Goals**
 
 - For users to be able to create an account, login and logout when they want.
-- For users to be able to view blogposts regardless if they have made and account and are signed in or out
+- For users to be able to view blogposts regardless if they have made an account and are signed in or out
 - For users to be able to create their own blogposts while logged in.
 - For users to be able to comment on their own and other peoples blogposts while logged in
 - For users to be able to edit their profile including adding thier own profile picture while logged in.
@@ -93,16 +93,16 @@ Sports expert was designed to be a site for Sports lovers to share and read thei
 ## **The Scope Plane**
 
  - CRUD Ability for authenticated users on Blogposts, Comments and User Profiles
- - Restricted site features for authenticated and non authenticated users such as adding Blogposts and viewing profile page.
+ - Restricted site features for authenticated and non-authenticated users such as adding Blogposts and viewing profile pages.
  - Full responsiveness for all screen sizes including hamburger navigation menu for mobile screens and different blogpost card layout
  for different screen sizes.
- - Eye catching caarousel on top of home page to catch new site users attention as soon as they enter the site.
+ - Eye-catching carousel on top of the home page to catch new site users attention as soon as they enter the site.
 
 ## **Agile Planning**
 
-This project was built using the Agile method throughout by creating EPIC Miletones which were broken down into smaller user stories with labels "must-have", "should-have", "could-have", and wont have. 
+This project was built using the Agile method throughout by creating EPIC Milestones which were broken down into smaller user stories with labels "must-have", "should-have", "could-have", and wont have. 
 
-Epics milestones were given Acceptance criterias and the must haves were completed first to complete the milestone. Any user stories that were not completed were moved back into the project backlog.
+Epics milestones were given Acceptance criteria and the must haves were completed first to complete the milestone. Any user stories that were not completed were moved back into the project backlog.
 
 The Kanban board was created using Github projects and can be located [here](https://github.com/users/seanj06/projects/5/views/1)  and can be viewed to see the completed and backlogged user stories.
 
@@ -113,28 +113,28 @@ The Kanban board was created using Github projects and can be located [here](htt
 ### **Epics**
 
 Epics were broken down into 9 EPIC Milestones(including backlog)
-which include 37 user stories in total. Each Milestone was given acceptance criteria and the milestone was closed when all the criteria had been met / all user stories were completed.
+which includes 37 user stories in total. Each Milestone was given acceptance criteria and the milestone was closed when all the criteria had been met / all user stories were completed.
 User stories were given tasks, and when each task and the given user stories were completed a comment was left with the commit number underneath the user story. When all tasks were complete the user story was closed.
 
 #### **EPIC: Django Installation and app setup [#Milestone 1](https://github.com/seanj06/P4-Sports-Expert/milestone/1?closed=1)**
 
-This Epic had 3 acceptance criterias
+This Epic had 3 acceptance criteria
 
-- Acceptance criteria 1: Django insalled to gitpod workspace and new project created
+- Acceptance criteria 1: Django installed to gitpod workspace and a new project created
 
-- Acceptance criteria 2: Install postresql database
+- Acceptance criteria 2: Install PostgreSQL database
 
-- Acceptance criteria 3: Create new app inside project
+- Acceptance criteria 3: Create a new app inside project
 
-This was the first milestone to be completed as it was needed to install django and the database.
+This was the first milestone to be completed as it was needed to install Django and the database.
 
 #### **EPIC: First Heroku Deployment [#Milestone 2](https://github.com/seanj06/P4-Sports-Expert/milestone/2?closed=1)**
 
-This Epic included 2 user stories which included installing cloudinary and the setting up the correct env.py variables to successfully deploy the prpject on heroku for the first time.
+This Epic included 2 user stories which included installing cloudinary and setting up the correct env.py variables to successfully deploy the project on heroku for the first time.
 
 #### **EPIC: Home page creation [#Milestone 3](https://github.com/seanj06/P4-Sports-Expert/milestone/8)**
 
-This Epic had 4 acceptance criterias
+This Epic had 4 acceptance criteria
 
 - Acceptance criteria 1: Users are brought to homepage when first entering the site
 
@@ -142,13 +142,13 @@ This Epic had 4 acceptance criterias
 
 - Acceptance criteria 3: What users see on the home page differs depending on if they are logged in or out
 
-- Accpetance criteria 4: Users are shown a list of most recent blogs on page
+- Acceptance criteria 4: Users are shown a list of most recent blogs on page
 
-This epic centred around the site home page and made sure user athentication was set up correctly
+This epic centred around the site home page and made sure user authentication was set up correctly
 
 #### **EPIC: User profile [#Milestone 4](https://github.com/seanj06/P4-Sports-Expert/milestone/10)**
 
-This Epic had 3 acceptance criterias
+This Epic had 3 acceptance criteria
 
 - Acceptance criteria 1: Users are able to go to profile section from home page
 
@@ -156,7 +156,7 @@ This Epic had 3 acceptance criterias
 
 - Acceptance criteria 3: Users can see all of their blog posts from profile section
 
-This epic centered around the users profile section including users being able to access profile page from the home page and edit and see their own blog posts from their profile page.
+This epic centred around the users profile section including users being able to access profile page from the home page and edit and see their own blog posts from their profile page.
 
 #### **EPIC: Crud Functionality [#Milestone 5](https://github.com/seanj06/P4-Sports-Expert/milestone/5?closed=1)**
 
@@ -164,7 +164,7 @@ This epic had 4 user stories all based around CRUD functionality
 
 - User able to Read a blog post
 
-- User able create a blog post
+- User able to create a blog post
 
 - User able to update a blog post
 
@@ -172,7 +172,7 @@ This epic had 4 user stories all based around CRUD functionality
 
 #### **EPIC: Blog view page creation [#Milestone 6](https://github.com/seanj06/P4-Sports-Expert/milestone/9)**
 
-This Epic had 3 acceptance criterias
+This Epic had 3 acceptance criteria
 
 - Acceptance criteria 1: Users can access blog page via a button on home page
 
@@ -180,11 +180,11 @@ This Epic had 3 acceptance criterias
 
 - Acceptance criteria 3: Users can access pages to edit or delete their posts if they are logged in
 
-This milstone was centered around the creation of the blog home page. Note: The filter functionality of accpetance criteria 2 was not completed due to time constraints and the relevant user story was moved into the backlog.
+This milestone was centred around the creation of the blog home page. Note: The filter functionality of acceptance criteria 2 was not completed due to time constraints and the relevant user story was moved into the backlog.
 
 #### **EPIC: U/X [#Milestone 7](https://github.com/seanj06/P4-Sports-Expert/milestone/4)**
 
-This Epic had 7 acceptance criterias
+This Epic had 7 acceptance criteria
 
 - Acceptance criteria 1: Home page follows U/X design, has navigation links aswell as a small about section.
 
@@ -201,11 +201,11 @@ Blog post cards show a title, category, date created, image and a description sn
 
 - Acceptance criteria 7: Footer to be added to base.html with social link icons and name of author and year of creation
 
-This milestone was centered around U/X design with acceptance criterias broken down by different site pages
+This milestone was centred around U/X design with acceptance criteria broken down by different site pages
 
 #### **EPIC: User Functionality [#Milestone 8](https://github.com/seanj06/P4-Sports-Expert/milestone/3?closed=1)
 
-This milestone included 3 user stories which centered around users being able to create an account and comment/ create blog posts.
+This milestone included 3 user stories which centred around users being able to create an account and comment/ create blog posts.
 
 #### **Backlog [#Milestone 9](https://github.com/seanj06/P4-Sports-Expert/milestone/6)**
 
@@ -224,7 +224,7 @@ There are 4 user stories in the backlog milestone due to not being complete beca
 ### **User Stories**
 
 Below is a list of user stories completed In epic milestones.
-Comments were left below user stories with commit numbers as per taksks completed.
+Comments were left below user stories with commit numbers as per tasks completed.
 
 #### **EPIC: Django Installation and app setup [#Milestone 1](https://github.com/seanj06/P4-Sports-Expert/milestone/1?closed=1)**
 
@@ -237,7 +237,7 @@ User Story 1
 
    - Tasks: 
        - Task 1 - Create new django project from command line
-       - Task 2 - Create new app inside project andadd to installed apps on settings.py
+       - Task 2 - Create new app inside project and add to installed apps on settings.py
        - Task 3 - Migrate all changes to database
        - Task 4 - Run app on server to make sure it was created successfully
 
@@ -685,7 +685,7 @@ User Story 8
        - As a developer I can style the log in, log out and sign up pages so that the UI matches the rest of the website pages
 
    - Tasks:
-       - Task 1 - Import allauth pages from commnd line and add them to templates folder
+       - Task 1 - Import allauth pages from command line and add them to templates folder
        - Task 2 - Add custom styling to pages
 
    - Comments:
@@ -980,7 +980,7 @@ User Story 4
 
   - The bottom of the home page shows the user 4 buttons, one to navigate to the first page, one for the previous page, one for the next page and one for the last page.
 
-  - There is also. page counter which shows the user which page they are currenty on aswell as the total number of pages
+  - There is also. page counter which shows the user which page they are currently on aswell as the total number of pages
 
   ![Blog-home-pagination](docs/features/blog-home-pagination.png)     
 
@@ -996,7 +996,7 @@ User Story 4
 
 **Header section**
 
- - The header section shows the Blogpost details such as the Author, The date posted, the title and either the user uploaded image or the placeholder image. Like the blog home page if the user has not uploaded an image the placeholder image will change depending on category chosen.
+ - The header section shows the Blogpost details such as the Author, The date posted, the title and either the user uploaded image or the placeholder image. Like the blog home page if the user has not uploaded an image the placeholder image will change depending on the category chosen.
     
     ![Blog-detail-header](docs/features/blog-detail-header.png)
 
@@ -1246,7 +1246,7 @@ User Story 4
    The ability for users to search multiple blog posts by author. I think this feature would be important as the site grows so users can search for blogposts by their favourite author.
 
    - [USER STORY:Search bar #16](https://github.com/seanj06/P4-Sports-Expert/issues/16)
-   A search bar on the homepage so users can search for either blogposts, categorys, title keywords or authors from the homepage. I think this feature would be importantas the site grows for users to easily find blogposts they are looking for.
+   A search bar on the homepage so users can search for either blogposts, categorys, title keywords or authors from the homepage. I think this feature would be important as the site grows for users to easily find blogposts they are looking for.
 
    - [USER STORY:Reset Password #7](https://github.com/seanj06/P4-Sports-Expert/issues/7)
    The ability for users to be able to reset their password if they lose it. This is currently beyond my skillset but would be an important part of any user authentication system.
@@ -1265,7 +1265,7 @@ User Story 4
 
 ### **Database Schema**
 
-Below is a diagram of the database models and how the the fields link to each other.
+Below is a diagram of the database models and how the fields link to each other.
 The diagram was made on [Lucidchart.com](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjjsv7X6aH-AhWwgFAGHd1lAykYABAAGgJkZw&ohost=www.google.com&cid=CAESbeD2ytxlwO3uCaazbKtzvqvppsNhe1heNFTWYr8Ja6pedxYm-qSu7Xj1K7h_fvv0_kTMzvjh05ERH1FwWEYshvM15Wfp03Zp21oiJIbm3ZTZd1b_1fJ9ENrGwYymQf5KRrpGNn5jUNGXbXujOM0&sig=AOD64_1k9ic9lgJt8Tto3XfmyTbZo-CLLg&q&adurl&ved=2ahUKEwjco_jX6aH-AhUCAsAKHch6ASkQ0Qx6BAgGEAE)
 
 ![database-schema](docs/readme-images/database-schema.png)
@@ -1320,7 +1320,7 @@ As the Blog Home page is the only page that changes layout as the screen size ge
 
 #### **Colour Scheme**
 
- - The main colour scheme chosen for the site was simple. 4 shades of primary colours ranging from black contrasting down to gray, a lighter shade of gray and then white. I felt this kept the site looking professional and made backgroound colours non conflicting and not too distracting.
+ - The main colour scheme chosen for the site was simple. 4 shades of primary colours ranging from black contrasting down to gray, a lighter shade of gray and then white. I felt this kept the site looking professional and made background colours non conflicting and not too distracting.
 
 ![Coolers](docs/readme-images/coolers.png)
 
@@ -1351,7 +1351,7 @@ As the Blog Home page is the only page that changes layout as the screen size ge
  - [ElephantSQL](https://www.elephantsql.com/) was used to run the postgres database for this project.
  - [Cloudinary](https://cloudinary.com/) was used to store all static files and images for this project.
  - [Heroku](https://www.heroku.com/) was used to deploy the project.
- - [GitHub:](https://github.com/) was used for for storing project code.
+ - [GitHub:](https://github.com/) was used for storing project code.
  - [Git](https://git-scm.com/) was used for version control of the project.
  - [GitPod](https://www.gitpod.io/) was the ide used to develop the project.
  - [LucidChart](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjjsv7X6aH-AhWwgFAGHd1lAykYABAAGgJkZw&ohost=www.google.com&cid=CAESbeD2ytxlwO3uCaazbKtzvqvppsNhe1heNFTWYr8Ja6pedxYm-qSu7Xj1K7h_fvv0_kTMzvjh05ERH1FwWEYshvM15Wfp03Zp21oiJIbm3ZTZd1b_1fJ9ENrGwYymQf5KRrpGNn5jUNGXbXujOM0&sig=AOD64_1k9ic9lgJt8Tto3XfmyTbZo-CLLg&q&adurl&ved=2ahUKEwjco_jX6aH-AhUCAsAKHch6ASkQ0Qx6BAgGEAE) was used for making the database schema diagram.
@@ -1393,7 +1393,7 @@ All testing that was done for the project can be Found In [TESTING.md](TESTING.m
 **The site was deployed to Heroku following these steps:**
 
 1. Go to [Heroku](https://www.heroku.com/) from your browser.
-2. CLick on the "new" button from the dashboard and select "create new app".
+2. Click on the "new" button from the dashboard and select "create new app".
 3. Name you app and click "create app"
 4. Navigate to "settings"
 5. Navigate to "config vars" and enter the following:
@@ -1453,7 +1453,7 @@ All testing that was done for the project can be Found In [TESTING.md](TESTING.m
 - Help getting started on the project was helped by watching [Codemy.com](https://www.youtube.com/@Codemycom) [Create A Simple Blog With Python and Django](https://www.youtube.com/watch?v=B40bteAMM_M) videos.
 - The timeout function for messages was taken from [Code Institute](https://learn.codeinstitute.net/) Blog walkthrough.
 - The [Django Documentation](https://docs.djangoproject.com/en/4.0/) helped along the way with troubleshooting and understanding django more in general.
-- [Stack Overflow](https://stackoverflow.com/) was used for troubleshootiing multiple issues including:
+- [Stack Overflow](https://stackoverflow.com/) was used for troubleshooting multiple issues including:
    - [Redirect to same page after POST method using class based views](https://stackoverflow.com/questions/39560175/redirect-to-same-page-after-post-method-using-class-based-views)
    - [In a Django form, how do I make a field readonly (or disabled) so that it cannot be edited?](https://stackoverflow.com/questions/324477/in-a-django-form-how-do-i-make-a-field-readonly-or-disabled-so-that-it-cannot)
    - [Django create profile for user signal](https://stackoverflow.com/questions/61580144/django-create-profile-for-user-signal)
