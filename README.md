@@ -39,16 +39,22 @@ Developed by Sean Johnston for code institute Project Portfolio project 4.
           - [Colour Scheme](#colour-scheme)
           - [Typography](#typography)
           - [Imagery](#imagery)
-6. [Technologies Used](#technologies-used)  
+4. [Technologies Used](#technologies-used)  
     - [Languages used](#languages-used)
     - [Frameworks used](#frameworks-used)
     - [Other Technologies used](#other-technologies-used)
     - [Libraries Used](#libraries-used)
-7. [Testing](#testing)
-8. [Deployment](#deployment)    
+5. [Testing](#testing)
+6. [Deployment](#deployment)    
     - [Heroku Deployment](#heroku-deployment)
     - [Forking The Repository](#forking-the-repository)
     - [Clone The Repository](#clone-the-repository)
+7. [Credits](#credits)
+    - [Project Set Up and Github Template](#project-set-up-and-github-template)
+    - [Media And Content](#media-and-content)
+    - [Code And Issues](#code-and-issues)
+    - [Unit Testing](#unit-testing)
+
 
 
 
@@ -1409,6 +1415,7 @@ All testing that was done for the project can be Found In [TESTING.md](TESTING.m
 
 - Help getting started on the project was helped by watching [Codemy.com](https://www.youtube.com/@Codemycom) [Create A Simple Blog With Python and Django](https://www.youtube.com/watch?v=B40bteAMM_M) videos.
 - The timeout function for messages was taken from [Code Institute](https://learn.codeinstitute.net/) Blog walkthrough.
+- The [Django Documentation](https://docs.djangoproject.com/en/4.0/) helped along the way with troubleshooting and understanding django more in general.
 - [Stack Overflow](https://stackoverflow.com/) was used for troubleshootiing multiple issues including:
    - [Redirect to same page after POST method using class based views](https://stackoverflow.com/questions/39560175/redirect-to-same-page-after-post-method-using-class-based-views)
    - [In a Django form, how do I make a field readonly (or disabled) so that it cannot be edited?](https://stackoverflow.com/questions/324477/in-a-django-form-how-do-i-make-a-field-readonly-or-disabled-so-that-it-cannot)
@@ -1417,6 +1424,20 @@ All testing that was done for the project can be Found In [TESTING.md](TESTING.m
    - [success_message in DeleteView not shown](https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown)
    - [Django UserPassesTestMixin confusion/questions?](https://stackoverflow.com/questions/65241141/django-userpassestestmixin-confusion-questions)
    - [Django user posts to be filtered from all posts and displayed in user profile](https://stackoverflow.com/questions/44693599/django-user-posts-to-be-filtered-from-all-posts-and-displayed-in-user-profile)
+
+### **Unit Testing**
+
+ - Steps on how to install and use coverage were taken from [Code Institute](https://learn.codeinstitute.net/) coverage video from the Hello Django walkthrough.
+
+ - [Stack Overflow](https://stackoverflow.com/) was used numerous times for research on how to use different unit test methods and test different type of functions. Some pages included:
+   - [Using @classmethod for creating objects in django for testing purposes](https://stackoverflow.com/questions/55646726/using-classmethod-for-creating-objects-in-django-for-testing-purposes)
+   - [How should I write tests for Forms in Django?](https://stackoverflow.com/questions/7304248/how-should-i-write-tests-for-forms-in-django)
+   - [how to get request object in django unit testing?](https://stackoverflow.com/questions/10277748/how-to-get-request-object-in-django-unit-testing)
+   - [How can I unittest get_context_data() of a ListView in Django?](https://stackoverflow.com/questions/61580104/how-can-i-unittest-get-context-data-of-a-listview-in-django)
+ - [Django Writing and running tests](https://docs.djangoproject.com/en/4.2/topics/testing/overview/) official documentation also helped through testing.
+ - [Real Python Testing in Django](https://realpython.com/testing-in-django-part-1-best-practices-and-examples/) was also used.  
+
+
 
 
 
