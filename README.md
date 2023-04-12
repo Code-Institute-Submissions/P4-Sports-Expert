@@ -1315,6 +1315,8 @@ As the Blog Home page is the only page that changes layout as the screen size ge
  - [GitHub:](https://github.com/) was used for for storing project code.
  - [Git](https://git-scm.com/) was used for version control of the project.
  - [GitPod](https://www.gitpod.io/) was the ide used to develop the project.
+ - [LucidChart](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjjsv7X6aH-AhWwgFAGHd1lAykYABAAGgJkZw&ohost=www.google.com&cid=CAESbeD2ytxlwO3uCaazbKtzvqvppsNhe1heNFTWYr8Ja6pedxYm-qSu7Xj1K7h_fvv0_kTMzvjh05ERH1FwWEYshvM15Wfp03Zp21oiJIbm3ZTZd1b_1fJ9ENrGwYymQf5KRrpGNn5jUNGXbXujOM0&sig=AOD64_1k9ic9lgJt8Tto3XfmyTbZo-CLLg&q&adurl&ved=2ahUKEwjco_jX6aH-AhUCAsAKHch6ASkQ0Qx6BAgGEAE) was used for making the database schema diagram.
+ - [Balsamiq](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwih18Xz7KT-AhUK0O0KHa10Ac4YABAAGgJkZw&ohost=www.google.com&cid=CAESbeD2RPESw4sarkzssyVuJ3_18noPRmNSFJOT2cF3stlWcQOFp6gPdcDCXuoyPrUKWZxNLLshZQIEAJo_zFZQQUX0f9Lu_XsA3g1AvKtc7qZuF628J-8r4AqElCFmrMznj-ckVA181bCrKg7__Gk&sig=AOD64_3_LMgzuzJFmOC4EuNM6hTDxVkC7A&q&adurl&ved=2ahUKEwjavL7z7KT-AhWgR0EAHYA1CbgQ0Qx6BAgHEAE) was used for creating the wireframes.
 
 ### **Libraries Used**
 
