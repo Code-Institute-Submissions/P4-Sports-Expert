@@ -54,6 +54,7 @@ Developed by Sean Johnston for code institute Project Portfolio project 4.
     - [Media And Content](#media-and-content)
     - [Code And Issues](#code-and-issues)
     - [Unit Testing](#unit-testing)
+8. [Acknowledgements](#acknowledgements)    
 
 
 
@@ -1435,7 +1436,17 @@ All testing that was done for the project can be Found In [TESTING.md](TESTING.m
    - [how to get request object in django unit testing?](https://stackoverflow.com/questions/10277748/how-to-get-request-object-in-django-unit-testing)
    - [How can I unittest get_context_data() of a ListView in Django?](https://stackoverflow.com/questions/61580104/how-can-i-unittest-get-context-data-of-a-listview-in-django)
  - [Django Writing and running tests](https://docs.djangoproject.com/en/4.2/topics/testing/overview/) official documentation also helped through testing.
- - [Real Python Testing in Django](https://realpython.com/testing-in-django-part-1-best-practices-and-examples/) was also used.  
+ - [Real Python Testing in Django](https://realpython.com/testing-in-django-part-1-best-practices-and-examples/) was also used. 
+
+## **Acknowledgements** 
+
+- My amazing partner Sinead who has been supportive the whole way throughout the project.
+
+- My classmates Sean Finn and Victoria Traynor for help testing my site, spotting bugs and help throughout.
+
+- The Slack community as a whole for support.
+
+
 
 
 
