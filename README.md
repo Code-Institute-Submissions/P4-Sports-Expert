@@ -63,6 +63,8 @@ Developed by Sean Johnston for code institute Project Portfolio project 4.
 
 As my fourth project for the [Code Institute](https://codeinstitute.net/) 5P course the goal of the project is to demostrate all of the skills I have learned in the course so far including languages such as HTML, CSS, Javascript and Python. Frameworks such as Django and Boostrap and version control technologies such as Git and Github.
 
+[Top of page &uarr;](#contents)
+
 ## **U/X**
 
 ## **The Strategy Plane**
@@ -84,6 +86,8 @@ Sports expert was designed to be a site for Sports lovers to share and read thei
 - For users to be able to comment on their own and other peoples blogposts while logged in
 - For users to be able to edit their profile including adding thier own profile picture while logged in.
 
+[Top of page &uarr;](#contents)
+
 ## **The Scope Plane**
 
  - CRUD Ability for authenticated users on Blogposts, Comments and User Profiles
@@ -101,6 +105,8 @@ Epics milestones were given Acceptance criterias and the must haves were complet
 The Kanban board was created using Github projects and can be located [here](https://github.com/users/seanj06/projects/5/views/1)  and can be viewed to see the completed and backlogged user stories.
 
 ![Kanban Board](docs/readme-images/kanban-board.png)
+
+[Top of page &uarr;](#contents)
 
 ### **Epics**
 
@@ -210,6 +216,8 @@ There are 4 user stories in the backlog milestone due to not being complete beca
 - A search bar on the home page [USER STORY:Search bar #16](https://github.com/seanj06/P4-Sports-Expert/issues/16)
 
 - User being able to reset password - [USER STORY:Reset Password #7](https://github.com/seanj06/P4-Sports-Expert/issues/7)
+
+[Top of page &uarr;](#contents)
 
 ### **User Stories**
 
@@ -489,6 +497,8 @@ User Story 4
 
    - Comments:
        - Django form created and linked to model - [77f3686](https://github.com/seanj06/P4-Sports-Expert/commit/77f368639c4b1f4b79e9378bc8966a5f31f12b8b)
+
+[Top of page &uarr;](#contents)
 
 #### **EPIC: Blog view page creation [#Milestone 6](https://github.com/seanj06/P4-Sports-Expert/milestone/9)**
 
@@ -778,6 +788,8 @@ User Story 3
    - Comments:
        - Multiple apps created to keep code organisation
 
+[Top of page &uarr;](#contents)       
+
 #### Backlog Incompleted User Stories
 
 User Story 1
@@ -815,6 +827,8 @@ User Story 4
        - As a user I can reset my password so that i can retrieve my account if i forget my password
 
    - This User story was part of the [Epic: CRUD Functionality](https://github.com/seanj06/P4-Sports-Expert/milestone/5) milestone but was moved to the backlog because of time constraints.  
+
+[Top of page &uarr;](#contents)   
 
 ## **The Structure Plane**
 
@@ -900,6 +914,8 @@ User Story 4
 
    ![Footer](docs/features/footer-desktop.png) 
 
+[Top of page &uarr;](#contents)   
+
 #### **Blog Home Page**
 
 **Bootstrap cards**
@@ -964,7 +980,9 @@ User Story 4
 
   - There is also. page counter which shows the user which page they are currenty on aswell as the total number of pages
 
-  ![Blog-home-pagination](docs/features/blog-home-pagination.png)            
+  ![Blog-home-pagination](docs/features/blog-home-pagination.png)     
+
+[Top of page &uarr;](#contents)         
 
 
 #### **Blog Detail Page**
@@ -1030,7 +1048,9 @@ User Story 4
 
       - If the user presses delete their comment is deleted and they are shown a success message stating "Your comment has been deleted" and redirected back to the blog detail page.
         
-      ![Delete-comment-message](docs/features/comment-delete-message.png)     
+      ![Delete-comment-message](docs/features/comment-delete-message.png)  
+
+[Top of page &uarr;](#contents)         
 
 #### **Profile Page**
 
@@ -1089,6 +1109,8 @@ User Story 4
           - If they press delete they are logged out and redirected to the home page with a success message stating "Profile deleted successfully"
           
           ![delete-profile-message](docs/features/profile-delete-message.png)
+
+[Top of page &uarr;](#contents)          
         
 
 #### **Add A Blog Page**
@@ -1180,6 +1202,8 @@ User Story 4
 
  ![Sign-out-message](docs/features/sign-out-message.png)
 
+[Top of page &uarr;](#contents) 
+
 #### **Custom Error Pages**
 
 **404 Page Not Found**
@@ -1206,6 +1230,8 @@ User Story 4
 
  ![500-page](docs/features/500-page.png)
 
+[Top of page &uarr;](#contents) 
+
 
 ### **Future Features**
 
@@ -1231,6 +1257,8 @@ User Story 4
 
    - Users to be able to click on and view other user profiles from blogpost authors and comments.
 
+[Top of page &uarr;](#contents)   
+
 ## **The Skeleton Plane**
 
 ### **Database Schema**
@@ -1239,6 +1267,8 @@ Below is a diagram of the database models and how the the fields link to each ot
 The diagram was made on [Lucidchart.com](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjjsv7X6aH-AhWwgFAGHd1lAykYABAAGgJkZw&ohost=www.google.com&cid=CAESbeD2ytxlwO3uCaazbKtzvqvppsNhe1heNFTWYr8Ja6pedxYm-qSu7Xj1K7h_fvv0_kTMzvjh05ERH1FwWEYshvM15Wfp03Zp21oiJIbm3ZTZd1b_1fJ9ENrGwYymQf5KRrpGNn5jUNGXbXujOM0&sig=AOD64_1k9ic9lgJt8Tto3XfmyTbZo-CLLg&q&adurl&ved=2ahUKEwjco_jX6aH-AhUCAsAKHch6ASkQ0Qx6BAgGEAE)
 
 ![database-schema](docs/readme-images/database-schema.png)
+
+[Top of page &uarr;](#contents)
 
 ### **Wireframes**
 
@@ -1280,7 +1310,7 @@ As the Blog Home page is the only page that changes layout as the screen size ge
 
 ![wireframe-form](docs/wireframes/wireframe-form.png)
 
-
+[Top of page &uarr;](#contents)
 
 ## **The Surface Plane**
 
@@ -1348,6 +1378,8 @@ As the Blog Home page is the only page that changes layout as the screen size ge
 This project provides first-class OAuth library support for Requests.
 - [sqlparse](https://pypi.org/project/sqlparse/) - sqlparse is a non-validating SQL parser for Python. It provides support for parsing, splitting and formatting SQL statements.
 
+[Top of page &uarr;](#contents)
+
 ## **Testing**
 
 All testing that was done for the project can be Found In [TESTING.md](TESTING.md)
@@ -1397,6 +1429,8 @@ All testing that was done for the project can be Found In [TESTING.md](TESTING.m
 6. Type "git clone" into the terminal followed by the HTTPS url you copied to your clipboard.
 7. Press enter, your cloned repository should be created in the directory you specified.
 
+[Top of page &uarr;](#contents)
+
 ## **Credits**
 
 ### **Project Set Up and Github Template**
@@ -1438,6 +1472,7 @@ All testing that was done for the project can be Found In [TESTING.md](TESTING.m
  - [Django Writing and running tests](https://docs.djangoproject.com/en/4.2/topics/testing/overview/) official documentation also helped through testing.
  - [Real Python Testing in Django](https://realpython.com/testing-in-django-part-1-best-practices-and-examples/) was also used. 
 
+
 ## **Acknowledgements** 
 
 - My amazing partner Sinead who has been supportive the whole way throughout the project.
@@ -1445,6 +1480,8 @@ All testing that was done for the project can be Found In [TESTING.md](TESTING.m
 - My classmates Sean Finn and Victoria Traynor for help testing my site, spotting bugs and help throughout.
 
 - The Slack community as a whole for support.
+
+[Top of page &uarr;](#contents)
 
 
 
