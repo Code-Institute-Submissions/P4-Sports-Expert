@@ -10,7 +10,6 @@ body {
 
 /* Navbar */
 
-
 #logged-text {
     color: lightblue;
     border-top: 2px solid #fff;
@@ -26,11 +25,6 @@ body {
 
 .active-nav {
     text-decoration: underline lightblue 4px;
-}
-
-.messages {
-    position: absolute;
-    color: black;
 }
 
 
@@ -72,13 +66,22 @@ body {
     margin: 1rem;
 }
 
+/* Messages */
 
-/* Home Page */
+
 
 #msg {
     font-size: 1rem;
     z-index: 1;
 }
+
+.messages {
+    position: absolute;
+    color: black;
+}
+
+
+/* Home Page */
 
 .container-fluid>a {
     font-family: 'Tilt Warp', cursive;
@@ -159,7 +162,7 @@ body {
 
 .blog-image {
     width: 100%;
-    max-height: 45vh; 
+    max-height: 45vh;
     border: 1px solid grey;
     object-fit: cover;
     margin: auto;
@@ -167,11 +170,6 @@ body {
 
 .hero-row {
     justify-content: center;
-}
-
-#title-row {
-    border-top: 1px solid grey;
-    margin: auto;
 }
 
 #body-row {
@@ -188,23 +186,38 @@ body {
     font-weight: bolder;
 }
 
+/* Comments */
+
 .hero-text-comm {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     font-family: 'Tilt Warp', cursive;
     margin: 10px auto;
 }
 
-.comm-text {
-    font-family: sans-serif;
-    font-size: 1.3rem;
-    font-weight: bolder;
-    margin: 10px auto;
+.comment-row {
+    background-color: white;
+    padding: 0;
+    max-width: 100%;
+    margin: auto;
 }
 
+.comment-text {
+    font-size: 1.3rem;
+    font-family: 'Tilt Warp', cursive;
+    border-bottom: 1px solid black;
+}
 
+.comment-cont {
+    background-color: white;
+    margin-top: 5px;
+    border-radius: 10px;
+    padding: 5px;
+}
 
-#blog-btn {
-    margin: 1rem;
+.comment-cont>p {
+    font-family: 'Golos Text', sans-serif;
+    font-size: 1.2rem;
+    overflow: hidden;
 }
 
 .login-text {
@@ -218,6 +231,27 @@ body {
     margin: 2rem;
 }
 
+
+.card-title {
+    font-family: 'Tilt Warp', cursive;
+    border-bottom: 1px solid black;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.card-text {
+    font-family: 'Golos Text', sans-serif;
+    font-weight: bolder;
+    margin: 1rem 0;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+/* Pagination */
 
 #page-btns {
     justify-content: center;
@@ -239,27 +273,6 @@ body {
     color: #fff;
 }
 
-.card-title {
-    font-family: 'Tilt Warp', cursive;
-    border-bottom: 1px solid black;
-    margin: 0;
-    padding-bottom: 5px;
-}
-
-.card-text {
-    font-family: 'Golos Text', sans-serif;
-    font-weight: bolder;
-    margin: 1rem 0;
-}
-
-.card-img-top {
-    width: 100%;
-    height: 15vw;
-    object-fit: cover;
-}
-
-
-
 /* Profile page */
 
 .user-image {
@@ -268,7 +281,7 @@ body {
     max-height: 100%;
 }
 
-#profile-cont {
+.profile-cont {
     border-radius: 5px;
     color: #696969;
     font-family: 'Golos Text', sans-serif;
@@ -285,7 +298,7 @@ body {
     width: 400px;
     margin: auto;
     padding: 0;
-}    
+}
 
 #profile-image {
     border-radius: 50%;
@@ -323,8 +336,6 @@ body {
     padding: 2px;
 }
 
-
-
 /* Forms */
 
 .forms {
@@ -339,23 +350,7 @@ body {
 }
 
 
-
 /* General message containers */
-
-#text-containers {
-    border: 3px solid gray;
-    border-radius: 10px;
-    margin: 5rem;
-    background-color: #D3D3D3;
-    font-family: 'Tilt Warp', cursive;
-    color: black;
-    display: flex;
-    justify-content: center;
-}
-
-#text-containers>h1 {
-    color: black;
-}
 
 .confirmation {
     border-radius: 5px;
@@ -367,42 +362,15 @@ body {
     border: 4px solid gray;
 }
 
-
-/* Comments */
-
-
-.comment-row {
-    background-color: white;
-    padding: 0;
-    max-width: 100%;
-    margin: auto;
-}
-
-.comment-text {
-    font-size: 1.3rem;
-    font-family: 'Tilt Warp', cursive;
-    border-bottom: 1px solid black;
-}
-
-.comment-cont {
-    background-color: white;
-    margin-top: 5px;
-    border-radius: 10px;
-    padding: 5px;
-}
-
-.comment-cont > p {
-    font-family: 'Golos Text', sans-serif;
-    font-size: 1.2rem;
-    overflow: hidden;
-}
-
-
-
 /* Error Pages */
 
-.error-text {
+.error-hero-text {
     font-size: 2rem;
+    color: white;
+}
+
+.error-text {
+    font-size: 1.8rem;
     color: white;
 }
 
@@ -452,7 +420,7 @@ body {
         font-size: 0.9rem;
     }
 
-   /* Profile image */
+    /* Profile image */
 
     .profile-img-cont {
         height: 300px;

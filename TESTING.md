@@ -878,7 +878,7 @@ Since nearly every model in my database is connected in some way I have conclude
 
 ## **Responsiveness**
 
-I tested 10 devices at random on chrome devtools for responsiveness ranging from large to small screens. Things I was looking out for while testing includes, font sizes, font overflow, ratios, image sizes, image overflow and container overflow.
+I tested 10 devices on chrome devtools for responsiveness ranging from large to small screens. Things I was looking out for while testing includes, font sizes, font overflow, ratios, image sizes, image overflow and container overflow.
 
 | **Device** | **Result Pass/Fail** |
 |------------|----------------------|
