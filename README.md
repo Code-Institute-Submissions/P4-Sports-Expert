@@ -35,6 +35,10 @@ Link to the live site : [Sports Expert](https://sports-blog.herokuapp.com/)
       - [Future Features](#future-features)  
    - [The Skeleton Plane](#the-skeleton-plane)  
       - [Database Schema](#database-schema) 
+         - [User Model](#user-model)
+         - [BlogPost Model](#blogpost-model)
+         - [Profile Model](#profile-model)
+         - [Comments Model](#comments-model)
       - [Wireframes](#wireframes)
    - [The Surface Plane](#the-surface-plane) 
       - [Design](#design)   
@@ -1270,6 +1274,26 @@ The diagram was made on [Lucidchart.com](https://www.googleadservices.com/pagead
 
 ![database-schema](docs/readme-images/database-schema.png)
 
+#### **User Model**
+
+The User model is the default django User that comes pre installed with django and links to all custom models in some way.
+
+#### **BlogPost Model**
+
+The BlogPost model links to the User model via a ForeignKey relationship on the created_by field. This ensures that each blogpost that is created is then linked to the logged in user.
+
+#### **Profile Model**
+
+The Profile model links to the User model via a OneToOne relationship on the user field using Django signals. This means that everytime a user signs up for an account a profile is automatically created for them. The date_joined field also links to the User model date_joined field using the OneToOne relationship.
+
+The Profile model also links to the BlogPost model via a ManyToMany relationship on the blogs field. This means that everytime a user creates a blogpost it is linked to the profile model and accessible by the user from their profile.
+
+#### **Comments Model**
+
+The Comments model links to the Blogpost model via a ForeignKey relationship on the post field. This relationship is needed so that users can make comments on specific blogposts.
+
+The Comments model also links to the user model via a ForeignKey relationship on the user field. This means that everytime a user makes a comment it is linked to their account and profile.
+
 [Top of page &uarr;](#contents)
 
 ### **Wireframes**
@@ -1277,6 +1301,8 @@ The diagram was made on [Lucidchart.com](https://www.googleadservices.com/pagead
 Wireframes were made at the start of development with [balsamiq](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwih18Xz7KT-AhUK0O0KHa10Ac4YABAAGgJkZw&ohost=www.google.com&cid=CAESbeD2RPESw4sarkzssyVuJ3_18noPRmNSFJOT2cF3stlWcQOFp6gPdcDCXuoyPrUKWZxNLLshZQIEAJo_zFZQQUX0f9Lu_XsA3g1AvKtc7qZuF628J-8r4AqElCFmrMznj-ckVA181bCrKg7__Gk&sig=AOD64_3_LMgzuzJFmOC4EuNM6hTDxVkC7A&q&adurl&ved=2ahUKEwjavL7z7KT-AhWgR0EAHYA1CbgQ0Qx6BAgHEAE) and show roughly the structure of the site for the most part even though slight design changes were made in development.
 
 As the Blog Home page is the only page that changes layout as the screen size gets smaller I chose to only do wireframes for multiple screen sizes for that particular page. The wireframes for that page include the navbar changing to a hamburger button for medium and small size screens.
+
+[Top of page &uarr;](#contents)
 
 #### **Home Page**
 
