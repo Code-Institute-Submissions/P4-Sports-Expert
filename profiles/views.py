@@ -65,7 +65,7 @@ class EditProfile(
     model = Profile
     template_name = 'edit_profile.html'
     form_class = ProfileForm
-    success_message = "Profile edited successfully"
+    success_message = "Your profile has been edited"
 
     def get_success_url(self):
         """
@@ -97,7 +97,7 @@ class DeleteProfile(LoginRequiredMixin, DeleteView):
         """
         user = self.get_object().user
         user.delete()
-        messages.success(self.request, "Profile was deleted successfully.")
+        messages.success(self.request, "Your profile has been deleted")
         return HttpResponseRedirect(self.success_url)
 
         return super(DeleteProfile, self).delete(request, *args, **kwargs)

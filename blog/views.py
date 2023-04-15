@@ -154,7 +154,7 @@ class EditBlog(
     template_name = 'edit_blog.html'
     fields = ['description', 'title', 'blog_image', 'body', 'category']
     success_url = reverse_lazy('bloglist')
-    success_message = "Blog post edited successfully"
+    success_message = "Your blog post has been edited"
 
     def test_func(self):
         """
@@ -171,7 +171,7 @@ class DeleteBlog(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = BlogPost
     template_name = 'delete_blog.html'
     success_url = reverse_lazy('bloglist')
-    success_message = "Blog post deleted successfully"
+    success_message = "Your blog post has been deleted"
 
     def delete(self, request, *args, **kwargs):
         """
